@@ -2,7 +2,7 @@
 
 Use these only when the activated skill rules are not enough.
 
-## Motion (Framer Motion / motion)
+## Motion (`motion/react`)
 
 ```tsx
 <motion.div
