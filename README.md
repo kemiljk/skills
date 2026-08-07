@@ -2,29 +2,102 @@
 
 Personal agent skills distilled from [Karl Koch](https://karlkoch.me)'s writing on design engineering, fluid interfaces, semantic HTML, and AI judgement.
 
-Install selectively. Compose deliberately.
+Install selectively. Compose deliberately. Or run the full suite with `dxe`.
 
 ## Install
 
-List available skills:
+### Global (recommended)
+
+Install the full collection once, available in every project:
+
+```bash
+npx skills add kemiljk/skills -g --all
+```
+
+That installs every skill (including the `dxe` master pass) to all detected agents. Verify with:
+
+```bash
+npx skills ls -g
+```
+
+Update later with:
+
+```bash
+npx skills update -g
+```
+
+### Project
+
+Share skills with a repo/team (committed into the project):
+
+```bash
+npx skills add kemiljk/skills --all
+```
+
+### Selective
+
+List what’s in the package:
 
 ```bash
 npx skills add kemiljk/skills --list
 ```
 
-Install specific skills:
+Install only what you need (add `-g` for global):
 
 ```bash
-npx skills add kemiljk/skills \
+npx skills add kemiljk/skills -g \
   --skill fluid-design \
   --skill modern-css-html \
   --skill ai-output-judgement
 ```
 
+Target specific agents:
+
+```bash
+npx skills add kemiljk/skills -g -a cursor -a claude-code --all
+```
+
+## Master skill: `dxe`
+
+`dxe` is the orchestrator — paired with [d×e](https://designengineer.xyz). One short name; one full-suite design-engineering pass on a repository or scoped path.
+
+**Prerequisite:** install the full collection (`-g --all` above). `dxe` reads each sibling `SKILL.md` and will stop if any are missing.
+
+### How to invoke
+
+In Cursor / Claude Code (or any agent that has the skills installed), ask for a pass:
+
+| Prompt | Behaviour |
+| --- | --- |
+| `dxe` / “run a dxe pass” | Full workspace review; propose fixes |
+| `dxe src/components` | Scope to that path |
+| `dxe review` | Findings only; no edits |
+| `dxe fix` | Findings, then high-confidence fixes |
+
+### What it runs
+
+Phases in order:
+
+1. **Intent** — `write-first-design`, `subtractive-design`  
+   Hypothesis for the pass; cut unexplained chrome and generative residue.
+2. **Platform** — `semantic-html-first`, `modern-css-html`  
+   Native elements and modern CSS/HTML before ARIA theatre or JS hacks.
+3. **Feel** — `fluid-design`, `interface-affordances`, `product-delight`  
+   Interruptible motion, discoverable controls, care over novelty.
+4. **Bridge** — `design-engineering`  
+   Map design structure to code structure; keep taste attached to materials.
+5. **Shipping** — `ai-output-judgement`, `prototype-to-production`  
+   Name concrete AI-median failures; harden empty/error/auth/focus paths.
+
+You get a single report: hypothesis, findings by severity (tied to skill names), subtractive cuts, and ordered next actions.
+
+Use individual skills when you want a narrow lens. Use `dxe` when you want the full design-engineering pass on a repo.
+
 ## Skills
 
 | Skill | Use when |
 | --- | --- |
+| `dxe` | **Master pass** — full design-engineering suite on a repo or path |
 | `fluid-design` | Interfaces need physical motion, gestures, layout continuity |
 | `modern-css-html` | Writing/reviewing CSS & HTML with current platform features |
 | `semantic-html-first` | Building controls, forms, disclosure, dialogs |
@@ -38,12 +111,13 @@ npx skills add kemiljk/skills \
 
 ## Composition / precedence
 
-Skills overlap on purpose. Use this order when several activate:
+Skills overlap on purpose. Use this order when several activate — or invoke `dxe` to run them as one pass:
 
 1. **Intent** — `write-first-design`, `subtractive-design`
 2. **Platform** — `semantic-html-first`, `modern-css-html`
 3. **Feel** — `fluid-design`, `interface-affordances`, `product-delight`
-4. **Shipping** — `ai-output-judgement`, `prototype-to-production`
+4. **Bridge** — `design-engineering`
+5. **Shipping** — `ai-output-judgement`, `prototype-to-production`
 
 When motion taste and CSS purity disagree:
 
