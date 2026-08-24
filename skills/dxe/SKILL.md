@@ -120,7 +120,7 @@ Consider every phase, but do not manufacture a finding for each one.
 
 ## Progressive sibling routing
 
-Load a sibling `SKILL.md` only when the materials map, initial evidence, or requested depth triggers it. If a triggered skill is unavailable, continue with the shared rubric, disclose the missing lens, and do not invent its detailed guidance.
+Load a sibling `SKILL.md` only when the materials map, initial evidence, or requested depth triggers it. Collection siblings are installed adjacent to this skill, so first resolve `../<skill-name>/SKILL.md` before treating a lens as unavailable. If the file exists but an already-running agent's discovery registry does not list it, disclose a discovery-refresh limit and ask for a new session; do not describe the collection update as missing or failed. Only after both checks fail should the pass continue with the shared rubric, disclose the missing lens, and avoid inventing its detailed guidance.
 
 | Trigger | Read |
 | --- | --- |

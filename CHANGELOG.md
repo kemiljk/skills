@@ -8,6 +8,7 @@
 - Required both browser `console.error` and uncaught `pageerror` capture, with settled-state sampling for ARIA and animation checks.
 - Added first-party Apple native UI and Android/Compose UI skills, plus platform-specific DXE routing and verification lanes.
 - Require native skills to consult current primary platform documentation for release-sensitive guidance.
+- Make DXE resolve adjacent installed sibling paths before reporting a routing lens as unavailable.
 
 ## 2026-08-07
 
