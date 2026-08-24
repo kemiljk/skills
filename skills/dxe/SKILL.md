@@ -1,155 +1,184 @@
 ---
 name: dxe
 description: >
-  Master DXE design-engineering pass that applies the full kemiljk/skills suite to a
-  repository or UI surface. Use when the user asks for dxe, DXE, a design-eng pass,
-  "apply all skills", repo-wide interface review, ship-ready hardening with Karl Koch
-  design taste, or composing write-first, subtractive, semantic, fluid, delight, and
-  production checks at once.
+  Run a phase-ordered design-engineering review or hardening pass on a repository
+  or UI surface. Use for dxe, DXE, design-eng passes, "apply all skills," repo-wide
+  interface reviews, or ship-ready UI hardening with Karl Koch design taste. Defaults
+  to a non-mutating evidence-based review and loads specialist sibling skills progressively.
 license: MIT
 ---
 
 # dxe
 
-One invocation. Full suite. Apply every skill in this collection to the target repo (or scoped paths) in precedence order.
+Review interface work in this precedence order:
 
-## Required setup
+1. Intent before decoration.
+2. Correct semantics and accessibility before visual convenience.
+3. Interaction feel before implementation technique; use the most native implementation that preserves the intended feel.
+4. Production trust before prototype cleverness.
 
-All sibling skills from `kemiljk/skills` must be installed. Before work, **read each skill's `SKILL.md`** (and linked `references/` only when that phase needs depth):
+Read [references/dxe-core.md](references/dxe-core.md) before starting. It is the shared rubric for every mode. Do not load every sibling skill by default.
 
-| Phase | Skills to read |
+## Modes
+
+Infer the mode from the request; use `review` when unspecified.
+
+A path after `dxe` scopes any mode to that path. Treat “apply all skills” as `dxe exhaustive`.
+
+| Mode | Scope | Mutation |
+| --- | --- | --- |
+| `dxe quick` | Shared rubric on one representative surface; load no sibling unless essential | No |
+| `dxe` / `dxe review` | Full evidence matrix and representative repo sampling; progressively load triggered siblings | No |
+| `dxe fix` | Review, then implement and verify bounded high-confidence fixes | Yes, within the requested scope |
+| `dxe exhaustive` | Inspect every available surface and read the full sibling suite | No unless the user also asks to fix |
+
+Review mode is strictly non-mutating. Do not edit files, install dependencies, start external mutations, or change production systems. Read-only inspection and local verification are allowed. In fix mode, preserve unrelated work and existing design-system materials.
+
+## Scope and sampling
+
+Identify the repository or paths, primary user tasks, stack, tokens, primitives, and interaction/runtime libraries. Prefer existing materials over invented replacements.
+
+For a repository review, select representative surfaces rather than implying equal inspection of every screen:
+
+- primary landing or task page;
+- content/detail and list/index pages when present;
+- one form or mutation flow;
+- one overlay, dialog, or menu;
+- an available loading, empty, or error state;
+- desktop, compact, keyboard, and reduced-motion variants.
+
+State omissions in the report. In exhaustive mode, enumerate all discoverable surfaces and states before inspection.
+
+## Evidence protocol
+
+Write a short hypothesis and non-goals, then collect the minimum evidence appropriate to the mode. For normal review/fix, record:
+
+| Evidence | Minimum |
 | --- | --- |
-| 1. Intent | `write-first-design`, `subtractive-design` |
-| 2. Platform | `semantic-html-first`, `modern-css-html` |
-| 3. Feel | `fluid-design`, `interface-affordances`, `product-delight` |
-| 4. Bridge | `design-engineering` |
-| 5. Shipping | `ai-output-judgement`, `prototype-to-production` |
+| Materials | Stack, tokens, primitives, motion/runtime libraries |
+| Source | Representative routes and shared components |
+| Verification | Existing typecheck/tests and production build, when safe and available |
+| Desktop | Rendered layout, overflow, primary heading, first meaningful keyboard sequence |
+| Compact | Rendered layout, overflow, menu/dialog behaviour, touch affordances |
+| Accessibility | Names, roles, states, focus/return, reduced motion |
+| Production | Loading/error/empty behaviour, metadata, browser and server logs |
+| Confidence | `confirmed-rendered`, `confirmed-source`, `likely`, `unverified`, or `environment-only` |
 
-If a skill is missing, stop and tell the user which install is needed. Do not invent a substitute.
+Do not claim a rendered defect from source inspection alone. If rendering or a check is unavailable, label the limit instead of guessing.
 
-## Invocation shapes
+Separate observations into:
 
-- **`dxe`** / **design-eng pass** / **apply all skills** — full repo (or workspace) pass
-- **`dxe <path>`** — scope to that file/directory
-- **`dxe review`** — findings only; do not edit
-- **`dxe fix`** — findings then implement high-confidence fixes
+1. confirmed product defects;
+2. source-level risks;
+3. environment or tooling failures;
+4. unverified suspicions.
 
-Default: review + propose fixes; only write code when the user asked to fix/apply/ship, or chose `fix`.
+Reproduce a user-facing failure before promoting tooling noise to a product finding. Distinguish browser errors, server errors, expected local-service failures, and framework/tooling warnings.
 
-## Workflow
+## Compact cross-phase pass
 
-Copy and track:
+Consider every phase, but do not manufacture a finding for each one.
 
-```text
-dxe pass:
-- [ ] 0. Scope & materials map
-- [ ] 1. Intent (write-first, subtractive)
-- [ ] 2. Platform (semantic HTML, modern CSS/HTML)
-- [ ] 3. Feel (fluid, affordances, delight)
-- [ ] 4. Bridge (design-engineering)
-- [ ] 5. Shipping (AI judgement, prototype→production)
-- [ ] 6. Report & next actions
-```
+### Intent
 
-### 0. Scope & materials map
+- State what the interface helps the user accomplish.
+- Mark duplicate actions, unexplained chrome, and generated residue for removal.
+- Preserve elements whose purpose is clear and useful.
 
-1. Identify the target: whole repo, app package, or given paths.
-2. Map stack (framework, styling system, component primitives, motion library).
-3. Prefer existing tokens, primitives, and patterns over inventing new ones.
-4. List primary user tasks the UI must support (for subtractive and affordance checks).
+### Platform
 
-### 1. Intent
+- Prefer native elements and state contracts over `div` plus ARIA reconstructions.
+- Check navigation/focus order, names, roles, states, disabled behaviour, and form participation.
+- Prefer native CSS/HTML where it can express the behaviour without weakening it.
 
-From `write-first-design` + `subtractive-design`:
+### Feel
 
-- State the hypothesis for what this pass is improving (or note if the product already has one).
-- Mark unexplained chrome, duplicate actions, and generative residue for removal.
-- Prefer fewer decisions per screen; cut what cannot earn its place in one sentence.
+- Check input discoverability across keyboard, touch, and fine pointers.
+- Motion should be responsive, interruptible where needed, and have a reduced-motion path.
+- Delight should improve anticipation, reliability, or care—not add novelty without purpose.
 
-### 2. Platform
+### Bridge
 
-From `semantic-html-first` + `modern-css-html`:
+- Check that design structure maps deliberately to code, tokens, primitives, rendering, and accessibility.
+- Flag one-off values or abstractions that fight the existing system.
 
-- Native elements before `div`+ARIA theatre.
-- Native CSS/HTML features before JS/CSS hacks when support is acceptable.
-- Pseudo-classes and real disabled/open/invalid states over parallel `data-*` shadow systems.
+### Shipping
 
-### 3. Feel
+- Exercise relevant loading, empty, error, auth, validation, focus, metadata, and repeat-use paths.
+- Separate prototype shortcuts from confirmed release risks.
+- Look for tests around critical contracts rather than requiring blanket coverage.
 
-From `fluid-design` + `interface-affordances` + `product-delight`:
+## Progressive sibling routing
 
-- Continuous, interruptible motion where interaction needs physics; not decoration.
-- `fluid-design` owns feel; `modern-css-html` owns the most native implementation that can deliver it.
-- Affordance cues must match real behaviour; no hover-only critical actions.
-- Delight = anticipation, reliability, care — not novelty for its own sake.
+Load a sibling `SKILL.md` only when the materials map, initial evidence, or requested depth triggers it. If a triggered skill is unavailable, continue with the shared rubric, disclose the missing lens, and do not invent its detailed guidance.
 
-### 4. Bridge
+| Trigger | Read |
+| --- | --- |
+| Product intent is unclear or decisions need rationale | `write-first-design` |
+| Decorative, redundant, or cognitively heavy UI | `subtractive-design` |
+| Forms, menus, dialogs, custom controls, or semantic failures | `semantic-html-first` |
+| Responsive layout or CSS/HTML implementation questions | `modern-css-html` |
+| Gestures, springs, interruption, or shared-element motion | `fluid-design` |
+| Weak discoverability, hover-only actions, or input mismatch | `interface-affordances` |
+| A specific opportunity for useful polish | `product-delight` |
+| Design/code structure or token translation is breaking down | `design-engineering` |
+| Template-like or AI-generated residue needs judgement | `ai-output-judgement` |
+| Auth, validation, state, resilience, or release concerns | `prototype-to-production` |
 
-From `design-engineering`:
+`dxe exhaustive` is the only mode that requires reading all ten sibling skills.
 
-- Map design structure to code structure deliberately.
-- Keep taste attached to materials (tokens, rendering, a11y), not handoff documents alone.
+## Severity and confidence
 
-### 5. Shipping
+- **Critical:** blocks a primary task, risks data/security loss, causes a confirmed serious accessibility failure, or breaks production rendering.
+- **Should fix:** confirmed damage to comprehension, navigation, semantics, resilience, or trust with a bounded correction.
+- **Nice to have:** polish, consistency, dormant primitive risk, or non-blocking cleanup.
 
-From `ai-output-judgement` + `prototype-to-production`:
+Every finding must include one confidence tag. Never classify `unverified` or `environment-only` observations as Critical. Quote only the smallest useful source snippet and anchor findings to a path or rendered surface.
 
-- Treat median AI output as scaffolding; name concrete failures.
-- Harden happy paths: empty/error/loading, auth, focus, reduced motion, stable identity, real validation.
-- Remove demo-only shortcuts before calling it done.
-
-## Conflict rules
-
-When skills disagree, resolve in this order:
-
-1. **Intent** beats decoration (`subtractive-design` / write-first rationale).
-2. **Correct semantics & accessibility** beat visual convenience.
-3. **Feel** (`fluid-design`) decides how interaction should behave; **platform** (`modern-css-html`) picks native implementation; JS/Motion/SwiftUI only when CSS cannot express interruption, velocity, or gesture continuity.
-4. **Production trust** beats prototype cleverness.
-
-## Output format
-
-Deliver a single report:
+## Report
 
 ```markdown
-# dxe pass — [repo or scope]
+# dxe pass — [scope]
 
 ## Hypothesis
-We believe [change] will produce [outcome] because [reason].
+## Evidence collected
+## Verified strengths
+- [skill or core] path/surface — what should be preserved
 
 ## Findings
 ### Critical
-- [skill] path — issue — fix
-
+- [confidence] [skill or core] path/surface — issue — bounded fix
 ### Should fix
-- …
-
 ### Nice to have
-- …
 
-## Cuts (subtractive)
-- …
-
+## Cuts
 ## Proposed changes
-1. …
+## Verification status
+## Limits and unresolved observations
 ```
 
-Quote exact snippets for violations. Tie each finding to a skill name. Prefer system tokens and existing primitives in fixes.
+Verified strengths are evidence, not consolation: record systems that work and should survive later changes. An empty severity section is acceptable. Findings should never be failure quotas.
 
-## Prefer / Reject
+## Verification recipe
 
-| Prefer | Reject |
-| --- | --- |
-| Reading every sibling `SKILL.md` then acting | One mega-prompt of vague taste |
-| Phase-ordered pass with a checklist | Random drive-by nits |
-| Specific, path-anchored findings | "Make it nicer" |
-| Scoped edits that match stack materials | Rewrites that ignore the design system |
-| Review-only unless asked to fix | Silent mass refactors |
+When tools and repository scripts permit:
+
+1. Run the existing typecheck, tests, and production build.
+2. Render one desktop and one compact viewport.
+3. Check horizontal overflow and primary headings.
+4. Record the first meaningful keyboard focus sequence.
+5. Exercise one menu/dialog; verify exposed state and focus return.
+6. Repeat one motion-bearing task with reduced motion.
+7. Classify logs by browser, server, expected local dependency, and framework/tooling source.
+8. In fix mode, repeat affected checks and report exact results.
+
+Never mutate production or external systems as part of a review.
 
 ## Done when
 
-- [ ] Every phase checklist above was considered
-- [ ] Findings reference skills by name
-- [ ] Critical a11y/semantics/production gaps are called out or fixed
-- [ ] Subtractive cuts are explicit
-- [ ] Remaining work is ordered by severity
+- Scope, hypothesis, non-goals, sampling, and limits are explicit.
+- Every phase was considered; only triggered sibling skills were loaded.
+- Claims are tied to evidence, severity, confidence, and a path or surface.
+- Confirmed product defects are separated from tooling noise and suspicions.
+- Existing strengths and subtractive cuts are recorded when warranted.
+- Fixes, when authorized, are bounded and verified in proportion to risk.

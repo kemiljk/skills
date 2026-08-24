@@ -59,9 +59,9 @@ npx skills add kemiljk/skills -g -a cursor -a claude-code --all
 
 ## Master skill: `dxe`
 
-`dxe` is the orchestrator — paired with [d×e](https://designengineer.xyz). One short name; one full-suite design-engineering pass on a repository or scoped path.
+`dxe` is the orchestrator — paired with [d×e](https://designengineer.xyz). It starts with a compact shared rubric, gathers repository and rendered evidence, then loads specialist sibling skills only when the target warrants them.
 
-**Prerequisite:** install the full collection (`-g --all` above). `dxe` reads each sibling `SKILL.md` and will stop if any are missing.
+Install the full collection (`-g --all` above) for every specialist lens. A normal pass can still proceed with the shared rubric when an unneeded sibling is absent; `dxe exhaustive` requires the full collection.
 
 ### How to invoke
 
@@ -70,9 +70,12 @@ In Cursor / Claude Code (or any agent that has the skills installed), ask for a 
 | Prompt | Behaviour |
 | --- | --- |
 | `dxe` / “run a dxe pass” | Full workspace review; propose fixes |
+| `dxe quick` | Compact review of one representative surface |
 | `dxe src/components` | Scope to that path |
 | `dxe review` | Findings only; no edits |
 | `dxe fix` | Findings, then high-confidence fixes |
+| `dxe exhaustive` | Load the full suite and inspect every available surface |
+| “apply all skills” | Alias for `dxe exhaustive` |
 
 ### What it runs
 
@@ -89,7 +92,7 @@ Phases in order:
 5. **Shipping** — `ai-output-judgement`, `prototype-to-production`  
    Name concrete AI-median failures; harden empty/error/auth/focus paths.
 
-You get a single report: hypothesis, findings by severity (tied to skill names), subtractive cuts, and ordered next actions.
+Every phase is considered, but sibling skills are loaded progressively from evidence rather than up front. You get a single report with the hypothesis, evidence, verified strengths, confidence-tagged findings, subtractive cuts, verification status, and explicit limits.
 
 Use individual skills when you want a narrow lens. Use `dxe` when you want the full design-engineering pass on a repo.
 

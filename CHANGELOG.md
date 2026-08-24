@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Reworked `dxe` around a compact shared rubric and progressive sibling-skill loading.
+- Added quick, review, fix, and exhaustive depth modes plus a reproducible evidence matrix.
+- Added verified strengths, severity/confidence rules, bounded surface sampling, and explicit tooling-noise classification.
+
 ## 2026-08-07
 
 - Added `dxe` master skill: one design-engineering pass applies the full suite to a repo in precedence order
