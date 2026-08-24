@@ -61,7 +61,7 @@ Write a short hypothesis and non-goals, then collect the minimum evidence approp
 | Desktop | Rendered layout, overflow, primary heading, first meaningful keyboard sequence |
 | Compact | Rendered layout, overflow, menu/dialog behaviour, touch affordances |
 | Accessibility | Names, roles, states, focus/return, reduced motion |
-| Production | Loading/error/empty behaviour, metadata, browser and server logs |
+| Production | Loading/error/empty behaviour, metadata, browser `console.error` and uncaught `pageerror` events, and server logs |
 | Confidence | `confirmed-rendered`, `confirmed-source`, `likely`, `unverified`, or `environment-only` |
 
 Do not claim a rendered defect from source inspection alone. If rendering or a check is unavailable, label the limit instead of guessing.
@@ -74,6 +74,8 @@ Separate observations into:
 4. unverified suspicions.
 
 Reproduce a user-facing failure before promoting tooling noise to a product finding. Distinguish browser errors, server errors, expected local-service failures, and framework/tooling warnings.
+
+For checks that trigger a state change, wait for an observable settled condition before recording state. Prefer the target ARIA/DOM value, focus destination, transition completion, or animation settlement over an arbitrary delay. Do not report the immediate post-action sample as final evidence when rendering or animation is still in flight.
 
 ## Compact cross-phase pass
 
@@ -167,9 +169,9 @@ When tools and repository scripts permit:
 2. Render one desktop and one compact viewport.
 3. Check horizontal overflow and primary headings.
 4. Record the first meaningful keyboard focus sequence.
-5. Exercise one menu/dialog; verify exposed state and focus return.
-6. Repeat one motion-bearing task with reduced motion.
-7. Classify logs by browser, server, expected local dependency, and framework/tooling source.
+5. Exercise one menu/dialog; wait for its state transition, then verify exposed state and focus return.
+6. Repeat one motion-bearing task with reduced motion; wait for settlement before recording animation state or counts.
+7. Capture browser `console.error` and uncaught `pageerror` events, then classify logs by browser, server, expected local dependency, and framework/tooling source.
 8. In fix mode, repeat affected checks and report exact results.
 
 Never mutate production or external systems as part of a review.

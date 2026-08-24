@@ -5,6 +5,7 @@
 - Reworked `dxe` around a compact shared rubric and progressive sibling-skill loading.
 - Added quick, review, fix, and exhaustive depth modes plus a reproducible evidence matrix.
 - Added verified strengths, severity/confidence rules, bounded surface sampling, and explicit tooling-noise classification.
+- Required both browser `console.error` and uncaught `pageerror` capture, with settled-state sampling for ARIA and animation checks.
 
 ## 2026-08-07
 

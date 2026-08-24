@@ -21,6 +21,8 @@ Use these invariants for every `dxe` pass. Sibling skills deepen a triggered len
 - A prototype demonstrates a path; it does not establish production readiness.
 - Remove decoration, duplication, and generated residue only when the product becomes clearer or more trustworthy.
 - Never infer a user-facing defect solely from framework warnings, stale servers, missing local services, or test-runner noise.
+- Capture browser `console.error` output as well as uncaught `pageerror` events; neither channel alone is a complete browser-error check.
+- After an action, wait for an observable state transition or animation to settle before recording ARIA values, focus, DOM state, or animation counts. Treat an immediate in-flight sample as provisional.
 
 ## Evidence discipline
 
