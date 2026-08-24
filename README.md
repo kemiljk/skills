@@ -83,8 +83,8 @@ Phases in order:
 
 1. **Intent** — `write-first-design`, `subtractive-design`  
    Hypothesis for the pass; cut unexplained chrome and generative residue.
-2. **Platform** — `semantic-html-first`, `modern-css-html`  
-   Native elements and modern CSS/HTML before ARIA theatre or JS hacks.
+2. **Platform** — web: `semantic-html-first`, `modern-css-html`; native: `apple-native-ui`, `android-native-ui`
+   Native controls and platform semantics before custom reconstructions.
 3. **Feel** — `fluid-design`, `interface-affordances`, `product-delight`  
    Interruptible motion, discoverable controls, care over novelty.
 4. **Bridge** — `design-engineering`  
@@ -104,6 +104,8 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | `fluid-design` | Interfaces need physical motion, gestures, layout continuity |
 | `modern-css-html` | Writing/reviewing CSS & HTML with current platform features |
 | `semantic-html-first` | Building controls, forms, disclosure, dialogs |
+| `apple-native-ui` | SwiftUI, UIKit, AppKit, and Apple-platform UI review/build work |
+| `android-native-ui` | Kotlin, Jetpack Compose, Android Views, and Compose Multiplatform UI work |
 | `interface-affordances` | Discoverability and perceptible interaction cues matter |
 | `write-first-design` | Decisions should be written before pixels or code |
 | `design-engineering` | Bridging design intent and production implementation |
@@ -117,7 +119,7 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 Skills overlap on purpose. Use this order when several activate — or invoke `dxe` to run them as one pass:
 
 1. **Intent** — `write-first-design`, `subtractive-design`
-2. **Platform** — `semantic-html-first`, `modern-css-html`
+2. **Platform** — web: `semantic-html-first`, `modern-css-html`; native: `apple-native-ui`, `android-native-ui`
 3. **Feel** — `fluid-design`, `interface-affordances`, `product-delight`
 4. **Bridge** — `design-engineering`
 5. **Shipping** — `ai-output-judgement`, `prototype-to-production`

@@ -6,6 +6,8 @@
 - Added quick, review, fix, and exhaustive depth modes plus a reproducible evidence matrix.
 - Added verified strengths, severity/confidence rules, bounded surface sampling, and explicit tooling-noise classification.
 - Required both browser `console.error` and uncaught `pageerror` capture, with settled-state sampling for ARIA and animation checks.
+- Added first-party Apple native UI and Android/Compose UI skills, plus platform-specific DXE routing and verification lanes.
+- Require native skills to consult current primary platform documentation for release-sensitive guidance.
 
 ## 2026-08-07
 

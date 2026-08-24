@@ -13,7 +13,7 @@ Use these invariants for every `dxe` pass. Sibling skills deepen a triggered len
 
 - Base judgement on source and rendered evidence appropriate to the claim.
 - Preserve working systems and name verified strengths; do not create findings to fill a phase.
-- Prefer native HTML before custom controls and ARIA reconstruction.
+- Prefer the platform's native controls and accessibility semantics before custom reconstructions.
 - Prefer semantic tokens and existing primitives before one-off values or parallel systems.
 - Treat keyboard, touch, fine-pointer, and assistive-technology behaviour as one interaction contract.
 - Motion must preserve task completion under reduced motion. Avoid broad transitions that animate unrelated properties.
@@ -21,7 +21,7 @@ Use these invariants for every `dxe` pass. Sibling skills deepen a triggered len
 - A prototype demonstrates a path; it does not establish production readiness.
 - Remove decoration, duplication, and generated residue only when the product becomes clearer or more trustworthy.
 - Never infer a user-facing defect solely from framework warnings, stale servers, missing local services, or test-runner noise.
-- Capture browser `console.error` output as well as uncaught `pageerror` events; neither channel alone is a complete browser-error check.
+- On web, capture browser `console.error` output as well as uncaught `pageerror` events; neither channel alone is a complete browser-error check. On native platforms, capture the equivalent runtime diagnostics and accessibility tree/semantics evidence.
 - After an action, wait for an observable state transition or animation to settle before recording ARIA values, focus, DOM state, or animation counts. Treat an immediate in-flight sample as provisional.
 
 ## Evidence discipline
