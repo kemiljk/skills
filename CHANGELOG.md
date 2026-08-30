@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added a behaviour-first macOS lane to `apple-native-ui` covering app shape, affordance maps, commands, windows/documents, pasteboard and drag/drop, state restoration, interoperability, and Mac-specific QA.
 - Reworked `dxe` around a compact shared rubric and progressive sibling-skill loading.
 - Added quick, review, fix, and exhaustive depth modes plus a reproducible evidence matrix.
 - Added verified strengths, severity/confidence rules, bounded surface sampling, and explicit tooling-noise classification.

@@ -104,7 +104,7 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | `fluid-design` | Interfaces need physical motion, gestures, layout continuity |
 | `modern-css-html` | Writing/reviewing CSS & HTML with current platform features |
 | `semantic-html-first` | Building controls, forms, disclosure, dialogs |
-| `apple-native-ui` | SwiftUI, UIKit, AppKit, and Apple-platform UI review/build work |
+| `apple-native-ui` | SwiftUI, UIKit, AppKit, and Apple-platform UI work, with a dedicated behaviour-first macOS workflow |
 | `android-native-ui` | Kotlin, Jetpack Compose, Android Views, and Compose Multiplatform UI work |
 | `interface-affordances` | Discoverability and perceptible interaction cues matter |
 | `write-first-design` | Decisions should be written before pixels or code |

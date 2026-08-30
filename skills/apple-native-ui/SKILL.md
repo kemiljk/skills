@@ -3,7 +3,8 @@ name: apple-native-ui
 description: >
   Review or build native Apple UI in SwiftUI, UIKit, or AppKit. Use for iOS, iPadOS,
   macOS, watchOS, tvOS, or visionOS interfaces, especially when accessibility, adaptive
-  layout, state ownership, navigation, system controls, motion, or release verification matter.
+  layout, state ownership, navigation, system controls, motion, macOS command/window/document
+  behaviour, or release verification matter.
 license: MIT
 ---
 
@@ -20,6 +21,12 @@ Prefer system controls, semantic colors, text styles, safe-area APIs, navigation
 ## Fresh platform guidance
 
 Before prescribing or implementing APIs, behaviour, design conventions, or verification that may vary by SDK or OS release, search current primary Apple sources: Apple Developer Documentation, Human Interface Guidelines, and relevant WWDC sessions. Check the project's deployment target before recommending a newer API, and distinguish current Apple guidance from repository-local compatibility constraints. The examples here express durable contracts; they are not a substitute for release-specific documentation.
+
+## macOS workflow
+
+When macOS is an intended target, read [references/macos-native-workflows.md](references/macos-native-workflows.md) before planning, building, porting, or reviewing a non-trivial interface. It adds a Mac-specific workflow for commands, windows and documents, selection and focus, pasteboard and drag/drop, undo, state restoration, configuration, Finder interoperability, and behaviour-led verification.
+
+Treat a Mac version as a distinct workflow even when it shares models or views with iPadOS. A resizable iPad layout is not by itself a complete Mac app.
 
 ## State and identity
 

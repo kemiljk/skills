@@ -26,7 +26,7 @@ For tests that query accessibility state, wait for the native element or visible
 ## Platform reminders
 
 - iOS/iPadOS: keyboard avoidance, safe areas, rotation, split view, pointer, and state restoration.
-- macOS: window resizing, menus, commands, toolbar placement, keyboard equivalents, and multi-window state.
+- macOS: window resizing, menu and command validation, toolbar placement, keyboard-only workflows, selection, copy/paste, drag/drop, undo, Finder/open-save integration, and multi-window state restoration across relaunch. Use the behaviour probes in [macos-native-workflows.md](macos-native-workflows.md).
 - watchOS/tvOS/visionOS: the platform's focus, navigation, input, and power constraints are primary contracts.
 
 `#Preview` is useful local evidence, but it does not replace accessibility or device/runtime verification.
