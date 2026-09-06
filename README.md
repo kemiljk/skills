@@ -6,62 +6,32 @@ Install selectively. Compose deliberately. Or run the full suite with `dxe`.
 
 ## Install
 
-### Global (recommended)
+### Selective (recommended)
 
-Install the full collection once, available in every project:
+List the available skills, then install the workflows you need:
+
+```bash
+npx skills add kemiljk/skills --list
+npx skills add kemiljk/skills -g --skill fluid-design --skill modern-css-html
+```
+
+Omit `-g` for a project-local installation. Choose the appropriate agents with `-a`, and keep one discoverable copy per skill in each host. Cross-host links to the same source are useful; duplicate entries in one host are not.
+
+### Full collection
+
+Install the full collection when you want every specialist available, including exhaustive DXE passes:
 
 ```bash
 npx skills add kemiljk/skills -g --all
 ```
 
-That installs every skill (including the `dxe` master pass) to all detected agents. Verify with:
-
-```bash
-npx skills ls -g
-```
-
-Update later with:
-
-```bash
-npx skills update -g
-```
-
-### Project
-
-Share skills with a repo/team (committed into the project):
-
-```bash
-npx skills add kemiljk/skills --all
-```
-
-### Selective
-
-List what’s in the package:
-
-```bash
-npx skills add kemiljk/skills --list
-```
-
-Install only what you need (add `-g` for global):
-
-```bash
-npx skills add kemiljk/skills -g \
-  --skill fluid-design \
-  --skill modern-css-html \
-  --skill ai-output-judgement
-```
-
-Target specific agents:
-
-```bash
-npx skills add kemiljk/skills -g -a cursor -a claude-code --all
-```
+Verify installed skills with `npx skills ls -g`. Update with `npx skills update -g`.
 
 ## Master skill: `dxe`
 
 `dxe` is the orchestrator — paired with [d×e](https://designengineer.xyz). It starts with a compact shared rubric, gathers repository and rendered evidence, then loads specialist sibling skills only when the target warrants them.
 
-Install the full collection (`-g --all` above) for every specialist lens. A normal pass can still proceed with the shared rubric when an unneeded sibling is absent; `dxe exhaustive` requires the full collection.
+Install the full collection (`-g --all` above) when you need every specialist lens. A normal pass can still proceed with the shared rubric when an unneeded sibling is absent; `dxe exhaustive` requires the full collection.
 
 ### How to invoke
 
@@ -102,12 +72,12 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | --- | --- |
 | `dxe` | **Master pass** — full design-engineering suite on a repo or path |
 | `fluid-design` | Interfaces need physical motion, gestures, layout continuity |
-| `modern-css-html` | Writing/reviewing CSS & HTML with current platform features |
+| `modern-css-html` | Choosing native features, checking support, or replacing legacy workarounds |
 | `semantic-html-first` | Building controls, forms, disclosure, dialogs |
 | `apple-native-ui` | SwiftUI, UIKit, AppKit, and Apple-platform UI work, with a dedicated behaviour-first macOS workflow |
 | `android-native-ui` | Kotlin, Jetpack Compose, Android Views, and Compose Multiplatform UI work |
 | `interface-affordances` | Discoverability and perceptible interaction cues matter |
-| `write-first-design` | Decisions should be written before pixels or code |
+| `write-first-design` | Substantial product decisions need clarification before implementation |
 | `design-engineering` | Bridging design intent and production implementation |
 | `product-delight` | Adding polish without confusing novelty for care |
 | `subtractive-design` | Removing noise and requiring purpose |
@@ -116,7 +86,7 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 
 ## Composition / precedence
 
-Skills overlap on purpose. Use this order when several activate — or invoke `dxe` to run them as one pass:
+Select skills for the task, not merely because their subject appears in a file. For a requested broad pass, `dxe` considers these lenses and loads only relevant guidance:
 
 1. **Intent** — `write-first-design`, `subtractive-design`
 2. **Platform** — web: `semantic-html-first`, `modern-css-html`; native: `apple-native-ui`, `android-native-ui`
@@ -158,7 +128,7 @@ Each skill should stay:
 
 - trigger-precise in frontmatter `description`
 - compact in activated `SKILL.md`
-- actionable via prefer/reject rules and checklists
+- focused on useful decisions and project constraints, without mandatory process for routine edits
 - progressively disclosed when examples are long enough for `references/`
 
 ## License

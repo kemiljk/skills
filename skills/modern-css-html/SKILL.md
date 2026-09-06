@@ -1,10 +1,6 @@
 ---
 name: modern-css-html
-description: >
-  Modern CSS and HTML standards guidance. Use whenever writing or reviewing CSS/HTML:
-  layout, colour, typography, animation, forms, dialogs, selectors, responsive design,
-  or replacing JS/CSS hacks with native platform features. Also trigger for browser
-  support questions and progressive-enhancement decisions targeting WebKit and Blink.
+description: "Choose native CSS and HTML features, assess browser support, or replace legacy workarounds with progressive enhancement."
 license: MIT
 ---
 
@@ -69,5 +65,6 @@ Do not hardcode volatile global percentage figures in recommendations. Re-check 
 
 ## References
 
-- [Task recipes](references/recipes.md)
-- [Feature notes](references/features.md)
+- Read [Task recipes](references/recipes.md) when implementing a matching pattern.
+- Read [Feature notes](references/features.md) when choosing a feature or fallback.
+Load only the reference relevant to the current decision.

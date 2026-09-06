@@ -1,9 +1,6 @@
 ---
 name: subtractive-design
-description: >
-  Use when interfaces feel noisy, over-decorated, cognitively heavy, or when a
-  feature/request defaults to adding more UI. Trigger for decluttering, simplification,
-  reducing settings, tightening hierarchy, and requiring every element to earn its place.
+description: "Simplify noisy interfaces and evaluate whether proposed UI additions serve a concrete user need."
 license: MIT
 ---
 

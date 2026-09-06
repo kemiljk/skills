@@ -1,10 +1,6 @@
 ---
 name: design-engineering
-description: >
-  Use when bridging design and engineering: translating Figma/intent into code,
-  building design-system components, prototyping to learn, or reviewing work that
-  sits between visual design and production software. Trigger for handshake-style
-  collaboration, avoiding handoffs, and mapping design structures to code structures.
+description: "Translate design intent into production components or improve collaboration between design and engineering."
 license: MIT
 ---
 

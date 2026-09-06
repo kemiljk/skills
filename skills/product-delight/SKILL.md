@@ -1,9 +1,6 @@
 ---
 name: product-delight
-description: >
-  Use when asked to add delight, polish, "make it pop", micro-interactions, or
-  memorable product moments. Trigger for reviewing motion or novelty that may be
-  decorative, excessive, or disconnected from anticipation and reliability.
+description: "Improve product care, anticipation, and useful feedback when the user asks for delight or polish."
 license: MIT
 ---
 
@@ -26,7 +23,7 @@ Delight is anticipation, reliability, and care. Animation can support those qual
 
 ## Defaults
 
-- Ask what need is being anticipated before adding motion.
+- Identify the user need before adding motion; infer it from the task and ask only if the missing context changes the design.
 - Invest first in reliability, latency, empty states, and clarity.
 - Use motion to explain cause and effect, not to decorate.
 - Remove novelty that competes with the task.

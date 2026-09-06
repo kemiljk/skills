@@ -1,10 +1,6 @@
 ---
 name: dxe
-description: >
-  Run a phase-ordered design-engineering review or hardening pass on a repository
-  or UI surface. Use for dxe, DXE, design-eng passes, "apply all skills," repo-wide
-  interface reviews, or ship-ready UI hardening with Karl Koch design taste. Defaults
-  to a non-mutating evidence-based review and loads specialist sibling skills progressively.
+description: "Review a repository or UI surface for design engineering quality. Use for a DXE pass or broad interface review; fix only when requested and load specialist guidance from evidence."
 license: MIT
 ---
 
@@ -120,7 +116,7 @@ Consider every phase, but do not manufacture a finding for each one.
 
 ## Progressive sibling routing
 
-Load a sibling `SKILL.md` only when the materials map, initial evidence, or requested depth triggers it. Collection siblings are installed adjacent to this skill, so first resolve `../<skill-name>/SKILL.md` before treating a lens as unavailable. If the file exists but an already-running agent's discovery registry does not list it, disclose a discovery-refresh limit and ask for a new session; do not describe the collection update as missing or failed. Only after both checks fail should the pass continue with the shared rubric, disclose the missing lens, and avoid inventing its detailed guidance.
+Load a sibling `SKILL.md` only when the materials map, initial evidence, or requested depth triggers it. Collection siblings are installed adjacent to this skill, so first resolve `../<skill-name>/SKILL.md` before treating a lens as unavailable. If a sibling exists and is readable, use its content even when this session’s discovery registry omits it. A registry refresh is needed only to expose it as a separately invocable skill, not to continue the current pass. If neither discovery nor the adjacent path provides a readable skill, continue with the shared rubric, disclose the missing lens, and avoid inventing its detailed guidance.
 
 | Trigger | Read |
 | --- | --- |

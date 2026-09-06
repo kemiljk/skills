@@ -1,12 +1,6 @@
 ---
 name: fluid-design
-description: >
-  Use whenever building interfaces that should feel physically responsive and polished.
-  Trigger for springs, gestures, interruptible animation, physics-based motion, drag,
-  momentum, layout animation, shared-element transitions, spatial UI, micro-interactions,
-  or requests to make UI feel alive, snappy, smooth, natural, or less static. Also trigger
-  for interactive components (drawers, sheets, carousels, modals, accordions, reorderable
-  lists) without specified motion.
+description: "Design or refine springs, gestures, and interruptible motion when physical continuity or direct manipulation matters."
 license: MIT
 ---
 
@@ -29,7 +23,7 @@ Make interfaces feel like continuous physical systems, not discontinuous state f
 4. Preserve velocity across gesture boundaries (release → settle/dismiss).
 5. Keep shared identity across state/route changes when the same object survives.
 6. Adapt interaction models to input method (mouse, trackpad, touch, keyboard).
-7. Animate layout with FLIP / `layout` / View Transitions — never `top`/`left`/`height`/`margin`.
+7. Prefer FLIP, layout animation, or View Transitions for spatial continuity. Use direct layout-property animation only when appropriate to the component and its measured rendering cost.
 8. Add progressive resistance at edges and rubber-banding at boundaries.
 9. Sequence choreography: acted object leads, surroundings yield, then settle.
 10. Provide a reduced-motion path that preserves affordances with safer alternatives.
@@ -39,7 +33,7 @@ Make interfaces feel like continuous physical systems, not discontinuous state f
 | Prefer | Reject |
 | --- | --- |
 | `type: "spring"` for interactive motion | `transition: all` |
-| CSS `transition` for colour/opacity | Animating layout properties |
+| CSS `transition` for colour/opacity | Expensive layout animation without a reason or performance check |
 | Alternate reduced-motion layouts | `animation: none !important` as the only a11y plan |
 | Velocity-aware hover gating on dense surfaces | Debounced hover that feels dead, or ungated strobing |
 | Transform + opacity | Long locked keyframe sequences users must wait out |
@@ -70,5 +64,6 @@ Make interfaces feel like continuous physical systems, not discontinuous state f
 
 ## References
 
-- [Motion recipes](references/motion-recipes.md)
-- [Principle notes](references/principles.md)
+- Read [Motion recipes](references/motion-recipes.md) for a matching gesture or transition implementation.
+- Read [Principle notes](references/principles.md) when deciding how continuity should behave.
+Load only the reference needed for the task.

@@ -1,9 +1,6 @@
 ---
 name: prototype-to-production
-description: >
-  Use when turning vibe-coded demos, prototypes, or happy-path AI builds into
-  production software. Trigger for shipping checklists, hardening passes, auth/a11y
-  gaps, state edge cases, performance, and maintainability reviews after a fast prototype.
+description: "Harden an existing prototype for real use, including failure states, accessibility, security boundaries, and maintainability."
 license: MIT
 ---
 

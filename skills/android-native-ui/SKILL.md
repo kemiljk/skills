@@ -1,9 +1,6 @@
 ---
 name: android-native-ui
-description: >
-  Review or build native Android UI in Kotlin, Jetpack Compose, or Android Views.
-  Use for Material 3, adaptive layouts, Compose state and effects, accessibility semantics,
-  navigation, performance, emulator/device verification, or Compose Multiplatform boundaries.
+description: "Build or review Android interfaces in Compose or Views, including Material conventions, accessibility, adaptive layout, and state."
 license: MIT
 ---
 

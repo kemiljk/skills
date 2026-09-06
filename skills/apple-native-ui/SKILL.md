@@ -1,10 +1,6 @@
 ---
 name: apple-native-ui
-description: >
-  Review or build native Apple UI in SwiftUI, UIKit, or AppKit. Use for iOS, iPadOS,
-  macOS, watchOS, tvOS, or visionOS interfaces, especially when accessibility, adaptive
-  layout, state ownership, navigation, system controls, motion, macOS command/window/document
-  behaviour, or release verification matter.
+description: "Build or review native Apple interfaces, including platform controls, accessibility, state, navigation, and macOS window behavior."
 license: MIT
 ---
 

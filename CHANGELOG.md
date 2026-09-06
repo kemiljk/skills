@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Narrow skill descriptions to their task boundaries and recommend selective installation.
+- Make write-first design conditional on unresolved product decisions; preserve clear briefs and existing authorization.
+- Let DXE use readable sibling skills without requiring a discovery refresh or a new session.
+- Load CSS and motion references only when relevant, and keep motion choices proportional to the interaction.
+- Clarify that product-delight context can be inferred without a mandatory question.
+
 - Added a behaviour-first macOS lane to `apple-native-ui` covering app shape, affordance maps, commands, windows/documents, pasteboard and drag/drop, state restoration, interoperability, and Mac-specific QA.
 - Reworked `dxe` around a compact shared rubric and progressive sibling-skill loading.
 - Added quick, review, fix, and exhaustive depth modes plus a reproducible evidence matrix.

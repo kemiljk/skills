@@ -1,10 +1,6 @@
 ---
 name: interface-affordances
-description: >
-  Use when designing or reviewing controls, interactive surfaces, empty states,
-  or any UI where users must understand what they can do. Trigger for affordance
-  issues, discoverability problems, hover-only features, weak hit targets, or
-  mismatched visual cues versus actual behaviour.
+description: "Fix unclear interaction cues, hidden actions, weak hit targets, or mismatches between a control’s appearance and behavior."
 license: MIT
 ---
 

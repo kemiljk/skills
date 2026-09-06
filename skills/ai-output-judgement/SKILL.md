@@ -1,9 +1,6 @@
 ---
 name: ai-output-judgement
-description: >
-  Use when reviewing or refining AI-generated UI, code, copy, or design-system
-  output. Trigger for Cursor/Claude drafts, vibe-coded components, "looks fine"
-  previews, and any request to raise quality above the median internet default.
+description: "Critique generated UI, copy, or code when the user requests a quality review of AI output."
 license: MIT
 ---
 

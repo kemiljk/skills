@@ -1,10 +1,6 @@
 ---
 name: semantic-html-first
-description: >
-  Use when building or reviewing UI controls, forms, disclosure, dialogs, menus,
-  or any interactive component. Prefer native HTML semantics and platform behaviour
-  over div+ARIA reconstructions. Trigger for accessibility reviews, design-system
-  primitives, and AI-generated markup that looks interactive but uses non-semantic elements.
+description: "Choose HTML semantics and accessible behavior for controls, forms, and custom interaction primitives."
 license: MIT
 ---
 
