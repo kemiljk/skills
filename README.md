@@ -4,6 +4,10 @@ Personal agent skills distilled from [Karl Koch](https://karlkoch.me)'s writing 
 
 Install selectively. Compose deliberately. Or run the full suite with `dxe`.
 
+## Figma Design and Make
+
+The [Figma editions](figma/skills/) are self-contained skills adapted to Figma Design and Make. Commands retain their original names, including `/dxe` and `/fluid-design`.
+
 ## Install
 
 ### Selective (recommended)

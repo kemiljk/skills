@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add 13 standalone Figma Design and Make editions with original command names and a packaging validator.
+
 - Narrow skill descriptions to their task boundaries and recommend selective installation.
 - Make write-first design conditional on unresolved product decisions; preserve clear briefs and existing authorization.
 - Let DXE use readable sibling skills without requiring a discovery refresh or a new session.
