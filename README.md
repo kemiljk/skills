@@ -1,6 +1,6 @@
 # kemiljk/skills
 
-Personal agent skills distilled from [Karl Koch](https://karlkoch.me)'s writing on design engineering, fluid interfaces, semantic HTML, and AI judgement.
+Personal agent skills distilled from [Karl Koch](https://karlkoch.me)'s writing on design engineering, fluid interfaces, semantic HTML, and AI judgement, with researched design traditions translated into practical UI and UX guidance.
 
 Install selectively. Compose deliberately. Or run the full suite with `dxe`.
 
@@ -85,14 +85,18 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | `design-engineering` | Bridging design intent and production implementation |
 | `product-delight` | Adding polish without confusing novelty for care |
 | `subtractive-design` | Removing noise and requiring purpose |
+| `humane-functionalism` | Applying Danish functionalism to UI structure, perception, human fit, everyday use, and craft |
 | `ai-output-judgement` | Reviewing generated drafts before shipping |
 | `prototype-to-production` | Hardening happy-path prototypes for real use |
 
 ## Composition / precedence
 
+For a focused functionalist pass, ask “Use `humane-functionalism` to improve this flow.” It balances reduction with discoverability, useful density, accessibility, and product character. Its [research notes](skills/humane-functionalism/references/research.md) distinguish historical sources from contemporary UI applications.
+
 Select skills for the task, not merely because their subject appears in a file. For a requested broad pass, `dxe` considers these lenses and loads only relevant guidance:
 
 1. **Intent** — `write-first-design`, `subtractive-design`
+   Add `humane-functionalism` when a Danish functionalist lens is requested.
 2. **Platform** — web: `semantic-html-first`, `modern-css-html`; native: `apple-native-ui`, `android-native-ui`
 3. **Feel** — `fluid-design`, `interface-affordances`, `product-delight`
 4. **Bridge** — `design-engineering`

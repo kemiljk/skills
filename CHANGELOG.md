@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add `humane-functionalism`: researched UI/UX guidance grounded in Danish functionalism and related Danish Modern craft, source notes, a standalone Figma edition, and DXE routing.
+
 - Add 13 standalone Figma Design and Make editions with original command names and a packaging validator.
 
 - Narrow skill descriptions to their task boundaries and recommend selective installation.

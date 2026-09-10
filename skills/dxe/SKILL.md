@@ -122,6 +122,7 @@ Load a sibling `SKILL.md` only when the materials map, initial evidence, or requ
 | --- | --- |
 | Product intent is unclear or decisions need rationale | `write-first-design` |
 | Decorative, redundant, or cognitively heavy UI | `subtractive-design` |
+| A Danish functionalist design lens is requested | `humane-functionalism` |
 | Web forms, menus, dialogs, custom controls, or semantic failures | `semantic-html-first` |
 | Web responsive layout or CSS/HTML implementation questions | `modern-css-html` |
 | SwiftUI, UIKit, AppKit, Xcode, or Apple-platform UI | `apple-native-ui` |
@@ -133,7 +134,7 @@ Load a sibling `SKILL.md` only when the materials map, initial evidence, or requ
 | Template-like or AI-generated residue needs judgement | `ai-output-judgement` |
 | Auth, validation, state, resilience, or release concerns | `prototype-to-production` |
 
-`dxe exhaustive` is the only mode that requires reading all ten sibling skills.
+`dxe exhaustive` is the only mode that requires reading every sibling skill in the routing table.
 
 ## Severity and confidence
 
