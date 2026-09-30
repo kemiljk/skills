@@ -75,6 +75,7 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | Skill | Use when |
 | --- | --- |
 | `dxe` | **Master pass** — full design-engineering suite on a repo or path |
+| `hiring-manager-bar` | Review a job-seeking portfolio and recommend prioritized site code and content changes |
 | `fluid-design` | Interfaces need physical motion, gestures, layout continuity |
 | `modern-css-html` | Choosing native features, checking support, or replacing legacy workarounds |
 | `semantic-html-first` | Building controls, forms, disclosure, dialogs |
@@ -129,6 +130,7 @@ These skills compress lessons from essays such as:
 - [Beauty comes from absence](https://karlkoch.me/writing/beauty-comes-from-absence)
 - [Design for handshakes, not handovers](https://karlkoch.me/writing/design-for-handshakes-not-handovers)
 - [On teaching AI how you work](https://karlkoch.me/writing/on-teaching-ai-how-you-work)
+- [The hiring manager is your user](https://karlkoch.me/writing/the-hiring-manager-is-your-user/)
 
 ## Validation
 
