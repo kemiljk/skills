@@ -37,6 +37,8 @@ Default to review with findings in chat and no canvas or code edits. A request t
 
 Choose depth from observed problems. Do not force a finding in each phase or redesign working patterns to match personal taste.
 
+When behaviour is unresolved, record the trigger, state change, persistence, interruption, and recovery promises. When a shared pattern needs to change, inspect contrasting consumers and account for existing instances or API compatibility. For repeated tasks, inspect retained context and the ordinary as well as faster path. Use representative content to expose structural decisions that uniform placeholders conceal. Apply these lenses only where the scoped work warrants them.
+
 ## Report and act
 
 Give a compact report with scope, primary task, evidence inspected, strengths to preserve, prioritized findings, useful cuts, and verification limits.

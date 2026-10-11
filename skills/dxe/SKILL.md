@@ -131,6 +131,10 @@ Load a sibling `SKILL.md` only when the materials map, initial evidence, or requ
 | Weak discoverability, hover-only actions, or input mismatch | `interface-affordances` |
 | A specific opportunity for useful polish | `product-delight` |
 | Design/code structure or token translation is breaking down | `design-engineering` |
+| Consequential interaction behaviour is unspecified or inconsistent | `interaction-contracts` |
+| A shared component or token model needs a compatibility or migration decision | `design-system-evolution` |
+| Recurring setup, waiting, or interruption makes repeated work costly | `design-for-repetition` |
+| Placeholder or uniform content obscures hierarchy or layout decisions | `real-content-design` |
 | Template-like or AI-generated residue needs judgement | `ai-output-judgement` |
 | Auth, validation, state, resilience, or release concerns | `prototype-to-production` |
 

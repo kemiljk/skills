@@ -84,6 +84,10 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | `interface-affordances` | Discoverability and perceptible interaction cues matter |
 | `write-first-design` | Substantial product decisions need clarification before implementation |
 | `design-engineering` | Bridging design intent and production implementation |
+| `interaction-contracts` | Resolving the behaviour a component or flow promises, including interruption, persistence, and recovery |
+| `design-system-evolution` | Choosing bounded component, variant, API, or token changes and planning compatibility and migration |
+| `design-for-repetition` | Reducing recurring effort while preserving discoverability, context, and safe recovery |
+| `real-content-design` | Using representative content to shape hierarchy, comparison, layout, and component structure |
 | `intentional-craft` | Developing design and engineering ideas through human intention, focused scope, and evidence of craft, inspired by Apple's *Intention* film |
 | `product-delight` | Adding polish without confusing novelty for care |
 | `subtractive-design` | Removing noise and requiring purpose |
@@ -92,6 +96,8 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | `prototype-to-production` | Hardening happy-path prototypes for real use |
 
 ## Composition / precedence
+
+Use `interaction-contracts` when behaviour is unresolved, `design-system-evolution` when a shared model needs to change, `design-for-repetition` when a task's cost accumulates, and `real-content-design` when placeholder content is hiding structural decisions. Each supports a focused proposal, review, or authorised implementation without requiring a full suite pass. All four have self-contained Figma Design and Make editions.
 
 For an experience-led craft pass, ask “Use `intentional-craft` to develop this idea” or “Use `intentional-craft` to refine this flow.” It translates Apple's 2013 *Intention* film into general design engineering decisions. Its [source and translation notes](skills/intentional-craft/references/source-and-translation.md) link the published copy, preserve an ordered paraphrase, and distinguish the film's message from the skill's software applications.
 
