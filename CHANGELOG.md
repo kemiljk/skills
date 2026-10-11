@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add a standalone `hiring-manager-bar` edition for Figma Design and Make, with medium-specific evidence and verification guidance.
+
 - Add `intentional-craft` for experience-led design and engineering decisions, with source and translation notes and a standalone Figma Design and Make edition.
 
 - Add `humane-functionalism`: researched UI/UX guidance grounded in Danish functionalism and related Danish Modern craft, source notes, a standalone Figma edition, and DXE routing.
