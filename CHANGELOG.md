@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add `intentional-craft` for experience-led design and engineering decisions, with source and translation notes and a standalone Figma Design and Make edition.
+
 - Add `humane-functionalism`: researched UI/UX guidance grounded in Danish functionalism and related Danish Modern craft, source notes, a standalone Figma edition, and DXE routing.
 
 - Add 13 standalone Figma Design and Make editions with original command names and a packaging validator.

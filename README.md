@@ -84,6 +84,7 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | `interface-affordances` | Discoverability and perceptible interaction cues matter |
 | `write-first-design` | Substantial product decisions need clarification before implementation |
 | `design-engineering` | Bridging design intent and production implementation |
+| `intentional-craft` | Developing design and engineering ideas through human intention, focused scope, and evidence of craft, inspired by Apple's *Intention* film |
 | `product-delight` | Adding polish without confusing novelty for care |
 | `subtractive-design` | Removing noise and requiring purpose |
 | `humane-functionalism` | Applying Danish functionalism to UI structure, perception, human fit, everyday use, and craft |
@@ -91,6 +92,8 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | `prototype-to-production` | Hardening happy-path prototypes for real use |
 
 ## Composition / precedence
+
+For an experience-led craft pass, ask “Use `intentional-craft` to develop this idea” or “Use `intentional-craft` to refine this flow.” It translates Apple's 2013 *Intention* film into general design engineering decisions. Its [source and translation notes](skills/intentional-craft/references/source-and-translation.md) link the published copy, preserve an ordered paraphrase, and distinguish the film's message from the skill's software applications.
 
 For a focused functionalist pass, ask “Use `humane-functionalism` to improve this flow.” It balances reduction with discoverability, useful density, accessibility, and product character. Its [research notes](skills/humane-functionalism/references/research.md) distinguish historical sources from contemporary UI applications.
 
