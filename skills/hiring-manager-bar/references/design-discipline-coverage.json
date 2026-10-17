@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "researched_at": "2026-10-17",
+  "purpose": "Bounded portfolio-review calibration from public Design Discipline material; not measured hiring effectiveness.",
+  "discovery": {
+    "feed_url": "https://www.designdisciplin.com/feed",
+    "feed_sha256": "0e3725ad489015a0d1059b46f12eee15717fe37fac5ca64518fd870147c2c277",
+    "rss_entries_screened": 20,
+    "targeted_older_audio_episodes": 1,
+    "catalog_entries": 21,
+    "coverage": "Latest public RSS entries plus targeted older free interviews and public written sources. Not the complete Design Discipline archive. Subscriber-only audio excluded."
+  },
+  "transcription_summary": {
+    "new_original_audio_transcripts": 4,
+    "previously_transcribed_danny_episode": 1,
+    "total_original_audio_transcripts": 5,
+    "new_audio_seconds": 18150.18,
+    "total_audio_seconds": 21795.48,
+    "new_audio_hours": 5.04,
+    "total_audio_hours": 6.05,
+    "human_audio_verified": false,
+    "speaker_diarization": false,
+    "retrieval_review": "Topic search followed by reading the surrounding passages. Full audio transcribed, selected text reviewed; no claim that every segment was manually read.",
+    "duration_basis": "End of the final ASR segment, rather than a separately measured media duration; may exclude trailing silence."
+  },
+  "sources": [
+    {
+      "id": "DD01",
+      "url": "https://www.designdisciplin.com/p/irmak",
+      "title": "Irmak Nur Sunal Lutkin",
+      "published": "2022-09-05",
+      "author": "Irmak Nur Sunal Lutkin interviewed by Baytaş",
+      "evidence_kind": "Interview advice, personal experience, and reported examples; selected machine-transcript passages",
+      "verification": "Public publisher audio downloaded with ordinary curl and transcribed locally. Selected contextual passages read as text; no human audio verification or diarization. Speaker attribution follows conversational context, rather than automated speaker labels.",
+      "ranges_seconds": [
+        [
+          1489,
+          1689
+        ],
+        [
+          1988,
+          2196
+        ],
+        [
+          2255,
+          2337
+        ]
+      ],
+      "transcription": {
+        "publisher_url": "https://www.designdisciplin.com/p/irmak",
+        "publisher_feed": "https://www.designdisciplin.com/feed",
+        "feed_sha256": "0e3725ad489015a0d1059b46f12eee15717fe37fac5ca64518fd870147c2c277",
+        "audio_url": "https://api.substack.com/api/v1/audio/upload/d1761128-1060-4c5a-836d-64ccb7f037f4/src",
+        "audio_sha256": "2dbd07abded70b45bd7ed80eab54c75d7d3a20666e2e3893bfbc91b8788d444b",
+        "published": "2022-09-05",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "transcribed_at": "2026-10-17T10:16:14.309469+00:00",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "final_transcript_timestamp_seconds": 3049.32,
+        "download_method": "ordinary curl of publisher public audio URL; no cookies or access controls bypassed"
+      },
+      "transcript_sha256": "7886bdb7016a38488aa66ad5db172fa974d99c164358f97d0e96c146c1597f27"
+    },
+    {
+      "id": "DD02",
+      "url": "https://www.designdisciplin.com/p/daniel-hollick",
+      "title": "Dan Hollick",
+      "published": "2026-06-25",
+      "author": "Dan Hollick interviewed by Baytaş; distinguish host statements",
+      "evidence_kind": "Interview advice, personal experience, and reported examples; selected machine-transcript passages",
+      "verification": "Public publisher audio downloaded with ordinary curl and transcribed locally. Selected contextual passages read as text; no human audio verification or diarization. Speaker attribution follows conversational context, rather than automated speaker labels.",
+      "ranges_seconds": [
+        [
+          2339,
+          2435
+        ],
+        [
+          2530,
+          2619
+        ],
+        [
+          2822,
+          3143
+        ]
+      ],
+      "transcription": {
+        "publisher_url": "https://www.designdisciplin.com/p/daniel-hollick",
+        "publisher_feed": "https://www.designdisciplin.com/feed",
+        "feed_sha256": "0e3725ad489015a0d1059b46f12eee15717fe37fac5ca64518fd870147c2c277",
+        "audio_url": "https://api.substack.com/feed/podcast/202417067/9fdb7dacddda4a8808921578458bd847.mp3",
+        "audio_sha256": "a791be712187cfb6e12240667018d305d700fd546976247034ca884df63149c5",
+        "published": "2026-06-25T10:48:32+00:00",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "transcribed_at": "2026-10-17T10:16:44.671175+00:00",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "final_transcript_timestamp_seconds": 4200.48,
+        "download_method": "ordinary curl of publisher public audio URL; no cookies or access controls bypassed"
+      },
+      "transcript_sha256": "ecee488dac15bcba65f3552f283502b22459d37381f0d985cd21dfbf6d5571b6"
+    },
+    {
+      "id": "DD03",
+      "url": "https://www.designdisciplin.com/p/ridd",
+      "title": "Ridd",
+      "published": "2026-05-26",
+      "author": "Michael Riddering (Ridd) interviewed by Baytaş; distinguish speakers",
+      "evidence_kind": "Interview advice, personal experience, and reported examples; selected machine-transcript passages",
+      "verification": "Public publisher audio downloaded with ordinary curl and transcribed locally. Selected contextual passages read as text; no human audio verification or diarization. Speaker attribution follows conversational context, rather than automated speaker labels.",
+      "ranges_seconds": [
+        [
+          1806,
+          1949
+        ],
+        [
+          3598,
+          3872
+        ],
+        [
+          4467,
+          4521
+        ]
+      ],
+      "transcription": {
+        "publisher_url": "https://www.designdisciplin.com/p/ridd",
+        "publisher_feed": "https://www.designdisciplin.com/feed",
+        "feed_sha256": "0e3725ad489015a0d1059b46f12eee15717fe37fac5ca64518fd870147c2c277",
+        "audio_url": "https://api.substack.com/feed/podcast/199178364/1b5504d724dbe062853881bb33abf6c4.mp3",
+        "audio_sha256": "50d260885ab59d8e22f60cdcc9c2bd1426482f22ae027986b6c78a717dd671ea",
+        "published": "2026-05-26T09:16:22+00:00",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "transcribed_at": "2026-10-17T10:18:14.364492+00:00",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "final_transcript_timestamp_seconds": 5466,
+        "download_method": "ordinary curl of publisher public audio URL; no cookies or access controls bypassed"
+      },
+      "transcript_sha256": "3e09bfc2b0f85987cb76e122b2d6f95fc1f3b87c72aeecd74024d63d5e00fd50"
+    },
+    {
+      "id": "DD04",
+      "url": "https://www.designdisciplin.com/p/adrian-shaughnessy",
+      "title": "Adrian Shaughnessy",
+      "published": "2025-10-29",
+      "author": "Adrian Shaughnessy interviewed by Baytaş; distinguish speakers",
+      "evidence_kind": "Interview advice, personal experience, and reported examples; selected machine-transcript passages",
+      "verification": "Public publisher audio downloaded with ordinary curl and transcribed locally. Selected contextual passages read as text; no human audio verification or diarization. Speaker attribution follows conversational context, rather than automated speaker labels.",
+      "ranges_seconds": [
+        [
+          2683,
+          2838
+        ],
+        [
+          3178,
+          3299
+        ],
+        [
+          3556,
+          3827
+        ]
+      ],
+      "transcription": {
+        "publisher_url": "https://www.designdisciplin.com/p/adrian-shaughnessy",
+        "publisher_feed": "https://www.designdisciplin.com/feed",
+        "feed_sha256": "0e3725ad489015a0d1059b46f12eee15717fe37fac5ca64518fd870147c2c277",
+        "audio_url": "https://api.substack.com/feed/podcast/175884427/0da84fe3a9f94103fadedd3882da7857.mp3",
+        "audio_sha256": "f4dee9b0853dcf7ac06bc172247853fb976141f3479f12bb159f9cd243daaf61",
+        "published": "2025-10-29T10:15:45+00:00",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "transcribed_at": "2026-10-17T10:19:27.343624+00:00",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "final_transcript_timestamp_seconds": 5434.38,
+        "download_method": "ordinary curl of publisher public audio URL; no cookies or access controls bypassed"
+      },
+      "transcript_sha256": "d3cf67e41752190a3c5a9c6806a8eed1c0f9c20a7aba4447624ef86d024b35e4"
+    },
+    {
+      "id": "DD05",
+      "url": "https://www.designdisciplin.com/p/design-engineering-101",
+      "title": "Design Engineering 101",
+      "published": "2024-09-17",
+      "author": "Baytaş; publisher commentary distinguished from interview quotations",
+      "evidence_kind": "Public authored article",
+      "verification": "Primary public text read through web extraction; source retained locally for provenance. No full-episode claims inferred from highlights.",
+      "locators": [
+        "What Even Is a Design Engineer?",
+        "What Do Design Engineers Do?"
+      ],
+      "source_content_sha256": "7bc2343fedbb82b864b128e841ccfcd3ec19f34b5a439e4b6550447da922bda6"
+    },
+    {
+      "id": "DD06",
+      "url": "https://www.designdisciplin.com/p/hakan-lidbo",
+      "title": "Håkan Lidbo",
+      "published": "2021-03-31",
+      "author": "Baytaş; publisher commentary distinguished from interview quotations",
+      "evidence_kind": "Public publisher introduction and selected interview highlights; full audio not reviewed",
+      "verification": "Primary public text read through web extraction; source retained locally for provenance. No full-episode claims inferred from highlights.",
+      "locators": [
+        "Publisher introduction",
+        "Highlights: On Categories"
+      ],
+      "source_content_sha256": "236f45099f24664f91d621a0dbc2d6d902ca3f35bc1b39272ee008116a165b33"
+    }
+  ],
+  "reused_sources": [
+    {
+      "source_id": "DM07",
+      "url": "https://www.designdisciplin.com/p/danny-martinez",
+      "title": "Danny Martinez",
+      "published": "2026-09-28",
+      "note": "Already curated in danny-martinez.md and danny-martinez-sources.json. Same audio transcript, not a new independent source.",
+      "transcription": {
+        "publisher_url": "https://www.designdisciplin.com/p/danny-martinez",
+        "publisher_feed": "https://www.designdisciplin.com/feed",
+        "feed_sha256": "0e3725ad489015a0d1059b46f12eee15717fe37fac5ca64518fd870147c2c277",
+        "audio_url": "https://api.substack.com/feed/podcast/214546822/66b19c7a1ef55ab085fdc4337359c8fe.mp3",
+        "audio_sha256": "9158925d6cb7efe663f828a57a1725b09817cee88dc0846c82d9ced81ba01397",
+        "published": "2026-09-28",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "transcribed_at": "2026-10-17T10:02:35.568117+00:00",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "final_transcript_timestamp_seconds": 3645.3
+      }
+    }
+  ],
+  "excluded_material": [
+    {
+      "url": "https://www.designdisciplin.com/p/how-to-craft-your-first-portfolio",
+      "reason": "Subscriber-only episode; only public topic preview inspected. No full-episode claims imported."
+    },
+    {
+      "url": "https://www.designdisciplin.com/p/how-to-develop-taste-office-hours",
+      "reason": "Subscriber-only episode; only public topic preview inspected. No full-episode claims imported."
+    },
+    {
+      "url": "https://www.designdisciplin.com/p/how-to-get-your-first-design-job",
+      "reason": "Identified as subscriber-only during targeted discovery. Not transcribed or used for full-episode advice."
+    }
+  ],
+  "method_notes": [
+    "Initial urllib downloads of the four new public episodes returned HTTP 403; ordinary curl downloads succeeded without cookies, sign-in, or bypassing access restrictions. Original failed-attempt record retained locally.",
+    "Native Apple SpeechTranscriber required the existing on-device runtime outside the restricted shell sandbox.",
+    "Full audio and machine transcripts remain in ignored research storage. The distributed skill contains only short original paraphrases and provenance."
+  ]
+}

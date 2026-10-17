@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "researched_at": "2026-10-17",
+  "purpose": "Bounded examples for portfolio-review judgment; source authors have not endorsed this implementation, and reported outcomes do not establish hiring causality.",
+  "coverage": {
+    "original_recordings_transcribed": 4,
+    "provider_duration_seconds": 3949,
+    "transcript_segments": 776,
+    "full_media_and_transcripts_distributed": false
+  },
+  "sources": [
+    {
+      "id": "VA01",
+      "title": "The portfolio presentation that got me hired as a design manager",
+      "author": "Femke van Schoonhoven",
+      "url": "https://www.youtube.com/watch?v=TxBrcdiNqcM",
+      "published": "2022-12-07",
+      "evidence_kind": "personal account of a portfolio presentation and reported hiring outcome",
+      "verification": "Original public media downloaded using standard unauthenticated access. Selected Apple transcript text reviewed; no human audio verification, diarization, or rendered-video inspection. Public video metadata or publisher RSS establishes title and date.",
+      "ranges_seconds": [
+        [
+          383,
+          558
+        ],
+        [
+          693,
+          749
+        ],
+        [
+          749,
+          877
+        ]
+      ],
+      "discovery": {
+        "video_id": "TxBrcdiNqcM",
+        "channel": "femke.design",
+        "downloader": "yt-dlp 2026.8.19",
+        "format_id": "140-7",
+        "metadata_sha256": "d423b5ada55041689063a0c44a169b6bf2f33b143388cb6485a39d91acb7f928",
+        "captions_sha256": "6121ee1b4ffbe28c100a1e0f0da8071d4b579284986ddb2cc66d595e9f7268d4",
+        "captions_use": "Public platform captions retained locally as a distinct source artifact; notes were checked against the independent local Apple transcript, not a human audio review.",
+        "publisher_discovery_url": "https://ck.femke.design/posts/is-it-time-to-update-your-portfolio",
+        "publisher_page_sha256": "15817057ff419e713c3087404c913674bb7c10318dd0da5a248b7e9a75a3b5b0"
+      },
+      "transcription": {
+        "method": "original public audio transcribed locally",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "audio_sha256": "ad1cd067e5375ff5b03918fb5414bab7e1fe1476fb686b367296dbd0eaaeb270",
+        "transcript_sha256": "8535391cd4745a389f41594cb8fcce28803a88775a49348c973006e5b7ff26df",
+        "segment_count": 184,
+        "last_speech_end_seconds": 916.08,
+        "provider_duration_seconds": 929,
+        "transcriber_binary_sha256": "fc89327153d6f1d0455935de8ef3f6647e4714d1c82fd203e232a22510a78e2a",
+        "transcriber_source_sha256": "0e86864ebecf87b6fbe344164e57e1a5a0515d2da3786070d8373af8b51422ff"
+      }
+    },
+    {
+      "id": "VA02",
+      "title": "Showcases: the new portfolio case study",
+      "author": "Femke van Schoonhoven",
+      "url": "https://www.youtube.com/watch?v=zMGah34LgnU",
+      "published": "2025-03-01",
+      "evidence_kind": "author advice, peer feedback, and illustrative examples",
+      "verification": "Original public media downloaded using standard unauthenticated access. Selected Apple transcript text reviewed; no human audio verification, diarization, or rendered-video inspection. Public video metadata or publisher RSS establishes title and date.",
+      "ranges_seconds": [
+        [
+          18,
+          144
+        ],
+        [
+          236,
+          361
+        ],
+        [
+          365,
+          597
+        ]
+      ],
+      "discovery": {
+        "video_id": "zMGah34LgnU",
+        "channel": "femke.design",
+        "downloader": "yt-dlp 2026.8.19",
+        "format_id": "140-5",
+        "metadata_sha256": "e54380c728e83e7304e3fe95b96637ef8763e7efe9075dabe8fd99af2fd79791",
+        "captions_sha256": "325c18e8fcc097398aef7c2ed840fe5efc08f77b24fc687d19c89db1556ada3f",
+        "captions_use": "Public platform captions retained locally as a distinct source artifact; notes were checked against the independent local Apple transcript, not a human audio review."
+      },
+      "transcription": {
+        "method": "original public audio transcribed locally",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "audio_sha256": "0a684765ab855b2520b25815b3acc589789200c1b3824d8c2be6e493e1b67baf",
+        "transcript_sha256": "ee54c876ec8ea1e077509c6f3213eabd0a240c17d254aacd653d5e4455171c99",
+        "segment_count": 143,
+        "last_speech_end_seconds": 635.34,
+        "provider_duration_seconds": 641,
+        "transcriber_binary_sha256": "fc89327153d6f1d0455935de8ef3f6647e4714d1c82fd203e232a22510a78e2a",
+        "transcriber_source_sha256": "0e86864ebecf87b6fbe344164e57e1a5a0515d2da3786070d8373af8b51422ff"
+      }
+    },
+    {
+      "id": "VA03",
+      "title": "7 Portfolio Mistakes That Could Hurt Your UX Job Search",
+      "author": "Megan Brown, Nielsen Norman Group",
+      "url": "https://www.youtube.com/watch?v=T-RJXW3gJgU",
+      "published": "2025-03-24",
+      "evidence_kind": "author advice for student UX portfolios",
+      "verification": "Original public media downloaded using standard unauthenticated access. Selected Apple transcript text reviewed; no human audio verification, diarization, or rendered-video inspection. Public video metadata or publisher RSS establishes title and date.",
+      "ranges_seconds": [
+        [
+          97,
+          160
+        ],
+        [
+          160,
+          305
+        ],
+        [
+          305,
+          387
+        ]
+      ],
+      "discovery": {
+        "video_id": "T-RJXW3gJgU",
+        "channel": "NNgroup",
+        "downloader": "yt-dlp 2026.8.19",
+        "format_id": "140-12",
+        "metadata_sha256": "bb2265fd3b4700ee2c8cd656774bc3c2b26a0f13ac98d7efe27b924f1ce4de8f",
+        "captions_sha256": "55f4c034fee72bc7bf6e4ef314aa9a907200f04f7315965010f3ef6e80895432",
+        "captions_use": "Public platform captions retained locally as a distinct source artifact; notes were checked against the independent local Apple transcript, not a human audio review.",
+        "publisher_page_url": "https://www.nngroup.com/videos/7-portfolio-mistakes/",
+        "publisher_page_sha256": "156deeae8eb0bd7702ab03a8c1c72e527fd6bb42c1e98832b26373f97e7168b1"
+      },
+      "transcription": {
+        "method": "original public audio transcribed locally",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "audio_sha256": "e76243df4eba385d8409a6940a1208a800393acaaaedb18b8c2ca2877d68b4dc",
+        "transcript_sha256": "6e5b5489935df182ca4afa3bf98a67ff88dc2f788775b0d80ce1fe6e1e92393a",
+        "segment_count": 91,
+        "last_speech_end_seconds": 469.56,
+        "provider_duration_seconds": 471,
+        "transcriber_binary_sha256": "fc89327153d6f1d0455935de8ef3f6647e4714d1c82fd203e232a22510a78e2a",
+        "transcriber_source_sha256": "0e86864ebecf87b6fbe344164e57e1a5a0515d2da3786070d8373af8b51422ff"
+      }
+    },
+    {
+      "id": "VA04",
+      "title": "315: How to hire (and get hired) in a brand design role",
+      "author": "Femke van Schoonhoven and Charli Prangley",
+      "url": "https://www.designlife.fm/episode/315-how-to-hire-and-get-hired-in-a-brand-design-role",
+      "published": "2025-07-28",
+      "evidence_kind": "hosts’ hiring discussion and reported role-specific preferences",
+      "verification": "Original public media downloaded using standard unauthenticated access. Selected Apple transcript text reviewed; no human audio verification, diarization, or rendered-video inspection. Public video metadata or publisher RSS establishes title and date.",
+      "ranges_seconds": [
+        [
+          488,
+          825
+        ],
+        [
+          974,
+          1139
+        ],
+        [
+          1140,
+          1403
+        ],
+        [
+          1424,
+          1550
+        ],
+        [
+          1601,
+          1729
+        ]
+      ],
+      "discovery": {
+        "publisher_feed_url": "https://rss.simplecast.com/podcasts/6750/rss",
+        "guid": "ac9fe346-10df-446e-89ea-ea4959100294",
+        "audio_url": "https://pdst.fm/e/cdn.simplecast.com/audio/a4fa12d1-78f8-4c87-ac61-6e28667cc434/episodes/e5d319f0-f7e8-49ee-bee1-420d22672197/audio/639e8316-1f7d-453b-9463-88817ddc642a/default_tc.mp3?aid=rss_feed&feed=R3170kJB",
+        "feed_sha256": "3ed9854fde23f336a748d463e73bf9cb22af48cf36e8d57fcefe567cd0cd6de8",
+        "publisher_page_sha256": "908361b7d764c08f10ae4076cc41f07f9d2f9a229ba3f966ce767138fac23efa"
+      },
+      "transcription": {
+        "method": "original public audio transcribed locally",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "audio_sha256": "80574a37d4f68a2f83fc7b52d9e3440cbaa0ce79883add8327cee8217d313865",
+        "transcript_sha256": "b620da89fdad19dd3e24feac949abed3543d2d7df01020252a55af9df2704337",
+        "segment_count": 358,
+        "last_speech_end_seconds": 1907.88,
+        "provider_duration_seconds": 1908,
+        "transcriber_binary_sha256": "fc89327153d6f1d0455935de8ef3f6647e4714d1c82fd203e232a22510a78e2a",
+        "transcriber_source_sha256": "0e86864ebecf87b6fbe344164e57e1a5a0515d2da3786070d8373af8b51422ff"
+      }
+    }
+  ]
+}

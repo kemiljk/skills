@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "researched_at": "2026-10-17",
+  "purpose": "Bounded portfolio and hiring-process calibration. These opinions and selected examples do not validate the skill’s fairness or hiring effectiveness.",
+  "discovery": {
+    "feed_url": "https://hiringhumans.decimals.work/feed",
+    "feed_sha256": "9e0fdb1820e113179318f1a9c2030d38758b2d6507ac57d56acfdd54e2185df6",
+    "rss_entries_screened": 20,
+    "selected_articles_read": 5,
+    "coverage": "Latest available public RSS entries and five targeted primary articles, not a complete archive review."
+  },
+  "sources": [
+    {
+      "id": "HH01",
+      "url": "https://hiringhumans.decimals.work/p/can-ai-kill-the-resume",
+      "title": "Can AI kill the resume?",
+      "published": "2025-05-18",
+      "author": "Danny Martinez and Jess Toy",
+      "evidence_kind": "Coauthored advice and proposed hiring approach",
+      "verification": "Full public primary article read through web extraction; RSS content retained locally with matching title, URL, and publication date. No separate audio transcription used.",
+      "locators": [
+        "The “ex-Google” trap and “We need better signals” sections."
+      ],
+      "rss_content_sha256": "a5a9af73c4f1ba59b560b2d7fbe4fa5371e92f3f43b93539535d27a222dae6f1",
+      "reuse_note": "Same interview/source family as DM03; not independent corroboration."
+    },
+    {
+      "id": "HH02",
+      "url": "https://hiringhumans.decimals.work/p/how-to-get-headhunted-by-lovable",
+      "title": "How to get headhunted by Lovable ❤️",
+      "published": "2025-06-20",
+      "author": "Danny Martinez reporting Mindaugas Petrutis’s experience",
+      "evidence_kind": "Reported career outcome; growth-team hire, not a designer hire",
+      "verification": "Full public primary article read through web extraction; RSS content retained locally with matching title, URL, and publication date. No separate audio transcription used.",
+      "locators": [
+        "“How he was hired at Invision and Lovable” and Backchannel sections."
+      ],
+      "rss_content_sha256": "a0fa849e9f7bfa5a527fab395813dd242dabce28266ac5956b874e5aa24a12b1"
+    },
+    {
+      "id": "HH03",
+      "url": "https://hiringhumans.decimals.work/p/underrepresented-folks-in-tech-are",
+      "title": "Underrepresented folks in tech are like the future. We're here, but not evenly distributed.",
+      "published": "2025-08-17",
+      "author": "Danny Martinez interviewing Meri Williams; distinguish author introduction from guest views",
+      "evidence_kind": "Interview advice and personal examples about inclusion",
+      "verification": "Full public primary article read through web extraction; RSS content retained locally with matching title, URL, and publication date. No separate audio transcription used.",
+      "locators": [
+        "Meri’s three questions and tactical interview-access details."
+      ],
+      "rss_content_sha256": "d908ef39e3ab1bebd5a9e7fbf59a20339f2acf034282d31669e00c42304faeb2"
+    },
+    {
+      "id": "HH04",
+      "url": "https://hiringhumans.decimals.work/p/paddy-lambros-shares-his-playbook",
+      "title": "Paddy Lambros shares his playbook for getting hired, after recruiting for 100s of VC-backed founders.",
+      "published": "2025-04-10",
+      "author": "Danny Martinez interviewing Paddy Lambros",
+      "evidence_kind": "Interview advice and stated preferences",
+      "verification": "Full public primary article read through web extraction; RSS content retained locally with matching title, URL, and publication date. No separate audio transcription used.",
+      "locators": [
+        "“His hiring advice for founders and hiring managers” and candidate playbook."
+      ],
+      "rss_content_sha256": "4bec8e9cb3bdb946f91df8cddcd70707c01217456e247205f830e772db1638e9"
+    },
+    {
+      "id": "HH05",
+      "url": "https://hiringhumans.decimals.work/p/the-future-of-work-a-design-leaders",
+      "title": "The future of work: a design leader’s perspective",
+      "published": "2025-06-01",
+      "author": "Danny Martinez interviewing Filippos Protogeridis; distinguish guest forecasts from author framing",
+      "evidence_kind": "Interview opinions and forecasts; not measured labour-market evidence",
+      "verification": "Full public primary article read through web extraction; RSS content retained locally with matching title, URL, and publication date. No separate audio transcription used.",
+      "locators": [
+        "Craft and tool use discussion; forecasts excluded from portfolio criteria."
+      ],
+      "rss_content_sha256": "8874d95c2fecbb9b4caf01a268e81cb19fc0ab58fae572e4bd32af69c55a9beb"
+    }
+  ],
+  "excluded_material": [
+    {
+      "url": "https://hiringhumans.decimals.work/p/stop-applying-start-getting-hired",
+      "reason": "Not read in full; no advice imported from title or inaccessible page."
+    }
+  ],
+  "storage": "Full article HTML remains in ignored local research storage; only short attributed paraphrases are distributed."
+}

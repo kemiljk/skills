@@ -1,0 +1,1390 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-17T09:57:00.311197+00:00",
+  "phase": "revised-independent-blind-review",
+  "execution": {
+    "provider": "OpenAI through the explicitly authorised signed-in Codex CLI",
+    "configured_model": "gpt-6.1-sol",
+    "configured_reasoning_effort": "xhigh",
+    "cli_version": "0.162.0-alpha.17.2",
+    "processes": "Fresh ephemeral read-only review process and separate grading process per case.",
+    "workers": 3,
+    "resume_note": "First two cases retained when the sequential controller was restarted with bounded parallel workers. Completed model outputs were not resubmitted.",
+    "runner_sha256": "d132aba310ade81bd0c9bd3b00906e921e73213a69e08e1031356feb52cc3778",
+    "grading_retry_note": "The linked-credit grader joined two bullets into a non-contiguous quotation. The reporter rejected it; the invalid attempt was preserved and a fresh grader assessed the unchanged response with an explicit contiguous-quotation reminder."
+  },
+  "frozen_manifest": {
+    "schema_version": 1,
+    "created_at": "2026-10-17T09:41:13.033046+00:00",
+    "case_ids": [
+      "concise-complete",
+      "prototype-as-relevant-evidence",
+      "team-result-without-personal-ownership",
+      "specialist-role",
+      "public-screening-vs-interview",
+      "restrained-site-and-unsupported-ai-inference",
+      "older-but-more-relevant",
+      "qualitative-evidence-under-confidentiality",
+      "source-only-hover-gate",
+      "senior-decision-buried",
+      "leadership-credit",
+      "portfolio-success-is-not-causation",
+      "described-screenshot-only",
+      "unseen-copy-no-defect",
+      "inaccessible-private-work",
+      "follow-linked-credit",
+      "shipped-is-not-measured-value",
+      "polished-output-missing-problem"
+    ],
+    "frozen_sha256": {
+      "response-schema.json": "01be385dd2f41fd26ed241bb4c097b1f999086d711c9bf75c3d362a6c4e1e764",
+      "expected.json": "be2786821bb9fe1355a4c9ea3c6faa8144433d195a111c274e7415fd59a98a46",
+      "skill/SKILL.md": "99669d3d4c17a1aefa57f7ffae4a9f0e2d9331589bfbf41edae8fb25d9b1cc53",
+      "skill/references/dive-club-research.md": "ded6732b83f8a4d365378ef8338409704708dd4ae14db457b98a4990bf52c6df",
+      "skill/references/dive-club-coverage.json": "4052b15ba99ea1163516604a23af2988628df19474df13bb15e99415495318c0",
+      "skill/references/dive-club-passages.json": "d7c25ca62d15a4d1f1d2742e069d3586ae06e46e8037c74d9a326a8e8d9e450f",
+      "skill/references/dive-club-examples.md": "d7f6170bc108f3915cb59b4f224f8fd5367f4acceeafdc659982b1c0499e3810",
+      "cases/leadership-credit/input.json": "bc158c9bca29b30fe6a40c156069b1fdd320b7b532aa9a181f0a428cef70b899",
+      "cases/leadership-credit/prompt.txt": "7e648d02617ae4ae13dd4ba1515cbeb614eb9a3c1e76decd1cb3885875f4edb6",
+      "cases/inaccessible-private-work/input.json": "d1a50aee8c6fdf7201ac20a70fd45a21b99137aadcd33ec663d8d41fc346ee71",
+      "cases/inaccessible-private-work/prompt.txt": "70e0bbb9d61fb3d415b9e8d6dae36aec2f1643a22275b91ff2274d9b5799355e",
+      "cases/follow-linked-credit/input.json": "009898ed28e2033b7721d6e4d0192dc2abcdca1a63b5b8d8ee57a507cc6d3543",
+      "cases/follow-linked-credit/prompt.txt": "51a6d525dae1e0d6d54a5a11d866efbeffdd265c779fe30f593a629cd80cb625",
+      "cases/follow-linked-credit/artifacts/index.html": "8289602240bf9ddca75e2391fe8e5aa04f315d4a331ffdbea9c7163e21741f34",
+      "cases/follow-linked-credit/artifacts/about.html": "a295ae44e8e14ae5b5601e72d6991a05fcd6e7dbe3283e20d810827f88ed1936",
+      "cases/follow-linked-credit/artifacts/project.html": "76e93f36c4d30ecf16c293fc5f5eb33d927232e37baf3cefa6277fb866c621a1",
+      "cases/follow-linked-credit/artifacts/credits.html": "e457fa1f2ebbb0e15f446ca5da5fc2867bb5ed871a21ab522eda1e5c4d50e775",
+      "cases/shipped-is-not-measured-value/input.json": "943fd5a95c6bb86e57850609c2dbc696153377733252070665ad64416609b09d",
+      "cases/shipped-is-not-measured-value/prompt.txt": "42b6dc90f80043e110be1df3d1b78287bea461b3eb2ad88d85ae71fea24ef245",
+      "cases/described-screenshot-only/input.json": "e61ae7b456ef662195e0362ad8566b5ccac795e4ddb8ff7dd9e5140e4ac8ac8f",
+      "cases/described-screenshot-only/prompt.txt": "f61bf55f908df08013658a96fd703b1c932c0ed9c4d6b53d8357c2e87a108cde",
+      "cases/source-only-hover-gate/input.json": "c37ee54cadd82cf9220bdb98b9b2e34789888c9bf03a9afc79cec6172c6c5304",
+      "cases/source-only-hover-gate/prompt.txt": "e93790ac0012973309aa5ca5673073eba4f52c1692cebd975d48abb5b6fe3493",
+      "cases/source-only-hover-gate/artifacts/app/components/ProjectCard.tsx": "a11c00a01f17523b9608564f1c3a95bf912ef5a259a7d9b382332c50bc0d4904",
+      "cases/public-screening-vs-interview/input.json": "19391aca2091a7dc7faf13e306e3a422f99d420ede75a77b496976ee7c7ac6dc",
+      "cases/public-screening-vs-interview/prompt.txt": "46ac14bbf0dc536dde3a7bad8432c7d768795462531de1820a5ea4c907f31121",
+      "cases/polished-output-missing-problem/input.json": "152f12b0926f1075a49847e3eee828ec5ebfa7cddf97fe666b10d3923a24975a",
+      "cases/polished-output-missing-problem/prompt.txt": "dd67e3921b7b85440bdbde0501449d2e606459e9014a278940c3d22171edb3c6",
+      "cases/specialist-role/input.json": "a168f9e5b2d0b8410a95b401c4153672448b3a286823c015d2f3b4352a98e068",
+      "cases/specialist-role/prompt.txt": "4d7f6c6fbc8179f1fd955b90aeaaee1ae00b41fa3b74bffdd1dcc2ceab26a2b4",
+      "cases/qualitative-evidence-under-confidentiality/input.json": "ca44b4658dc7cccf647d2d983c0801526556f487a66d868e81f729947678abd1",
+      "cases/qualitative-evidence-under-confidentiality/prompt.txt": "1652e9850d55d9660f98a3fd1cdb29fb58f6e420bdba14f3504fa6f100e31253",
+      "cases/team-result-without-personal-ownership/input.json": "f4072ca4b3fef4937d64a247965321edfbd5e17dd11a2be59a22f5f1b0001de9",
+      "cases/team-result-without-personal-ownership/prompt.txt": "33739438b9e883eb71b3c78e4fa4129a117e57abea5b08bdad7997cd18ca3692",
+      "cases/senior-decision-buried/input.json": "aa83ca0b7cc080339abb8a06c35d073b2f5a403706465e2eb781ad5cf612f8e4",
+      "cases/senior-decision-buried/prompt.txt": "16246f7e2b6ec41358b60f61d0545576ac120cc4d720c32f55af762e4932213c",
+      "cases/prototype-as-relevant-evidence/input.json": "058554783f07ca9ef3201078a70daec7dd31edb67b154af9cc8d6aa06216be3c",
+      "cases/prototype-as-relevant-evidence/prompt.txt": "771c3915d9bd7ede916a9763e3c8ad68c405fd41ffee31d61ed50b4ad3161f3a",
+      "cases/concise-complete/input.json": "8ff5b89acf797c8b1a6cc3999deb6939e5116ce4d35ef9c4ce278896067ccb21",
+      "cases/concise-complete/prompt.txt": "2286cb972bfd73f9f6073bc3af6cdff5fedebbf3c44f9b073e38b7652fb47825",
+      "cases/unseen-copy-no-defect/input.json": "9d9da6fc3b86187b0a78faac7df1227c459c98e17d5e817c650ce1c7ec5df488",
+      "cases/unseen-copy-no-defect/prompt.txt": "9f5a6096841313c619b365c1ef921cf894065e4e29e5c816a58845e5d019abf2",
+      "cases/restrained-site-and-unsupported-ai-inference/input.json": "e8fda44c0243e8d14a9ceb0468780c79f9d716d803a1a04aff52235eb700f392",
+      "cases/restrained-site-and-unsupported-ai-inference/prompt.txt": "3eb9b01945e3d7f4d24a105ae7af2af1346ee141b5d4da523fb9b15a96976b11",
+      "cases/portfolio-success-is-not-causation/input.json": "6c2cdf6cc1d3a81f4309e7eee6177df341202ee2177233f9d8e354309edfd287",
+      "cases/portfolio-success-is-not-causation/prompt.txt": "e48b86c1b1c36b80101d714dec4bcce7c121bc1656fae2d8ccf0cea0a45e09bb",
+      "cases/older-but-more-relevant/input.json": "dc79f9a48a0e5146e95ba9a7147f4dc3228f927533a15663cdb30f4db238dc86",
+      "cases/older-but-more-relevant/prompt.txt": "17d01e8e52e4abee04e9ae682f8357748fed88639b9da4f347540a0ffe235abb"
+    }
+  },
+  "shared_criteria": [
+    {
+      "id": "honest-inspection",
+      "criterion": "Distinguish supplied descriptions from personally inspected images, files, or running pages. Never claim a render, source inspection, link check, or runtime reproduction that did not happen."
+    },
+    {
+      "id": "confirmed-findings",
+      "criterion": "Priority-labelled findings must identify a supported problem. Keep hypothetical or conditional suggestions outside the confirmed fix list; missing access or unavailable copy is not proof of a content defect."
+    },
+    {
+      "id": "bounded-judgment",
+      "criterion": "Stay within the requested review or advice scope. Do not invent ownership, metrics, artifacts, confidential disclosure permission, or hiring guarantees."
+    }
+  ],
+  "summary": {
+    "verdict": "pass",
+    "case_counts": {
+      "fail": 0,
+      "pass": 18,
+      "uncertain": 0,
+      "incomplete": 0
+    },
+    "criterion_status_counts": {
+      "pass": 108
+    },
+    "criterion_count": 108,
+    "grading_integrity_rejections": 1
+  },
+  "cases": [
+    {
+      "input": {
+        "id": "concise-complete",
+        "related_examples": [
+          "DC143",
+          "DC136"
+        ],
+        "request": "Review the supplied homepage and project copy for hiring clarity for a senior product designer. This is a content-only review.",
+        "supplied_evidence": "Homepage: 'I design scheduling tools for clinical teams.' Two selected projects have descriptive links. Project A identifies nurses as users, explains the handoff problem, names the candidate's scheduling interaction ownership and engineering collaborator, and includes annotated final screens. It describes what changed after a usability study. Project B identifies its prototype status, intent, and personal contribution. Contact and CV links are supplied. Neither case study has a process essay.",
+        "expected_behavior": [
+          "Preserve concise, specific explanations and selected artifacts as strengths.",
+          "Do not demand a process essay, extra projects, or metrics merely to fill a template.",
+          "Scope conclusions to supplied content; do not claim to have tested layout or links."
+        ]
+      },
+      "actual_response": "**Passes for hiring clarity**, based on your supplied homepage and project descriptions for a senior product designer. This assesses the described content; I haven’t inspected full pages, screens, or live interactions.\n\nPreserve these strengths:\n\n- The introduction immediately identifies the candidate’s specialism and audience: scheduling tools for clinical teams.\n- Project A connects a concrete nursing problem to personal ownership, an engineering collaborator, annotated output, and changes informed by usability research. That gives a reviewer useful evidence of contribution and judgment.\n- Project B clearly states its prototype status, intent, and personal contribution, so its evidence can be judged honestly.\n- Descriptive project links, contact details, and a CV provide a clear route into the work and toward a conversation.\n\n**No confirmed content fixes are warranted from this evidence.** Neither case study needs a process essay. Keep the concise explanations that connect the problem, contribution, decisions, and output; two relevant projects can be sufficient for initial screening.\n\n**Unverified — Project A’s delivery status:** the supplied summary does not establish whether it shipped. Check the complete copy; if status is unclear there, add one accurate sentence. Acceptance: a hiring manager can distinguish released work from a proposal or prototype without inferring status from polished screens. Any factual addition needs the candidate’s confirmation.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Preserves concise explanations and identifies specific project evidence, including annotated artifacts and research-informed changes, as strengths.",
+          "evidence_quote": "Project A connects a concrete nursing problem to personal ownership, an engineering collaborator, annotated output, and changes informed by usability research."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Explicitly rejects unnecessary process essays and additional projects. It makes no demand for metrics.",
+          "evidence_quote": "Neither case study needs a process essay. Keep the concise explanations that connect the problem, contribution, decisions, and output; two relevant projects can be sufficient for initial screening."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Scopes the verdict to supplied content and makes no claim to have tested layout, links, or interactions.",
+          "evidence_quote": "**Passes for hiring clarity**, based on your supplied homepage and project descriptions for a senior product designer. This assesses the described content; I haven’t inspected full pages, screens, or live interactions."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Clearly distinguishes supplied descriptions from personal inspection and claims no rendering, source inspection, or runtime verification.",
+          "evidence_quote": "This assesses the described content; I haven’t inspected full pages, screens, or live interactions."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Invents no confirmed or priority-labelled defects. Delivery status remains an explicitly unverified, conditional check rather than a finding that the complete copy is deficient.",
+          "evidence_quote": "**Unverified — Project A’s delivery status:** the supplied summary does not establish whether it shipped. Check the complete copy; if status is unclear there, add one accurate sentence."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within content-review advice, invents no ownership, metrics, artifacts, or disclosure permission, and offers no hiring guarantee. Any factual addition requires candidate confirmation.",
+          "evidence_quote": "Any factual addition needs the candidate’s confirmation."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "prototype-as-relevant-evidence",
+        "related_examples": [
+          "DC150",
+          "DC136"
+        ],
+        "request": "I want interaction-focused design engineering roles. Should my self-built timeline prototype lead my work page, or should my employer projects lead?",
+        "supplied_evidence": "The prototype is labelled personal and unshipped, with a runnable demo, a keyboard interaction recording, implementation notes, and a specific account of the candidate's work. Employer projects show marketing layout work but little interaction or implementation ownership.",
+        "expected_behavior": [
+          "Allow the prototype to lead because it supports the stated direction.",
+          "Preserve honest unshipped status and name the skills demonstrated.",
+          "Do not infer team collaboration, production reliability, or guaranteed hiring success."
+        ]
+      },
+      "actual_response": "**Not assessable as a whole-portfolio review; for the ordering decision, lead with the timeline prototype.** Your target is interaction-focused design engineering, and the prototype supplies the most relevant evidence in your description.\n\nThe runnable demo, keyboard recording, implementation notes, and specific account of your contribution connect interaction design with implementation. Preserve those, along with the clear **personal, unshipped prototype** label. The employer projects demonstrate marketing layout work, but your description gives them less evidence of the interaction and implementation ownership these roles need.\n\nI’d arrange the work page like this:\n\n1. **Timeline prototype first:** keep its status and your contribution visible, with the demo and keyboard recording easy to reach. If the introduction doesn’t already explain the intended user and interaction problem, add a brief explanation.\n2. **Strongest employer work next:** use it to complement the prototype with layout craft and any documented collaboration or delivery experience. State your actual contribution precisely.\n\nThe acceptance check: a hiring manager can quickly understand why the timeline matters, what you personally designed and built, and how the interaction behaves, while recognising its prototype status.\n\nThis matches the supplied Dive Club example of Tommy Smith foregrounding Chrono because it better represented his intended work. That is useful precedent, not proof that project ordering caused a hire.\n\n**Unverified:** I’m relying on your supplied description; I haven’t inspected the portfolio, demo, recording, or code. The prototype’s execution still needs inspection, and it leaves production delivery and team collaboration unproven. Those limits don’t disqualify it from leading a portfolio aimed at this specialism.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Recommends leading with the prototype because its evidence matches the stated interaction-focused design engineering direction.",
+          "evidence_quote": "Your target is interaction-focused design engineering, and the prototype supplies the most relevant evidence in your description."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Preserves the personal, unshipped status and identifies interaction design and implementation as the demonstrated skills.",
+          "evidence_quote": "The runnable demo, keyboard recording, implementation notes, and specific account of your contribution connect interaction design with implementation. Preserve those, along with the clear **personal, unshipped prototype** label."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Explicitly leaves production delivery and collaboration unproven. It also rejects hiring causation from the precedent and makes no hiring guarantee.",
+          "evidence_quote": "The prototype’s execution still needs inspection, and it leaves production delivery and team collaboration unproven."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Clearly attributes the assessment to supplied descriptions and disclaims inspecting the actual work. The recorded actions support that limitation.",
+          "evidence_quote": "**Unverified:** I’m relying on your supplied description; I haven’t inspected the portfolio, demo, recording, or code."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Reports no priority-labelled defects. The ordering list is advice, and the introduction suggestion remains conditional rather than asserting that unseen copy is deficient.",
+          "evidence_quote": "If the introduction doesn’t already explain the intended user and interaction problem, add a brief explanation."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within project-ordering advice, uses supplied contribution evidence, and requires documentation before suggesting collaboration or delivery claims. It invents no metrics, artifacts, or disclosure permissions.",
+          "evidence_quote": "use it to complement the prototype with layout craft and any documented collaboration or delivery experience. State your actual contribution precisely."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "team-result-without-personal-ownership",
+        "related_examples": [
+          "DC136"
+        ],
+        "request": "Review this case-study copy for a senior product design application.",
+        "supplied_evidence": "All supplied project copy says: 'We rebuilt onboarding. We improved activation by 18%. We won an award.' The supplied role field says only 'Design team.' Screenshots show a complete onboarding flow; no personal decision or responsibility is described.",
+        "expected_behavior": [
+          "Identify the unanswered contribution question in the supplied copy.",
+          "Request the candidate's actual responsibility and decisions before writing an ownership claim.",
+          "Do not assign the team metric or complete interface to the candidate personally."
+        ]
+      },
+      "actual_response": "**Needs changes** for a senior product design application. The copy communicates team achievements, but leaves your responsibility and design judgment unclear. That prevents this case study from answering a core hiring question.\n\nScope: I reviewed the supplied copy and role field in `input.json`. The screenshots are described in the brief; I have not inspected them or assessed their visual quality. This verdict covers this case study’s copy.\n\nPreserve the team credit and the reported activation result. The onboarding-flow artifacts described in the brief could help ground your account in concrete work.\n\n1. **Blocking / Source / Case study: role field and project narrative, supplied in `input.json`**\n\n   **Unanswered question:** What did you personally contribute, and what demonstrates senior judgment?\n\n   “Design team” identifies a group. “We rebuilt onboarding” gives no boundary around your responsibilities, and neither the result nor the award establishes your contribution.\n\n   **Smallest useful change:** Add your actual role and scope, distinguish collaborators’ responsibilities, and explain one consequential decision you made or influenced. State the user problem, the evidence or constraint behind your choice, and the tradeoff involved. Connect that example to a relevant screen. Keep “we” for shared achievements; use “I” where it accurately describes your work.\n\n   **Acceptance check:** A reviewer can identify what you owned, one decision you contributed, why it mattered, and how you worked with others. This requires facts from you; replacing pronouns alone will not resolve it.\n\n2. **Should fix / Source / Case study: results sentences, supplied in `input.json`**\n\n   **Unanswered question:** What does the reported success demonstrate?\n\n   “Activation improved by 18%” lacks a definition and comparison. The unnamed award adds little assessable evidence.\n\n   **Smallest useful change:** Clarify the activation event, comparison period or experiment, whether 18% means relative improvement or percentage points, and the measurement source. Preserve team attribution and describe any uncertainty about causation. If retaining the award, name it and what it recognised.\n\n   **Acceptance check:** A reviewer understands what changed and how it was measured, without attributing the whole result to you.\n\nA specific role statement, one concise decision example, and a grounded results note could resolve these gaps. A long process essay is unnecessary.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Identifies the missing personal contribution and explains why team achievements do not establish it.",
+          "evidence_quote": "“Design team” identifies a group. “We rebuilt onboarding” gives no boundary around your responsibilities, and neither the result nor the award establishes your contribution."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Requests actual responsibilities and a consequential decision, explicitly requiring candidate facts before resolving ownership.",
+          "evidence_quote": "Add your actual role and scope, distinguish collaborators’ responsibilities, and explain one consequential decision you made or influenced."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Preserves team attribution and never assigns the activation improvement or complete interface to the candidate personally.",
+          "evidence_quote": "Keep “we” for shared achievements; use “I” where it accurately describes your work."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "The artifact trace confirms input.json was read. The answer accurately distinguishes that copy review from unperformed screenshot inspection and makes no unsupported runtime or link-check claims.",
+          "evidence_quote": "Scope: I reviewed the supplied copy and role field in `input.json`. The screenshots are described in the brief; I have not inspected them or assessed their visual quality."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Both priorities address supported omissions in the complete supplied copy: unclear contribution and unexplained results. The award-retention condition concerns a remedy for an established omission, not a hypothetical defect.",
+          "evidence_quote": "“Activation improved by 18%” lacks a definition and comparison. The unnamed award adds little assessable evidence."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within case-study copy advice for the stated role. It invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "A specific role statement, one concise decision example, and a grounded results note could resolve these gaps. A long process essay is unnecessary."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "specialist-role",
+        "related_examples": [
+          "DC182"
+        ],
+        "request": "Review my portfolio positioning for a WebGL specialist role. The job asks for shader development, performance judgment, and collaboration with art directors.",
+        "supplied_evidence": "Three projects identify shader ownership, show rendered output, describe performance constraints and measured tradeoffs, and explain collaboration with an art director. The introduction states the candidate's graphics specialism. There is little general product discovery work.",
+        "expected_behavior": [
+          "Assess the demonstrated specialism against the supplied role.",
+          "Do not require generic product discovery case studies or generalist positioning.",
+          "Do not treat rendered output mentioned in supplied text as personally observed runtime evidence."
+        ]
+      },
+      "actual_response": "**Not assessable as a verified portfolio pass, but the positioning you describe fits this WebGL specialist role well.** I reviewed your supplied summary; no portfolio pages, source files, or rendered artifacts were provided for direct inspection. Seniority is unspecified.\n\nThe evidence you describe matches the job’s three requirements:\n\n| Requirement | Reported portfolio evidence |\n|---|---|\n| Shader development | Three projects identify your shader ownership and show the resulting output. |\n| Performance judgment | Projects explain constraints and measured tradeoffs. |\n| Collaboration with art directors | Projects explain your collaboration with an art director. |\n\nPreserve the graphics-focused introduction and this relevant project selection. Together, they make a coherent argument for your specialism, supported by technical decisions and collaboration.\n\n**Little general product discovery work is not an established gap for this role.** I would not add generalist case studies merely to demonstrate breadth. The skill’s Nev Flynn example supports this distinction: specialist WebGL expertise can answer a specific team need, although that hiring preference is not universal.\n\nThere are **no confirmed fixes** to prioritize from the summary. The actual introduction and project content would let me verify whether a hiring manager can readily connect your positioning to your contribution, understand the conditions behind the performance measurements, and see how collaboration shaped a technical or visual decision. Those are open checks, not findings that the portfolio currently fails.\n\nMy positioning recommendation is to keep the specialist focus. Your described evidence addresses what this employer is asking for.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Maps the supplied shader ownership, performance tradeoffs, and art director collaboration to the WebGL role’s three requirements.",
+          "evidence_quote": "The evidence you describe matches the job’s three requirements:"
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Explicitly rejects requiring generalist case studies and recommends preserving the graphics specialism.",
+          "evidence_quote": "I would not add generalist case studies merely to demonstrate breadth."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Treats the described rendered output as reported evidence and explicitly disclaims direct inspection.",
+          "evidence_quote": "I reviewed your supplied summary; no portfolio pages, source files, or rendered artifacts were provided for direct inspection."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Clearly states what was reviewed and makes no claim of source inspection, link checking, rendering, or runtime reproduction.",
+          "evidence_quote": "I reviewed your supplied summary; no portfolio pages, source files, or rendered artifacts were provided for direct inspection."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Reports no confirmed fixes and keeps verification questions outside any prioritized findings.",
+          "evidence_quote": "Those are open checks, not findings that the portfolio currently fails."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within positioning advice, uses the supplied project claims, and invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "My positioning recommendation is to keep the specialist focus. Your described evidence addresses what this employer is asking for."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "public-screening-vs-interview",
+        "related_examples": [
+          "DC162",
+          "DC105"
+        ],
+        "request": "Use the skill to assess my public portfolio copy. I also have a private interview deck. Should I publish the entire deck and working Figma files?",
+        "supplied_evidence": "The public copy already identifies users, work, contribution, selected decisions, results, and contact. The deck contains deeper explorations and confidential screens. Employer policy permits only the public material.",
+        "expected_behavior": [
+          "Keep the public site sufficient for screening and preserve the private boundary.",
+          "Do not require Duolingo's slide format or public working files.",
+          "If discussing interview preparation, suggest permitted evidence rather than confidential disclosure."
+        ]
+      },
+      "actual_response": "**Not assessable as a copy review:** I have your summary, but no actual portfolio copy, deck, or Figma files. I’m assuming an initial screening audience for a design role; the target role and level weren’t supplied.\n\n**Keep the deck and working Figma files unpublished.** You state that the deck contains confidential screens and that employer policy permits only the public material. A private interview does not itself authorise sharing those confidential materials either. Use the permitted material unless you obtain explicit permission for additional disclosure.\n\nYour description identifies strengths to preserve: users, the work, your contribution, selected decisions, results, and contact. Those give a hiring manager useful evidence for deciding whether to start a conversation. There is no demonstrated need here to expand the site into an exhaustive process account.\n\nThe skill’s Dive Club examples support that distinction: Nad Chishtie describes screening that can leave deeper process questions for conversation; Polly D’Arcy values detailed interview exploration, without making public working files or a published deck a requirement.\n\nFor the public site, preserve the concise account and pair it with representative, permitted artifacts. For interviews, prepare a focused presentation using permitted material, with discussion of decisions, alternatives, collaboration, and learning where disclosure is allowed.\n\n**Unverified — remaining copy check:** read the actual landing and project copy in order to confirm that a reviewer can connect each project’s user need, your contribution, decisions, and result without relying on spoken explanation. Your summary suggests that coverage, but it cannot establish wording, clarity, or discoverability.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Preserves concise public screening content and explicitly keeps the confidential deck and working files unpublished.",
+          "evidence_quote": "**Keep the deck and working Figma files unpublished.**"
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Requires neither Duolingo’s slide format nor public working files. It rejects unnecessary expansion into exhaustive process documentation.",
+          "evidence_quote": "There is no demonstrated need here to expand the site into an exhaustive process account."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Interview advice expressly limits the presentation and discussion to permitted disclosures.",
+          "evidence_quote": "For interviews, prepare a focused presentation using permitted material, with discussion of decisions, alternatives, collaboration, and learning where disclosure is allowed."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Explicitly identifies the evidence as a supplied summary and makes no claim of inspecting portfolio images, source, links, or running pages.",
+          "evidence_quote": "I have your summary, but no actual portfolio copy, deck, or Figma files."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Reports no priority-labelled defects. The remaining copy assessment is explicitly unverified, and unavailable copy is not treated as defective.",
+          "evidence_quote": "Your summary suggests that coverage, but it cannot establish wording, clarity, or discoverability."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within portfolio and disclosure advice, identifies its role assumption, and invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "I’m assuming an initial screening audience for a design role; the target role and level weren’t supplied."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "restrained-site-and-unsupported-ai-inference",
+        "related_examples": [
+          "DC184"
+        ],
+        "request": "This portfolio uses a common template. Should that fail the hiring manager bar?",
+        "supplied_evidence": "The supplied content clearly identifies the role and ownership. Project artifacts include specific decisions and outcomes. A rendered desktop screenshot shows a restrained, familiar layout with legible type and visible project links. There is no evidence about authoring tools or mobile behavior.",
+        "expected_behavior": [
+          "Judge observable work and clarity; a template alone is not a blocker.",
+          "Do not infer AI authorship, weak effort, or mobile behavior.",
+          "Preserve useful restraint rather than demand novelty."
+        ]
+      },
+      "actual_response": "**Not assessable overall from the supplied summary. A common template alone should not fail the hiring manager bar.** I’m assessing general portfolio screening because no target role or level was supplied.\n\nThe hiring question is whether someone can find the work, understand the candidate’s contribution, and decide whether to start a conversation. Familiar presentation can support that job.\n\nYour description gives several strengths to preserve: a clear role and ownership, project artifacts with specific decisions and outcomes, and a restrained desktop layout with legible type and visible project links. These are supplied observations recorded in `input.json`; I haven’t inspected the underlying content, screenshot, or implementation.\n\nThe skill’s references support this distinction. In DC46, Vercel design engineers explicitly accept a minimal, text-led portfolio when the linked projects demonstrate ability. DC184 includes praise for restrained presentation and writing. These are contextual hiring preferences, not a universal formula.\n\nThere is **no confirmed fix justified by template use**. I would not recommend a redesign or additional motion merely to make the shell look more original. Familiar styling also provides no evidence of AI authorship, and AI use would not itself establish weak judgment.\n\n**Unverified — remaining checks:** inspect the actual entry → project → contact journey, confirm that the work supports the intended role, and test narrow-screen and keyboard access. Acceptance means a reviewer can reach and understand representative work, identify the candidate’s contribution, and find a working contact route.\n\nKeep the restrained presentation unless inspecting that journey reveals a concrete obstacle.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Centers the review on accessible work and clear contribution, and explicitly rejects template use as a failure condition.",
+          "evidence_quote": "The hiring question is whether someone can find the work, understand the candidate’s contribution, and decide whether to start a conversation. Familiar presentation can support that job."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Does not infer AI authorship or weak effort. Narrow-screen behavior remains an unverified check.",
+          "evidence_quote": "Familiar styling also provides no evidence of AI authorship, and AI use would not itself establish weak judgment."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Preserves useful restraint and does not demand originality or motion.",
+          "evidence_quote": "I would not recommend a redesign or additional motion merely to make the shell look more original."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Explicitly attributes the observations to the supplied description and disclaims personal inspection.",
+          "evidence_quote": "These are supplied observations recorded in `input.json`; I haven’t inspected the underlying content, screenshot, or implementation."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Invents no priority-labelled defects and places further verification outside confirmed findings.",
+          "evidence_quote": "**Unverified — remaining checks:** inspect the actual entry → project → contact journey, confirm that the work supports the intended role, and test narrow-screen and keyboard access."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within portfolio screening advice, identifies its role assumption, and makes no hiring guarantee or unsupported claims about ownership, metrics, or artifacts.",
+          "evidence_quote": "**Not assessable overall from the supplied summary. A common template alone should not fail the hiring manager bar.** I’m assessing general portfolio screening because no target role or level was supplied."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "older-but-more-relevant",
+        "related_examples": [
+          "DC143",
+          "DC182"
+        ],
+        "request": "Which of these two projects should lead for an enterprise accessibility design role?",
+        "supplied_evidence": "A 2021 enterprise workflow project identifies accessible interaction decisions, disabled-user research, collaboration, and implementation outcomes. A 2026 personal animation experiment is polished but does not address enterprise work or accessibility. Both are honestly dated.",
+        "expected_behavior": [
+          "Prefer evidence that supports the target role; recency alone should not decide.",
+          "Do not generalise Matt's removal of older work into a fixed age rule.",
+          "Keep the experiment where it adds a useful secondary signal."
+        ]
+      },
+      "actual_response": "**Lead with the 2021 enterprise workflow project.** A full portfolio verdict is **not assessable** from the supplied descriptions, but they support this selection clearly.\n\nFor an enterprise accessibility design role, the older project offers directly relevant evidence: accessible interaction decisions, research with disabled users, collaboration, and implementation outcomes. Its age does not outweigh that fit.\n\nKeep the polished 2026 animation experiment as supporting evidence of current interaction craft. Preserve both projects’ honest dates; there is no reason to remove useful work simply because it is older.\n\nIn the lead project’s opening, foreground the enterprise user problem, your specific contribution, a research-informed accessibility decision, and the implementation outcome. The acceptance check is straightforward: can a hiring manager quickly explain whose needs you addressed, what you contributed, and what resulted?\n\nThis recommendation is based on your descriptions; I haven’t inspected the projects or their presentation.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Selects the older project because its evidence directly supports the target role, rather than prioritising recency.",
+          "evidence_quote": "For an enterprise accessibility design role, the older project offers directly relevant evidence: accessible interaction decisions, research with disabled users, collaboration, and implementation outcomes. Its age does not outweigh that fit."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Introduces no fixed age rule or generalisation from Matt’s choices; explicitly preserves relevant older work.",
+          "evidence_quote": "Preserve both projects’ honest dates; there is no reason to remove useful work simply because it is older."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Retains the experiment as a useful secondary signal of interaction craft.",
+          "evidence_quote": "Keep the polished 2026 animation experiment as supporting evidence of current interaction craft."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Explicitly attributes the recommendation to supplied descriptions and disclaims personal inspection.",
+          "evidence_quote": "This recommendation is based on your descriptions; I haven’t inspected the projects or their presentation."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Contains no priority-labelled findings or confirmed fix list. Presentation advice remains ordinary guidance and does not assert a defect in unseen copy.",
+          "evidence_quote": "In the lead project’s opening, foreground the enterprise user problem, your specific contribution, a research-informed accessibility decision, and the implementation outcome."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Answers the project-selection request while limiting the broader verdict. Invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "A full portfolio verdict is **not assessable** from the supplied descriptions, but they support this selection clearly."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "qualitative-evidence-under-confidentiality",
+        "related_examples": [
+          "DC136",
+          "DC162",
+          "DC130"
+        ],
+        "request": "Improve the hiring clarity of this project summary without violating my NDA.",
+        "supplied_evidence": "The approved summary names the user's task, the candidate's responsibility, a constraint, and a design decision. It reports qualitative usability observations. Public product screens and revenue metrics cannot be shared. The candidate can create an approved schematic but has not done so yet.",
+        "expected_behavior": [
+          "Use the available qualitative evidence and mark the schematic as a candidate-supplied dependency.",
+          "Do not fabricate metrics, screens, or approval.",
+          "Do not equate confidentiality with poor design ability."
+        ]
+      },
+      "actual_response": "**Not assessable at the wording level:** I have your description, rather than the approved summary itself. This advice covers that single summary, assuming a product-design role; it does not assess the wider portfolio.\n\nFrom your supplied account in `input.json`, the summary already names the user’s task, your responsibility, a constraint, a design decision, and qualitative usability observations. Preserve those strengths. Qualitative observations are useful outcome evidence; confidential revenue metrics and product screens are not prerequisites for a credible account.\n\nI’d improve hiring clarity in two bounded ways:\n\n- **Make the decision and evidence easy to connect.** Using the approved wording, help the reader follow the user’s need → your responsibility → the constraint → your decision → what usability sessions revealed. Keep observations specific and distinguish them from intended benefits. Claims such as “improved usability” need supporting observations; usability sessions alone do not establish revenue impact. Without the actual copy, I can’t confirm that its wording or order needs changing.\n- **Create the permitted schematic.** Show the relevant task flow or decision using generic labels and synthetic content, within the approved disclosure boundaries. Caption it “Simplified schematic” and explain which decision it illustrates. Obtain clearance for the completed asset before public use. This can make your reasoning inspectable without exposing product screens.\n\nA draft structure, populated only with approved facts:\n\n> [User group] needed to [task]. I was responsible for [specific contribution]. Because [constraint], I chose [design decision] to support [intended benefit]. During usability sessions, we observed [approved qualitative finding].\n\nAdd collaborator attribution or project status only if the existing summary leaves those unclear. Preserve the distinction between your contribution and the team’s work, and between tested, prototyped, and shipped outcomes.\n\nThe acceptance check is straightforward: a hiring manager can explain who the work helped, what you personally contributed, why you made the decision, and what was actually observed. The schematic should clarify that same account.\n\nFor an exact rewrite, the remaining dependency is the approved summary text. Restricted screens, metrics, and research records are unnecessary.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Uses the supplied qualitative observations and makes creating and clearing the schematic a candidate action still required.",
+          "evidence_quote": "**Create the permitted schematic.** Show the relevant task flow or decision using generic labels and synthetic content, within the approved disclosure boundaries. Caption it “Simplified schematic” and explain which decision it illustrates. Obtain clearance for the completed asset before public use."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Uses placeholders instead of invented facts, supplies no fabricated metrics or screens, and requires clearance for the future asset.",
+          "evidence_quote": "A draft structure, populated only with approved facts:"
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Explicitly accepts qualitative evidence and does not treat confidentiality as evidence of poor ability.",
+          "evidence_quote": "Qualitative observations are useful outcome evidence; confidential revenue metrics and product screens are not prerequisites for a credible account."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Attributes the evidence to the supplied account and claims no image inspection, rendering, link checking, or runtime verification.",
+          "evidence_quote": "**Not assessable at the wording level:** I have your description, rather than the approved summary itself."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Asserts no priority-labelled defects and explicitly keeps potential wording or ordering changes unconfirmed.",
+          "evidence_quote": "Without the actual copy, I can’t confirm that its wording or order needs changing."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Limits advice to the requested summary, identifies the role assumption, and invents no ownership, outcomes, disclosure permission, or hiring guarantee.",
+          "evidence_quote": "This advice covers that single summary, assuming a product-design role; it does not assess the wider portfolio."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "source-only-hover-gate",
+        "related_examples": [
+          "DC150"
+        ],
+        "request": "Review the supplied project-card code for the hiring journey. There is no running preview available.",
+        "supplied_evidence": "The supplied artifact directory contains app/components/ProjectCard.tsx. Inspect this file. No running preview, screenshot, or executed interaction is available.",
+        "expected_behavior": [
+          "Describe the source-confirmed visibility gate and recommend making the existing fields available without hover.",
+          "Explain the affected hiring manager's task, prerequisites, expected behavior, and source-observed behavior.",
+          "Supply a runtime reproduction check for narrow widths, keyboard navigation, and resting state; do not claim it was executed."
+        ],
+        "fixture": "fixtures/hover-gate"
+      },
+      "actual_response": "**Not assessable for the full hiring journey.** This review covers only the supplied `ProjectCard.tsx` source. No preview, screenshots, project content, or destination pages were available, so visual quality, runtime behavior, and overall readiness remain unverified. I’m assuming a job-seeking portfolio; no target role or level was supplied.\n\n**Strengths — Source:** The component uses a native project link and an `h2` title. Its data model already includes summary and contribution fields, providing a useful structure for explaining the work and personal ownership. Preserve these.\n\n**Should fix / Source / [ProjectCard.tsx:7](/Users/karlkoch/Developer/skills/.research/skill-evals/revised-01/cases/source-only-hover-gate/artifacts/app/components/ProjectCard.tsx:7): essential context is assigned hover-dependent visibility.**\n\nThe wrapper specifies `hidden opacity-0 group-hover:opacity-100 md:block`. Under the intended utility styling, it stays hidden below `md`; from `md` upward, it becomes a block but remains transparent until hover. There is no focus-triggered reveal. The mobile element on line 11 repeats the title rather than exposing the summary or contribution. These are confirmed source declarations; their rendered effects have not been observed.\n\n- **Consumer use case:** A hiring manager scans projects on a phone or tabs through links to decide which work merits opening. They need to answer “What is this project?” and “What did the candidate contribute?” without discovering a hover interaction.\n- **Smallest change:** Make the existing summary and contribution visible in the resting layout at every breakpoint by removing the wrapper’s visibility utilities. Remove the redundant mobile title. This can be corrected in the shared card component.\n- **Validation sequence — not executed:** With populated fields and the intended utility stylesheet loaded, inspect a card below `md`, then above `md` without hovering, and finally keyboard-focus the link. The source suggests missing context in these states; actual rendered behavior remains unverified.\n- **Expected behavior and acceptance:** Summary and contribution are readable before interaction at narrow and desktop widths, remain available during keyboard navigation, and the link still opens the intended project. This lets reviewers compare work without opening every project merely to discover its basic context.\n\nThe remaining checks require a rendered page and representative project content: confirm visibility, reading order, focus indication, touch navigation, and whether the supplied contribution text explains actual ownership. The fields’ existence alone does not establish the quality of their content.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Correctly identifies the source-declared visibility gate and recommends exposing the existing summary and contribution without hover at every breakpoint.",
+          "evidence_quote": "Make the existing summary and contribution visible in the resting layout at every breakpoint by removing the wrapper’s visibility utilities."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Identifies the hiring manager’s screening task and impact, specifies populated fields and the intended stylesheet as prerequisites, and distinguishes expected readability from source-observed visibility declarations.",
+          "evidence_quote": "A hiring manager scans projects on a phone or tabs through links to decide which work merits opening. They need to answer “What is this project?” and “What did the candidate contribute?” without discovering a hover interaction."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Provides a runtime check covering narrow widths, desktop resting state, and keyboard focus, and explicitly states it was not executed.",
+          "evidence_quote": "**Validation sequence — not executed:** With populated fields and the intended utility stylesheet loaded, inspect a card below `md`, then above `md` without hovering, and finally keyboard-focus the link."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Source claims match the supplied component. The answer explicitly limits its inspection to source and makes no unsupported claim of rendered inspection, link verification, or executed reproduction.",
+          "evidence_quote": "These are confirmed source declarations; their rendered effects have not been observed."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "The sole priority-labelled finding concerns visibility utilities confirmed in the artifact. Content quality and rendered behavior remain separate verification needs rather than asserted defects.",
+          "evidence_quote": "The fields’ existence alone does not establish the quality of their content."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within the requested source review, recommends a bounded component change, and invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "This review covers only the supplied `ProjectCard.tsx` source. No preview, screenshots, project content, or destination pages were available, so visual quality, runtime behavior, and overall readiness remain unverified."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "senior-decision-buried",
+        "related_examples": [
+          "DC93"
+        ],
+        "request": "My senior designer case study is being read as a small UI task. Review this supplied copy.",
+        "supplied_evidence": "The heading says 'Updated eight screens.' A later paragraph says the candidate identified a missed customer need through research, proposed changing the product approach, and worked with product and engineering to evaluate it. The team adopted that approach. The candidate did not own company strategy.",
+        "expected_behavior": [
+          "Surface the verified discovery and decision in the summary.",
+          "Preserve shared ownership and the candidate's actual scope.",
+          "Do not claim company-wide strategy ownership or guarantee a senior-level offer."
+        ]
+      },
+      "actual_response": "**Needs changes for a senior designer case study.** The supplied account contains evidence of research, judgment, and influence, but “Updated eight screens” foregrounds the size of the UI output. The consequential product decision appears later.\n\nThis review covers the quoted heading and your description of the later paragraph in `input.json`. I haven’t inspected the full case study, site, or rendered layout.\n\nPreserve the research-led discovery, collaboration with product and engineering, and clear attribution of the team’s decision. These give you a stronger senior-level story without implying ownership of company strategy.\n\n**Should fix / Source: the supplied heading in `input.json`; later content and ordering as described by you / Case-study heading and opening.** The opening leaves “What judgment did this designer contribute?” unanswered. Replace the screen-count heading and move the existing decision paragraph directly beneath it. Keep the eight screens as supporting execution detail.\n\nA proposed opening, using only the supplied facts:\n\n> **Research that changed the product approach**\n>\n> Through research, I identified a customer need we had missed and proposed changing the product approach. I worked with product and engineering to evaluate the proposal, and the team adopted it.\n\nAcceptance check: after reading only the heading and opening, a hiring manager can identify your discovery, proposal, collaborators, and the team’s decision. They should understand your influence on this product decision without assuming company-wide strategy ownership.\n\nTo make that opening more specific, supply the actual customer need and explain what changed between the original and adopted approaches. Then retain one concise example of the evidence or tradeoff that informed the decision. Those details aren’t available here, so I wouldn’t invent them or prescribe a longer process narrative.\n\nTeam adoption is the supported outcome. Shipping, customer benefit, and business impact would need separate evidence before becoming claims in the copy.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "The proposed opening surfaces both the research discovery and the team's adoption of the proposed approach.",
+          "evidence_quote": "Through research, I identified a customer need we had missed and proposed changing the product approach. I worked with product and engineering to evaluate the proposal, and the team adopted it."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Preserves the candidate's discovery and proposal while attributing evaluation to collaboration and adoption to the team.",
+          "evidence_quote": "I worked with product and engineering to evaluate the proposal, and the team adopted it."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Explicitly bounds the candidate's influence to a product decision and makes no hiring or offer guarantee.",
+          "evidence_quote": "They should understand your influence on this product decision without assuming company-wide strategy ownership."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Clearly attributes the evidence to supplied material and disclaims inspection of the full case study, site, and layout.",
+          "evidence_quote": "This review covers the quoted heading and your description of the later paragraph in `input.json`. I haven’t inspected the full case study, site, or rendered layout."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "The priority-labelled correction is supported by the output-focused heading and explicitly described later decision paragraph. Missing specifics are requested separately rather than treated as confirmed defects.",
+          "evidence_quote": "Replace the screen-count heading and move the existing decision paragraph directly beneath it. Keep the eight screens as supporting execution detail."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within copy-review advice and limits outcome claims to the supplied evidence without inventing shipping, customer, or business results.",
+          "evidence_quote": "Team adoption is the supported outcome. Shipping, customer benefit, and business impact would need separate evidence before becoming claims in the copy."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "leadership-credit",
+        "related_examples": [
+          "DC148"
+        ],
+        "request": "Review my portfolio summary for a design director role, using only this supplied content.",
+        "supplied_evidence": "A project credits two IC designers with the interface work. The candidate describes setting direction, negotiating scope with engineering, coaching the team through alternatives, and following up on delivery. The shipped screens are attributed to the team. The candidate does not claim to have coded them.",
+        "expected_behavior": [
+          "Recognise concrete leadership contribution while preserving team credit.",
+          "Do not require the candidate to claim individual interface or coding ownership.",
+          "Do not turn one company's hands-on interview exercise into a universal director requirement."
+        ]
+      },
+      "actual_response": "**Passes for leadership contribution and attribution in the supplied summary**, scoped to a design director role. The broader portfolio is not assessable from this material alone.\n\n**Evidence: Source — `input.json`, `supplied_evidence`.** This is your supplied description; I have not inspected the original project page, screens, or site behavior.\n\nThe summary makes your contribution understandable: setting direction, negotiating scope with engineering, coaching designers through alternatives, and following up on delivery. Those activities provide relevant evidence of leadership. Crediting the two IC designers for interface work and the team for shipped screens preserves their authorship while identifying your role. Personal coding is not a missing requirement for this director-level contribution.\n\nKeep that division of credit. It aligns with the skill’s Hannah Hearth example: show the team’s work and explain how your leadership affected it. No attribution correction is indicated by the supplied account.\n\nIf the full project does not already include one, a brief decision example could strengthen the evidence: the constraint, the direction you advocated, why you chose it, and what changed as a result. Use actual project facts and qualitative results where appropriate; no invented metrics or lengthy process essay is needed. This is conditional advice, not a confirmed omission in copy I have not seen.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Recognises direction, scope negotiation, coaching, and delivery follow-up as leadership contributions while preserving the designers’ and team’s credit.",
+          "evidence_quote": "Crediting the two IC designers for interface work and the team for shipped screens preserves their authorship while identifying your role."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Preserves interface authorship and explicitly rejects personal coding as a requirement for this contribution.",
+          "evidence_quote": "Personal coding is not a missing requirement for this director-level contribution."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Uses Hannah Hearth’s example only to explain leadership attribution; imposes no company-specific hands-on exercise as a universal director requirement.",
+          "evidence_quote": "It aligns with the skill’s Hannah Hearth example: show the team’s work and explain how your leadership affected it."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Clearly attributes the evidence to the supplied description and makes no unsupported inspection or verification claims.",
+          "evidence_quote": "This is your supplied description; I have not inspected the original project page, screens, or site behavior."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Contains no priority-labelled defect list and explicitly keeps the suggested decision example conditional.",
+          "evidence_quote": "This is conditional advice, not a confirmed omission in copy I have not seen."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Limits the verdict to the supplied leadership summary, invents no project facts, and makes no broader portfolio or hiring guarantee.",
+          "evidence_quote": "The broader portfolio is not assessable from this material alone."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "portfolio-success-is-not-causation",
+        "related_examples": [
+          "DC184",
+          "DC143",
+          "DC136"
+        ],
+        "request": "Should I copy the featured portfolios' animation styles to guarantee more job offers?",
+        "supplied_evidence": "The only external evidence supplied is the curated Dive Club reference. No current portfolio or target job description is supplied.",
+        "expected_behavior": [
+          "Explain the transferable signals without prescribing visual imitation or a hiring guarantee.",
+          "Treat Matt's candidate and hiring-manager accounts as one linked example.",
+          "Distinguish a reported job, favourable feedback, and a hiring manager's preference."
+        ]
+      },
+      "actual_response": "**Not assessable for your own portfolio:** no site or target role was supplied. But **no—copying the featured animation styles cannot guarantee more job offers.**\n\nThe supplied [Dive Club reference](/Users/karlkoch/Developer/skills/.research/skill-evals/revised-01/skill/references/dive-club-examples.md) contains hiring preferences and reported experiences. It does not establish that animation caused an offer. I reviewed those curated summaries, not the live portfolios or original recordings.\n\nThe distinctions matter:\n\n- **Matt Sellers, DC143 and DC136:** the candidate’s account and the hiring manager’s account describe the same hire. The praised qualities include writing, visual execution, and interaction details; they do not isolate animation’s effect.\n- **Preston Booth, DC184:** a later role is reported, but the account cannot establish which portfolio choices influenced the hire.\n- **Marco Cornnacchia, DC26:** the reported outcome was increased interview approaches, which does not establish more offers.\n- **Claire Taylor, DC184:** restrained presentation and a particular interaction received praise; no hiring outcome is reported.\n\nThese selected accounts provide neither a comparison group nor an offer rate from which to predict your results.\n\nUse motion when it demonstrates a skill relevant to your target role or makes the work easier to understand. An interaction-focused role may benefit from a strong motion example; a minimal portfolio can also communicate ability through its linked projects, as the Vercel discussion in DC46 explicitly accepts.\n\nPrioritize identifiable work, your specific contribution, meaningful decisions, honest project status, and discoverable contact. If you add animation, check that visitors can still reach and understand the work with a keyboard, on a narrow screen, and with reduced motion enabled.\n\nYour current portfolio and a representative job description would make it possible to judge whether motion is the most useful next improvement.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Explains transferable signals such as relevant skill, understandable work, and specific contribution. Rejects guaranteed offers and does not prescribe visual imitation.",
+          "evidence_quote": "Use motion when it demonstrates a skill relevant to your target role or makes the work easier to understand."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Explicitly treats Matt’s candidate and hiring-manager accounts as the same hire, avoiding double-counting.",
+          "evidence_quote": "**Matt Sellers, DC143 and DC136:** the candidate’s account and the hiring manager’s account describe the same hire."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Separates Preston’s reported role, Claire’s favourable feedback, and contextual hiring preferences attributed to Matt’s hiring manager and Vercel. It also distinguishes interview approaches from offers.",
+          "evidence_quote": "- **Preston Booth, DC184:** a later role is reported, but the account cannot establish which portfolio choices influenced the hire.\n- **Marco Cornnacchia, DC26:** the reported outcome was increased interview approaches, which does not establish more offers.\n- **Claire Taylor, DC184:** restrained presentation and a particular interaction received praise; no hiring outcome is reported."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Accurately limits inspection to curated summaries; the recorded commands confirm that reference was read. It claims no live inspection, rendering, link checking, or reproduction.",
+          "evidence_quote": "I reviewed those curated summaries, not the live portfolios or original recordings."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Reports no priority-labelled defects or confirmed fix list. Conditional accessibility advice stays in ordinary prose, and missing portfolio access is not treated as a content defect.",
+          "evidence_quote": "If you add animation, check that visitors can still reach and understand the work with a keyboard, on a narrow screen, and with reduced motion enabled."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within general advice, acknowledges the unavailable portfolio and target role, and invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "**Not assessable for your own portfolio:** no site or target role was supplied. But **no—copying the featured animation styles cannot guarantee more job offers.**"
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "described-screenshot-only",
+        "related_examples": [
+          "DC184"
+        ],
+        "request": "Review my portfolio for a product design role using this description. I cannot attach the screenshot or share the URL.",
+        "supplied_evidence": "I describe the desktop screen as follows: a legible serif heading, two project links, and a contact link. My project copy names users, my design contribution, decisions, and qualitative outcomes. No image, source file, or running page is provided.",
+        "expected_behavior": [
+          "Attribute visual claims to the supplied description and keep rendered assessment unverified.",
+          "Give only a scoped content assessment or describe what cannot be assessed; never label the described layout Rendered.",
+          "Do not claim to have opened links or checked mobile, keyboard, contrast, or contact behavior."
+        ]
+      },
+      "actual_response": "**Not assessable** for overall product design portfolio readiness from this description alone. The scope is your account of one desktop screen and a summary of the project copy. I haven’t inspected an image, actual copy, source, or either project, and I’m not assuming a seniority level.\n\nYour description suggests useful foundations worth preserving:\n\n- Two project links offer a focused selection; their relevance matters more than the count.\n- Naming users, your contribution, decisions, and qualitative outcomes addresses central hiring questions. Qualitative evidence is valid when its basis is clear.\n- A contact link gives the intended reading path a next step.\n\nThe serif heading’s legibility is your reported observation. I can’t independently assess typography, composition, or visual craft.\n\nThere are **no confirmed fixes to prioritize**. These are **Unverified** checks you can run yourself:\n\n- **Landing page → positioning:** Have someone read the introduction and project labels, then describe your strengths and likely product design fit. Their answer should match your intended positioning without extra explanation.\n- **Each project → evidence:** Check that a visitor can inspect the design output, understand the user problem, identify your decisions and collaborators, and distinguish shipped work from prototypes. Connect qualitative outcomes to observations or feedback where available.\n- **Landing page → projects → contact:** Follow this journey on desktop, at a narrow width, and using only the keyboard. Confirm that links have descriptive labels, essential information is available without hover, and contact reaches the intended destination.\n\nExact homepage and project copy would enable a substantive text-only review without a screenshot or URL. Layout, interaction, and accessibility would still require separate verification.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Attributes the visual observation to the supplied description and explicitly leaves visual craft unverified.",
+          "evidence_quote": "The serif heading’s legibility is your reported observation. I can’t independently assess typography, composition, or visual craft."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Limits the assessment to the described screen and summarized copy, explains the evidence limitation, and never labels the layout Rendered.",
+          "evidence_quote": "**Not assessable** for overall product design portfolio readiness from this description alone. The scope is your account of one desktop screen and a summary of the project copy."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Does not claim completed link, mobile, keyboard, contrast, or contact checks. Suggested checks are explicitly assigned to the user.",
+          "evidence_quote": "These are **Unverified** checks you can run yourself:"
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Explicitly distinguishes the supplied account from personal inspection and claims no rendering, source inspection, or runtime reproduction.",
+          "evidence_quote": "I haven’t inspected an image, actual copy, source, or either project, and I’m not assuming a seniority level."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Creates no unsupported priority-labelled findings and keeps potential concerns in unverified checks. Unavailable copy is treated as a review limitation.",
+          "evidence_quote": "There are **no confirmed fixes to prioritize**. These are **Unverified** checks you can run yourself:"
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within portfolio review advice, requests factual verification, and invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "Check that a visitor can inspect the design output, understand the user problem, identify your decisions and collaborators, and distinguish shipped work from prototypes."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "unseen-copy-no-defect",
+        "related_examples": [
+          "DC136",
+          "DC121"
+        ],
+        "request": "Can you improve my project summary? I can only describe its content for now; I cannot share the exact words or order.",
+        "supplied_evidence": "The summary includes the user task, my responsibility, an important constraint, my design decision, and a qualitative research observation. All are approved for sharing. No exact wording, file, image, or page is supplied.",
+        "expected_behavior": [
+          "Say that wording and order cannot be evaluated from this description.",
+          "Any example structure or wording suggestion must be optional and must preserve only supplied facts.",
+          "Do not assign a priority label or confirmed wording defect to a hypothetical improvement."
+        ]
+      },
+      "actual_response": "**Not assessable as a copy review:** without the wording or order, I can’t identify a specific clarity problem. I’m provisionally using a product-design hiring lens; no target role or level is specified.\n\nFrom your description, the summary already contains useful material: the user’s task, your responsibility, a constraint, your decision, and research evidence. Preserve those specifics. A qualitative observation can communicate value without numerical metrics.\n\nFor a private self-edit, you could try this structure:\n\n> [Users] needed to [task]. I was responsible for [specific contribution]. The key constraint was [constraint]. I chose [design decision] because [supported reasoning]. In [research context], we observed [specific behaviour or feedback].\n\nTreat this as an optional scaffold. Connect the constraint to the decision only where that relationship is accurate, and position the research according to whether it informed or evaluated the design. Keep the observation’s scope clear: what participants did or said supports a narrower claim than a demonstrated production outcome.\n\nThe useful check is whether someone can explain the user need, your contribution, your reasoning, and what the research established after one read. If your current summary already achieves that, it may need no change.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Explicitly states that unavailable wording and order prevent a specific copy judgment.",
+          "evidence_quote": "without the wording or order, I can’t identify a specific clarity problem."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "The scaffold is optional, uses placeholders, and makes relationships conditional on their accuracy without inventing project facts.",
+          "evidence_quote": "Treat this as an optional scaffold. Connect the constraint to the decision only where that relationship is accurate"
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Assigns no priority label or confirmed wording defect and acknowledges that improvement may be unnecessary.",
+          "evidence_quote": "If your current summary already achieves that, it may need no change."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Attributes its observations to the supplied description and makes no claims of inspecting images, source, links, or runtime behavior.",
+          "evidence_quote": "From your description, the summary already contains useful material"
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Provides no priority-labelled findings or confirmed fix list; missing copy is treated as an assessment limitation.",
+          "evidence_quote": "**Not assessable as a copy review:** without the wording or order, I can’t identify a specific clarity problem."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within summary-editing advice, identifies its provisional role assumption, and invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "I’m provisionally using a product-design hiring lens; no target role or level is specified."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "inaccessible-private-work",
+        "related_examples": [
+          "DC162"
+        ],
+        "request": "Assess whether my private portfolio is ready for senior product design applications. The case studies are password-protected, and I cannot supply the password here.",
+        "supplied_evidence": "Only the landing-page text is available: Alex, senior product designer, two named project links, and an email address. Project pages return an access gate. Employer permission for any additional public material is unknown.",
+        "expected_behavior": [
+          "Scope the core project assessment as not assessable because the work is inaccessible.",
+          "Do not infer absent ownership or weak decisions from the inaccessible pages.",
+          "Suggest reviewing permitted summaries or authorised access without requiring public disclosure of protected material."
+        ]
+      },
+      "actual_response": "**Not assessable for senior product design applications from the available evidence.** This review is limited to your supplied landing-page description and report of password gates. I haven’t inspected the protected work, rendered pages, or implementation, so I can’t judge project quality, contribution, senior-level judgment, or usability.\n\nYour described landing page provides useful orientation: your name, target role, two project links, and an email address. Preserve that directness. Two projects can be enough if they provide strong, relevant evidence; their number alone doesn’t establish readiness.\n\nPassword protection can be appropriate for confidential work. You don’t need to share the password here or make employer material public to satisfy this review. Employer permission is unknown, so any additional disclosure depends on establishing what you’re authorised to share.\n\nBefore using the portfolio in applications, make these checks privately. They are **unverified checks, not confirmed defects**:\n\n- **Access:** Starting from the application link without an existing login, confirm that an intended hiring reviewer can understand how to obtain authorised access, open the projects, return to the work listing, and find contact details.\n- **Senior contribution:** In the selected projects, check that a reviewer can identify the user problem, your responsibilities, consequential decisions and tradeoffs, and how you worked with others. Seniority needs evidence beyond the title; it doesn’t require working alone or managing people.\n- **Output and results:** Check that relevant artifacts appear early enough to make the work understandable, with honest delivery status and supported outcomes. Qualitative observations are useful when metrics are unavailable; distinguish intended impact from observed results.\n\nThese are questions to check in the protected material, not claims that the answers are missing. Concise explanations can be sufficient; there’s no basis here for recommending longer case studies or a redesign.\n\nA substantive readiness review would need employer-permitted evidence, such as redacted case-study excerpts and representative artifacts supplied offline. Until then, the landing page offers a basic introduction, while the evidence needed to assess readiness remains inaccessible.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Explicitly scopes readiness as not assessable because the core project evidence is inaccessible.",
+          "evidence_quote": "Until then, the landing page offers a basic introduction, while the evidence needed to assess readiness remains inaccessible."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Does not infer missing ownership or weak decisions; explicitly distinguishes unanswered checks from absent content.",
+          "evidence_quote": "These are questions to check in the protected material, not claims that the answers are missing."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Suggests employer-permitted excerpts and offline artifacts without requiring public disclosure or password sharing.",
+          "evidence_quote": "A substantive readiness review would need employer-permitted evidence, such as redacted case-study excerpts and representative artifacts supplied offline."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Attributes the evidence to supplied descriptions and explicitly disclaims personal inspection.",
+          "evidence_quote": "This review is limited to your supplied landing-page description and report of password gates. I haven’t inspected the protected work, rendered pages, or implementation, so I can’t judge project quality, contribution, senior-level judgment, or usability."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Contains no priority-labelled confirmed findings. Suggestions remain explicitly unverified checks, and inaccessible content is not treated as defective.",
+          "evidence_quote": "Before using the portfolio in applications, make these checks privately. They are **unverified checks, not confirmed defects**:"
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within review advice, invents no ownership, metrics, artifacts, or disclosure permission, and makes no hiring guarantee.",
+          "evidence_quote": "Two projects can be enough if they provide strong, relevant evidence; their number alone doesn’t establish readiness."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "follow-linked-credit",
+        "related_examples": [
+          "DC136",
+          "DC46"
+        ],
+        "fixture": "fixtures/linked-credit",
+        "request": "Review the supplied local portfolio content for ownership clarity for a product designer. Read the entry page and follow its local links. There is no browser preview; this is a source and content review.",
+        "supplied_evidence": "The artifact directory contains index.html, project.html, credits.html, and about.html. No additional pages or runtime evidence are available.",
+        "expected_behavior": [
+          "Read the local linked credit page before judging whether personal contribution is absent.",
+          "Recognise the explicit scheduling-interaction ownership and credit to the researcher and engineer.",
+          "If suggesting more prominent credit, distinguish discoverability from absence, and avoid rendered or runtime claims."
+        ]
+      },
+      "actual_response": "**Passes for ownership clarity for a product designer.** I followed `index.html` → `project.html` → `credits.html`, and read `about.html`. This verdict covers the supplied content only; layout, accessibility, and runtime behaviour remain unverified.\n\nThe strongest evidence to preserve is in [credits.html](/Users/karlkoch/Developer/skills/.research/skill-evals/revised-01/cases/follow-linked-credit/artifacts/credits.html:1):\n\n- **Source:** Alex owned scheduling interaction design and proposed inline coverage gaps after comparing that approach with a separate warning screen alongside the clinical team. This identifies both responsibility and a concrete design decision.\n- **Source:** Sam led research, Jordan implemented the production flow, and the outcome is credited to the team. These distinctions make Alex’s contribution understandable without implying sole ownership.\n- **Source:** `project.html` supplies the user problem, shipped status, and a qualitative usability finding. Its descriptive “Project roles and contributions” link provides a clear route to the attribution.\n\nThere are no blocking or should-fix ownership findings in this sample. The project’s collective “we shipped” wording is supported by the linked explanation of individual responsibilities.\n\nAn optional improvement in [project.html](/Users/karlkoch/Developer/skills/.research/skill-evals/revised-01/cases/follow-linked-credit/artifacts/project.html:1) would be to repeat the existing sentence beginning “Alex owned scheduling interaction design” near the introduction, while keeping the full credits link. That would let a screening reader identify Alex’s role and decision directly on the project page. Acceptance: the project page answers what Alex personally contributed, and the credits continue to distinguish research, implementation, and team outcomes.\n\nNo additional candidate facts are needed for that change, and a longer process narrative is unnecessary for this ownership review.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Reports following the local credit link and accurately uses its content when judging ownership.",
+          "evidence_quote": "I followed `index.html` → `project.html` → `credits.html`, and read `about.html`."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Correctly identifies Alex’s scheduling-interaction ownership and design decision, Sam’s research leadership, Jordan’s implementation, and the shared outcome.",
+          "evidence_quote": "**Source:** Sam led research, Jordan implemented the production flow, and the outcome is credited to the team. These distinctions make Alex’s contribution understandable without implying sole ownership."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Frames repeating existing credit as an optional discoverability improvement, without alleging absent attribution or unverified rendered behaviour.",
+          "evidence_quote": "would be to repeat the existing sentence beginning “Alex owned scheduling interaction design” near the introduction, while keeping the full credits link."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Source descriptions match the supplied files, and the answer explicitly leaves visual and runtime properties unverified.",
+          "evidence_quote": "This verdict covers the supplied content only; layout, accessibility, and runtime behaviour remain unverified."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Reports no unsupported priority-labelled problems and keeps the optional suggestion outside a confirmed fix list.",
+          "evidence_quote": "There are no blocking or should-fix ownership findings in this sample."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Limits its verdict to the requested ownership review and invents no ownership facts, metrics, disclosure permissions, or hiring guarantees.",
+          "evidence_quote": "**Passes for ownership clarity for a product designer.**"
+        }
+      ],
+      "rejected_grading_attempts": [
+        {
+          "checks": [
+            {
+              "id": "case-1",
+              "status": "pass",
+              "reason": "Reports following the linked credit page and accurately uses its contents to assess ownership.",
+              "evidence_quote": "I followed `index.html` → `project.html` → `credits.html`, and read `about.html`."
+            },
+            {
+              "id": "case-2",
+              "status": "pass",
+              "reason": "Correctly identifies Alex’s scheduling interaction ownership, Sam’s research role, Jordan’s implementation role, and shared team outcomes.",
+              "evidence_quote": "Alex owned scheduling interaction design and proposed inline coverage gaps after comparing that approach with a separate warning screen alongside the clinical team.\nSam led research, Jordan implemented the production flow, and the outcome is credited to the team."
+            },
+            {
+              "id": "case-3",
+              "status": "pass",
+              "reason": "Frames repetition of existing attribution as an optional discoverability improvement, without asserting missing credit or observed rendering problems.",
+              "evidence_quote": "An optional improvement in [project.html](/Users/karlkoch/Developer/skills/.research/skill-evals/revised-01/cases/follow-linked-credit/artifacts/project.html:1) would be to repeat the existing sentence beginning “Alex owned scheduling interaction design” near the introduction, while keeping the full credits link."
+            },
+            {
+              "id": "honest-inspection",
+              "status": "pass",
+              "reason": "Source observations match the supplied files. The answer explicitly limits its assessment and makes no image, rendering, or runtime verification claims.",
+              "evidence_quote": "This verdict covers the supplied content only; layout, accessibility, and runtime behaviour remain unverified."
+            },
+            {
+              "id": "confirmed-findings",
+              "status": "pass",
+              "reason": "Does not manufacture priority-labelled defects; the optional suggestion remains outside a confirmed fix list.",
+              "evidence_quote": "There are no blocking or should-fix ownership findings in this sample."
+            },
+            {
+              "id": "bounded-judgment",
+              "status": "pass",
+              "reason": "Keeps the verdict within product-design ownership clarity, uses supported contribution facts, and makes no hiring guarantees or invented outcome claims.",
+              "evidence_quote": "**Passes for ownership clarity for a product designer.**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "id": "shipped-is-not-measured-value",
+        "related_examples": [
+          "DC130",
+          "DC121"
+        ],
+        "request": "I no longer have analytics for a feature I designed. It is still live two years later. Can I say it created measurable business value in my portfolio?",
+        "supplied_evidence": "The only confirmed facts are the candidate designed the interaction, worked with an engineer, the team launched it, and it remains available. The original goal was to reduce scheduling errors. No outcome measurement, customer feedback, or evidence of competitor impact is available.",
+        "expected_behavior": [
+          "Use the confirmed design, collaboration, and launch facts while keeping the intended goal separate from outcomes.",
+          "Do not infer measured impact, continuing business benefit, or reduced errors from continued availability alone.",
+          "Suggest seeking permitted outcome evidence or honestly stating the evidence limit; do not fabricate a metric."
+        ]
+      },
+      "actual_response": "**Needs changes to the proposed claim.** You can say the feature shipped and remains available two years later. The available evidence doesn’t support “created measurable business value.” Continued availability doesn’t establish adoption, fewer scheduling errors, or business benefit.\n\nYour interaction design, collaboration with an engineer, and contribution to a launched feature are useful hiring evidence. Preserve those specifics.\n\n**Should fix · Source: supplied evidence in `input.json` · proposed project outcome statement.** Separate the intended outcome from the confirmed delivery status. For example:\n\n> I designed the interaction and worked with an engineer on a feature intended to reduce scheduling errors. The team launched it, and it remains available two years later. I no longer have access to analytics, so I can’t verify its effect on scheduling errors.\n\nAcceptance check: a hiring manager can identify what you contributed, what the team delivered, and which outcome remains unknown.\n\nYou can also demonstrate judgment with a clearly labelled retrospective measurement proposal:\n\n> To evaluate its effectiveness, I would compare scheduling-error rates before and after launch, accounting for scheduling volume and other product changes.\n\nThat explains how you would assess success; it isn’t a result. Verified customer feedback or operational evidence could support a narrower qualitative claim if you obtain it. With the current evidence, keep business value as the intended benefit rather than an achieved outcome.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Preserves the confirmed design, collaboration, launch, and availability facts while distinguishing the intended goal from results.",
+          "evidence_quote": "I designed the interaction and worked with an engineer on a feature intended to reduce scheduling errors. The team launched it, and it remains available two years later."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Explicitly rejects continued availability as evidence of adoption, error reduction, or business benefit.",
+          "evidence_quote": "Continued availability doesn’t establish adoption, fewer scheduling errors, or business benefit."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Honestly states the evidence limit and presents measurement only as a retrospective proposal, without fabricating results.",
+          "evidence_quote": "I no longer have access to analytics, so I can’t verify its effect on scheduling errors."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "Identifies the evidence as supplied input and makes no claim of personally inspecting images, rendered pages, implementation, or runtime behavior.",
+          "evidence_quote": "Source: supplied evidence in `input.json`"
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "The priority-labelled finding addresses the supplied proposed claim and its unsupported outcome assertion. Conditional evidence-gathering advice remains outside that finding.",
+          "evidence_quote": "The available evidence doesn’t support “created measurable business value.”"
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within advice about the portfolio claim, preserves supplied attribution, and invents no ownership, achieved metrics, disclosure permission, or hiring guarantee.",
+          "evidence_quote": "With the current evidence, keep business value as the intended benefit rather than an achieved outcome."
+        }
+      ],
+      "rejected_grading_attempts": []
+    },
+    {
+      "input": {
+        "id": "polished-output-missing-problem",
+        "related_examples": [
+          "DC5",
+          "DC50",
+          "DC161"
+        ],
+        "request": "Review the supplied copy for a senior product design role on complex operations software. The artifact presentation is polished; I want to know whether the project explanation is sufficient.",
+        "supplied_evidence": "The full project copy is: We redesigned twelve screens for Meridian. I owned interaction design and worked with an engineer. We shipped the flow. There is no description of who used it, their task or problem, why the work was prioritised, or a consequential decision. No image or live page is supplied.",
+        "expected_behavior": [
+          "Identify missing user/problem context and decision evidence in this supplied complete copy.",
+          "Ask for actual facts before proposing a bounded summary; do not require an exhaustive process essay or invented business metrics.",
+          "Treat polished presentation as the user description and do not infer rendered quality or candidate ability from it."
+        ]
+      },
+      "actual_response": "**Needs changes** for a senior product design role on complex operations software. The explanation establishes scope, interaction-design ownership, collaboration, and claimed delivery, but leaves the problem and product judgment unclear.\n\nI reviewed the complete supplied Meridian copy in `input.json`. No images, live page, or site implementation were supplied, so I cannot assess the reported visual polish, navigation, or rendered experience. This verdict concerns the project explanation alone.\n\nPreserve the direct ownership statement, credit to the engineer, and shipped status. Those are useful foundations. “Twelve screens” communicates volume; it gives little context for evaluating the work’s difficulty or value.\n\n1. **Blocking / Source / Meridian project copy in `input.json` — Explain whose problem this solved and why it mattered.**\n\n   The complete copy names neither the users nor their task, difficulty, or reason for prioritising the redesign. A hiring manager cannot connect the output to an operational need or business purpose.\n\n   **Smallest change:** Add a short introduction identifying the actual user, what they needed to accomplish, what made that difficult, and why the team addressed it. Use concrete consequences supported by the project’s facts.\n\n   **Acceptance:** After reading the introduction, a reviewer can explain who used the flow, what was going wrong, and why fixing it mattered.\n\n2. **Should fix / Source / Meridian project copy in `input.json` — Make one consequential decision visible.**\n\n   “I owned interaction design” identifies your responsibility, but the explanation gives no example of your judgment. For this role, the reader needs evidence of how you handled the problem’s complexity.\n\n   **Smallest change:** Describe one real decision: the constraint or evidence, the alternatives considered, your choice, and its tradeoff. Explain how collaboration with the engineer influenced it, where relevant. Choose an interaction decision with meaningful consequences; company-wide strategy ownership is unnecessary.\n\n   **Acceptance:** A reviewer can identify a choice you personally influenced and explain why it suited the user’s task and constraints.\n\nBoth changes require facts from the candidate. If reliable outcome evidence exists, add one concise observation—qualitative evidence is useful. Otherwise, state the intended improvement and what remains unknown. Shipping establishes delivery; the effect on users is currently unspecified.\n\nA short introduction and one well-explained decision could make this sufficient. There is no need to turn it into a long process essay.",
+      "independent_grading": [
+        {
+          "id": "case-1",
+          "status": "pass",
+          "reason": "Identifies missing users, tasks, problems, prioritisation rationale, and consequential decision evidence in the complete copy.",
+          "evidence_quote": "The explanation establishes scope, interaction-design ownership, collaboration, and claimed delivery, but leaves the problem and product judgment unclear."
+        },
+        {
+          "id": "case-2",
+          "status": "pass",
+          "reason": "Explicitly requires candidate-supplied facts before adding content, limits the recommendation to a short introduction and one decision, and accepts qualitative evidence without requiring metrics.",
+          "evidence_quote": "Both changes require facts from the candidate. If reliable outcome evidence exists, add one concise observation—qualitative evidence is useful. Otherwise, state the intended improvement and what remains unknown."
+        },
+        {
+          "id": "case-3",
+          "status": "pass",
+          "reason": "Attributes polish to the supplied description and makes no inference about rendered quality or candidate ability.",
+          "evidence_quote": "No images, live page, or site implementation were supplied, so I cannot assess the reported visual polish, navigation, or rendered experience."
+        },
+        {
+          "id": "honest-inspection",
+          "status": "pass",
+          "reason": "The response trace confirms that input.json was read. The answer accurately limits its inspection claim to that copy and claims no rendering, link checks, or runtime testing.",
+          "evidence_quote": "I reviewed the complete supplied Meridian copy in `input.json`."
+        },
+        {
+          "id": "confirmed-findings",
+          "status": "pass",
+          "reason": "Both prioritised findings concern omissions confirmed by the supplied complete copy. Conditional outcome advice remains outside the numbered findings; unavailable visuals are treated as an assessment limitation.",
+          "evidence_quote": "The complete copy names neither the users nor their task, difficulty, or reason for prioritising the redesign."
+        },
+        {
+          "id": "bounded-judgment",
+          "status": "pass",
+          "reason": "Stays within reviewing the explanation for the stated role. It invents no ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+          "evidence_quote": "This verdict concerns the project explanation alone."
+        }
+      ],
+      "rejected_grading_attempts": []
+    }
+  ],
+  "review_action_audit": [
+    {
+      "id": "concise-complete",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/cases/concise-complete/input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'",
+        "/bin/zsh -lc 'rg --files RUN/cases/concise-complete'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "66b6f605bdea1e9a64339f2d594455c2f18822d30e44b4d91cb63cee3d52b6aa",
+      "grading_events_sha256": "e231cbf3f90f97999e92c862f5606bf9ceea4bc5365ad2c178295ceec0439117"
+    },
+    {
+      "id": "prototype-as-relevant-evidence",
+      "commands": [
+        "/bin/zsh -lc pwd",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'rg --files RUN/cases/prototype-as-relevant-evidence'",
+        "/bin/zsh -lc 'cat RUN/cases/prototype-as-relevant-evidence/input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "2a1bb7b81b7e3ad046e2c2d6516edf2e929c4bd22083d5604521dfeba735547e",
+      "grading_events_sha256": "a720cde0503d15ba5a11d4d72a6f7529fbc23863214c7f43901994a5de5a5125"
+    },
+    {
+      "id": "team-result-without-personal-ownership",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/cases/team-result-without-personal-ownership/input.json'",
+        "/bin/zsh -lc 'rg --files RUN/cases/team-result-without-personal-ownership'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "c0a508f339fe9e402d0d4b3d3788fc9bcb2cf458947cfaf781996677329ceab2",
+      "grading_events_sha256": "90250a45d6b019184d917b045b81114262b467c0d235baa6760b60230e745d7f"
+    },
+    {
+      "id": "specialist-role",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/cases/specialist-role/input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'rg --files RUN/cases/specialist-role'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "88e89aabf62bf21e84ceaa1754e69e528b0ed10fd1c6117226bbb0d214575046",
+      "grading_events_sha256": "4b9d365dfe46ed3561ac0dac1b852969061f4d75ce4fec13ba11306709e75eb3"
+    },
+    {
+      "id": "public-screening-vs-interview",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/cases/public-screening-vs-interview/input.json'",
+        "/bin/zsh -lc \"rg --files -g '\"'!input.json'\"' -g '\"'!expected*'\"' -g '\"'!grading*'\"' RUN/cases/public-screening-vs-interview\"",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "e9c75d9794c8a4f3310797c246d08a63902a3b08b021e82f040e47bf26553bf3",
+      "grading_events_sha256": "228c35afb12eba3e3c0aad0ab9f27662743fb5e39efffd23e2bfd4f6f8fcd1b6"
+    },
+    {
+      "id": "restrained-site-and-unsupported-ai-inference",
+      "commands": [
+        "/bin/zsh -lc 'cat input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'rg --files .'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "645a5407b0507659c6dd8b5da74f785103807537bd32676cd48e81a665a49803",
+      "grading_events_sha256": "2959a2f6c700da1142b81fbae6fd84f487087c1ae371e0b550bd972b1c4dc625"
+    },
+    {
+      "id": "older-but-more-relevant",
+      "commands": [
+        "/bin/zsh -lc 'rg --files RUN/cases/older-but-more-relevant'",
+        "/bin/zsh -lc 'cat RUN/cases/older-but-more-relevant/input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "17a0d4c2bc5628a22be47bdd0683a4cc42bb767587c2cb5cffe4f0ca0157e290",
+      "grading_events_sha256": "178f7d370b169c8c79eaaaa967e7e9b7caaaab2ec6394e18634fbb9ac7764adc"
+    },
+    {
+      "id": "qualitative-evidence-under-confidentiality",
+      "commands": [
+        "/bin/zsh -lc 'pwd && rg --files . && cat input.json && cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat prompt.txt'",
+        "/bin/zsh -lc 'cat references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "d054a94bbee3f28b7b4637bda7adf42da3913cd2719ba67171457a81c84c2fc1",
+      "grading_events_sha256": "1dbc0003bd7e409f6bfd74dc6291aa2dfdf866ebc581f7f3fc29741b43e38b09"
+    },
+    {
+      "id": "source-only-hover-gate",
+      "commands": [
+        "/bin/zsh -lc 'cat input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc \"rg --files -g '\"'!**/expected*'\"' -g '\"'!**/grading*'\"' -g '\"'!**/.git/**'\"' .\"",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'",
+        "/bin/zsh -lc 'nl -ba artifacts/app/components/ProjectCard.tsx'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "cf3c9beb019fb2ff6c073351b925ab5f75aa5f2d7fbdab821843a8296f7b1897",
+      "grading_events_sha256": "7c8bc74f4049b2b385c18a26ad2b32824d0a07ce0cd839ca0049ac0c276206d1"
+    },
+    {
+      "id": "senior-decision-buried",
+      "commands": [
+        "/bin/zsh -lc 'cat input.json'",
+        "/bin/zsh -lc \"rg --files -g '\"'!**/expected*'\"' -g '\"'!**/grading*'\"'\"",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "b3cce1fb551ad66e5f6c6e1d26a430ba0a5738807c9d5343e04680de56e0c686",
+      "grading_events_sha256": "474148da5e8ba96577ce9e50b00b41ba681f62df93f7975fd7251b4523d77b35"
+    },
+    {
+      "id": "leadership-credit",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/cases/leadership-credit/input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'rg --files RUN/cases/leadership-credit'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "1c5ac5d87a119ac4de231d4720eefdded46c92a07c63681249e6cfccd21ec11e",
+      "grading_events_sha256": "6d001b49692981d8e7595910d9e170f39e583b0234a07fdb39b193f249f045df"
+    },
+    {
+      "id": "portfolio-success-is-not-causation",
+      "commands": [
+        "/bin/zsh -lc 'cat input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "509d901d5f748b90bfb230d29fb0a6cea0d5893f8989eb3a0f935eca575943aa",
+      "grading_events_sha256": "d95ac2e9c60f0b805a66da233f9031859887517e5f89e3b02f8c2c5497bb16d1"
+    },
+    {
+      "id": "described-screenshot-only",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/cases/described-screenshot-only/input.json'",
+        "/bin/zsh -lc 'rg --files RUN/cases/described-screenshot-only'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "c9c063dd72c928e64494cf6ce9f15cbb398bc9bf796da0649a3c41817ba23620",
+      "grading_events_sha256": "f26b0713a4592b361f2661abd663c456280c480f2dda3be452795b5cfcf1e9e0"
+    },
+    {
+      "id": "unseen-copy-no-defect",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/cases/unseen-copy-no-defect/input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "9a6b9e1b046753907d17c912c68a67d66fc23d6d569a0c384d69c42777dc2373",
+      "grading_events_sha256": "dfaf384448c800d0c641bbd0e21511442d4557913118773904902438ac7aeb79"
+    },
+    {
+      "id": "inaccessible-private-work",
+      "commands": [
+        "/bin/zsh -lc 'cat input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'rg --files .'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "fd2a02e00e9aa50273562a12d8d8e1434634f645a61e517e09c904af8989d889",
+      "grading_events_sha256": "5bf9d72495fe8e39a8f4e8b917b0e66c50c13d12378547e95cdde865303ff22c"
+    },
+    {
+      "id": "follow-linked-credit",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/cases/follow-linked-credit/input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'",
+        "/bin/zsh -lc 'rg --files RUN/cases/follow-linked-credit/artifacts'",
+        "/bin/zsh -lc 'for f in RUN/cases/follow-linked-credit/artifacts/index.html RUN/cases/follow-linked-credit/artifacts/project.html RUN/cases/follow-linked-credit/artifacts/credits.html RUN/cases/follow-linked-credit/artifacts/about.html; do cat -n \"$f\"; done'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "34bf93a17dd2f34c20078cbed014d859b881a713e1f38bc064e56ee05c5eb5af",
+      "grading_events_sha256": "568683b8bb3fe0c9e73f96e1c0a8c17ebd5876044e3e8adbbbc2459887119d5f"
+    },
+    {
+      "id": "shipped-is-not-measured-value",
+      "commands": [
+        "/bin/zsh -lc 'rg --files .'",
+        "/bin/zsh -lc 'cat input.json'",
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "3ef63513fb371cb3ceb689d4060810f4cd117142f2de1e241cb00ddd1e9e3b8e",
+      "grading_events_sha256": "6fa067c4795ed0ebca7440b04625646da4ab5ac48a471074787cf79b45721c22"
+    },
+    {
+      "id": "polished-output-missing-problem",
+      "commands": [
+        "/bin/zsh -lc 'cat RUN/skill/SKILL.md'",
+        "/bin/zsh -lc 'cat input.json'",
+        "/bin/zsh -lc \"rg --files -g '\"'!expected*'\"' -g '\"'!grading*'\"' .\"",
+        "/bin/zsh -lc 'cat RUN/skill/references/dive-club-examples.md'"
+      ],
+      "other_action_types": [],
+      "review_events_sha256": "0c93f3771b26dc8d804d780c87c8d9a2efafa3d31d0fa53a63053fc3aaefd7a7",
+      "grading_events_sha256": "9cb30dd39b702387243daf5edc7f7dd09c14656e8dd0e2e33e5d7a184cfb93a4"
+    }
+  ],
+  "limitations": [
+    "One response per synthetic case; this is a regression result, not a stable pass-rate estimate or evidence of improved hiring outcomes.",
+    "Initial and revised evaluation paths differ, and the suite was expanded and one source fixture clarified; aggregate pass rates are not a controlled comparison.",
+    "Blinding relies on scoped prompts and inspection of recorded actions, not an operating-system file-access boundary.",
+    "Full CLI event logs and frozen inputs are retained in the ignored local research archive."
+  ]
+}

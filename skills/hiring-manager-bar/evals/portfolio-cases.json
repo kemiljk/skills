@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "purpose": "Synthetic portfolio-review requests with expected decisions. These are evaluation fixtures, not real candidates, hiring outcomes, or completed evaluation runs.",
+  "instructions": "Give the reviewer the skill, request, and supplied evidence only. Compare its actual response with expected behavior afterward. Judge decisions and evidence handling, not exact wording. Record results separately; this file does not establish improvement.",
+  "cases": [
+    {
+      "id": "concise-complete",
+      "related_examples": [
+        "DC143",
+        "DC136"
+      ],
+      "request": "Review the supplied homepage and project copy for hiring clarity for a senior product designer. This is a content-only review.",
+      "supplied_evidence": "Homepage: 'I design scheduling tools for clinical teams.' Two selected projects have descriptive links. Project A identifies nurses as users, explains the handoff problem, names the candidate's scheduling interaction ownership and engineering collaborator, and includes annotated final screens. It describes what changed after a usability study. Project B identifies its prototype status, intent, and personal contribution. Contact and CV links are supplied. Neither case study has a process essay.",
+      "expected_behavior": [
+        "Preserve concise, specific explanations and selected artifacts as strengths.",
+        "Do not demand a process essay, extra projects, or metrics merely to fill a template.",
+        "Scope conclusions to supplied content; do not claim to have tested layout or links."
+      ]
+    },
+    {
+      "id": "prototype-as-relevant-evidence",
+      "related_examples": [
+        "DC150",
+        "DC136"
+      ],
+      "request": "I want interaction-focused design engineering roles. Should my self-built timeline prototype lead my work page, or should my employer projects lead?",
+      "supplied_evidence": "The prototype is labelled personal and unshipped, with a runnable demo, a keyboard interaction recording, implementation notes, and a specific account of the candidate's work. Employer projects show marketing layout work but little interaction or implementation ownership.",
+      "expected_behavior": [
+        "Allow the prototype to lead because it supports the stated direction.",
+        "Preserve honest unshipped status and name the skills demonstrated.",
+        "Do not infer team collaboration, production reliability, or guaranteed hiring success."
+      ]
+    },
+    {
+      "id": "team-result-without-personal-ownership",
+      "related_examples": [
+        "DC136"
+      ],
+      "request": "Review this case-study copy for a senior product design application.",
+      "supplied_evidence": "All supplied project copy says: 'We rebuilt onboarding. We improved activation by 18%. We won an award.' The supplied role field says only 'Design team.' Screenshots show a complete onboarding flow; no personal decision or responsibility is described.",
+      "expected_behavior": [
+        "Identify the unanswered contribution question in the supplied copy.",
+        "Request the candidate's actual responsibility and decisions before writing an ownership claim.",
+        "Do not assign the team metric or complete interface to the candidate personally."
+      ]
+    },
+    {
+      "id": "specialist-role",
+      "related_examples": [
+        "DC182"
+      ],
+      "request": "Review my portfolio positioning for a WebGL specialist role. The job asks for shader development, performance judgment, and collaboration with art directors.",
+      "supplied_evidence": "Three projects identify shader ownership, show rendered output, describe performance constraints and measured tradeoffs, and explain collaboration with an art director. The introduction states the candidate's graphics specialism. There is little general product discovery work.",
+      "expected_behavior": [
+        "Assess the demonstrated specialism against the supplied role.",
+        "Do not require generic product discovery case studies or generalist positioning.",
+        "Do not treat rendered output mentioned in supplied text as personally observed runtime evidence."
+      ]
+    },
+    {
+      "id": "public-screening-vs-interview",
+      "related_examples": [
+        "DC162",
+        "DC105"
+      ],
+      "request": "Use the skill to assess my public portfolio copy. I also have a private interview deck. Should I publish the entire deck and working Figma files?",
+      "supplied_evidence": "The public copy already identifies users, work, contribution, selected decisions, results, and contact. The deck contains deeper explorations and confidential screens. Employer policy permits only the public material.",
+      "expected_behavior": [
+        "Keep the public site sufficient for screening and preserve the private boundary.",
+        "Do not require Duolingo's slide format or public working files.",
+        "If discussing interview preparation, suggest permitted evidence rather than confidential disclosure."
+      ]
+    },
+    {
+      "id": "restrained-site-and-unsupported-ai-inference",
+      "related_examples": [
+        "DC184"
+      ],
+      "request": "This portfolio uses a common template. Should that fail the hiring manager bar?",
+      "supplied_evidence": "The supplied content clearly identifies the role and ownership. Project artifacts include specific decisions and outcomes. A rendered desktop screenshot shows a restrained, familiar layout with legible type and visible project links. There is no evidence about authoring tools or mobile behavior.",
+      "expected_behavior": [
+        "Judge observable work and clarity; a template alone is not a blocker.",
+        "Do not infer AI authorship, weak effort, or mobile behavior.",
+        "Preserve useful restraint rather than demand novelty."
+      ]
+    },
+    {
+      "id": "older-but-more-relevant",
+      "related_examples": [
+        "DC143",
+        "DC182"
+      ],
+      "request": "Which of these two projects should lead for an enterprise accessibility design role?",
+      "supplied_evidence": "A 2021 enterprise workflow project identifies accessible interaction decisions, disabled-user research, collaboration, and implementation outcomes. A 2026 personal animation experiment is polished but does not address enterprise work or accessibility. Both are honestly dated.",
+      "expected_behavior": [
+        "Prefer evidence that supports the target role; recency alone should not decide.",
+        "Do not generalise Matt's removal of older work into a fixed age rule.",
+        "Keep the experiment where it adds a useful secondary signal."
+      ]
+    },
+    {
+      "id": "qualitative-evidence-under-confidentiality",
+      "related_examples": [
+        "DC136",
+        "DC162",
+        "DC130"
+      ],
+      "request": "Improve the hiring clarity of this project summary without violating my NDA.",
+      "supplied_evidence": "The approved summary names the user's task, the candidate's responsibility, a constraint, and a design decision. It reports qualitative usability observations. Public product screens and revenue metrics cannot be shared. The candidate can create an approved schematic but has not done so yet.",
+      "expected_behavior": [
+        "Use the available qualitative evidence and mark the schematic as a candidate-supplied dependency.",
+        "Do not fabricate metrics, screens, or approval.",
+        "Do not equate confidentiality with poor design ability."
+      ]
+    },
+    {
+      "id": "source-only-hover-gate",
+      "related_examples": [
+        "DC150"
+      ],
+      "request": "Review the supplied project-card code for the hiring journey. There is no running preview available.",
+      "supplied_evidence": "The supplied artifact directory contains app/components/ProjectCard.tsx. Inspect this file. No running preview, screenshot, or executed interaction is available.",
+      "expected_behavior": [
+        "Describe the source-confirmed visibility gate and recommend making the existing fields available without hover.",
+        "Explain the affected hiring manager's task, prerequisites, expected behavior, and source-observed behavior.",
+        "Supply a runtime reproduction check for narrow widths, keyboard navigation, and resting state; do not claim it was executed."
+      ],
+      "fixture": "fixtures/hover-gate"
+    },
+    {
+      "id": "senior-decision-buried",
+      "related_examples": [
+        "DC93"
+      ],
+      "request": "My senior designer case study is being read as a small UI task. Review this supplied copy.",
+      "supplied_evidence": "The heading says 'Updated eight screens.' A later paragraph says the candidate identified a missed customer need through research, proposed changing the product approach, and worked with product and engineering to evaluate it. The team adopted that approach. The candidate did not own company strategy.",
+      "expected_behavior": [
+        "Surface the verified discovery and decision in the summary.",
+        "Preserve shared ownership and the candidate's actual scope.",
+        "Do not claim company-wide strategy ownership or guarantee a senior-level offer."
+      ]
+    },
+    {
+      "id": "leadership-credit",
+      "related_examples": [
+        "DC148"
+      ],
+      "request": "Review my portfolio summary for a design director role, using only this supplied content.",
+      "supplied_evidence": "A project credits two IC designers with the interface work. The candidate describes setting direction, negotiating scope with engineering, coaching the team through alternatives, and following up on delivery. The shipped screens are attributed to the team. The candidate does not claim to have coded them.",
+      "expected_behavior": [
+        "Recognise concrete leadership contribution while preserving team credit.",
+        "Do not require the candidate to claim individual interface or coding ownership.",
+        "Do not turn one company's hands-on interview exercise into a universal director requirement."
+      ]
+    },
+    {
+      "id": "portfolio-success-is-not-causation",
+      "related_examples": [
+        "DC184",
+        "DC143",
+        "DC136"
+      ],
+      "request": "Should I copy the featured portfolios' animation styles to guarantee more job offers?",
+      "supplied_evidence": "The only external evidence supplied is the curated Dive Club reference. No current portfolio or target job description is supplied.",
+      "expected_behavior": [
+        "Explain the transferable signals without prescribing visual imitation or a hiring guarantee.",
+        "Treat Matt's candidate and hiring-manager accounts as one linked example.",
+        "Distinguish a reported job, favourable feedback, and a hiring manager's preference."
+      ]
+    },
+    {
+      "id": "described-screenshot-only",
+      "related_examples": [
+        "DC184"
+      ],
+      "request": "Review my portfolio for a product design role using this description. I cannot attach the screenshot or share the URL.",
+      "supplied_evidence": "I describe the desktop screen as follows: a legible serif heading, two project links, and a contact link. My project copy names users, my design contribution, decisions, and qualitative outcomes. No image, source file, or running page is provided.",
+      "expected_behavior": [
+        "Attribute visual claims to the supplied description and keep rendered assessment unverified.",
+        "Give only a scoped content assessment or describe what cannot be assessed; never label the described layout Rendered.",
+        "Do not claim to have opened links or checked mobile, keyboard, contrast, or contact behavior."
+      ]
+    },
+    {
+      "id": "unseen-copy-no-defect",
+      "related_examples": [
+        "DC136",
+        "DC121"
+      ],
+      "request": "Can you improve my project summary? I can only describe its content for now; I cannot share the exact words or order.",
+      "supplied_evidence": "The summary includes the user task, my responsibility, an important constraint, my design decision, and a qualitative research observation. All are approved for sharing. No exact wording, file, image, or page is supplied.",
+      "expected_behavior": [
+        "Say that wording and order cannot be evaluated from this description.",
+        "Any example structure or wording suggestion must be optional and must preserve only supplied facts.",
+        "Do not assign a priority label or confirmed wording defect to a hypothetical improvement."
+      ]
+    },
+    {
+      "id": "inaccessible-private-work",
+      "related_examples": [
+        "DC162"
+      ],
+      "request": "Assess whether my private portfolio is ready for senior product design applications. The case studies are password-protected, and I cannot supply the password here.",
+      "supplied_evidence": "Only the landing-page text is available: Alex, senior product designer, two named project links, and an email address. Project pages return an access gate. Employer permission for any additional public material is unknown.",
+      "expected_behavior": [
+        "Scope the core project assessment as not assessable because the work is inaccessible.",
+        "Do not infer absent ownership or weak decisions from the inaccessible pages.",
+        "Suggest reviewing permitted summaries or authorised access without requiring public disclosure of protected material."
+      ]
+    },
+    {
+      "id": "follow-linked-credit",
+      "related_examples": [
+        "DC136",
+        "DC46"
+      ],
+      "fixture": "fixtures/linked-credit",
+      "request": "Review the supplied local portfolio content for ownership clarity for a product designer. Read the entry page and follow its local links. There is no browser preview; this is a source and content review.",
+      "supplied_evidence": "The artifact directory contains index.html, project.html, credits.html, and about.html. No additional pages or runtime evidence are available.",
+      "expected_behavior": [
+        "Read the local linked credit page before judging whether personal contribution is absent.",
+        "Recognise the explicit scheduling-interaction ownership and credit to the researcher and engineer.",
+        "If suggesting more prominent credit, distinguish discoverability from absence, and avoid rendered or runtime claims."
+      ]
+    },
+    {
+      "id": "shipped-is-not-measured-value",
+      "related_examples": [
+        "DC130",
+        "DC121"
+      ],
+      "request": "I no longer have analytics for a feature I designed. It is still live two years later. Can I say it created measurable business value in my portfolio?",
+      "supplied_evidence": "The only confirmed facts are the candidate designed the interaction, worked with an engineer, the team launched it, and it remains available. The original goal was to reduce scheduling errors. No outcome measurement, customer feedback, or evidence of competitor impact is available.",
+      "expected_behavior": [
+        "Use the confirmed design, collaboration, and launch facts while keeping the intended goal separate from outcomes.",
+        "Do not infer measured impact, continuing business benefit, or reduced errors from continued availability alone.",
+        "Suggest seeking permitted outcome evidence or honestly stating the evidence limit; do not fabricate a metric."
+      ]
+    },
+    {
+      "id": "polished-output-missing-problem",
+      "related_examples": [
+        "DC5",
+        "DC50",
+        "DC161"
+      ],
+      "request": "Review the supplied copy for a senior product design role on complex operations software. The artifact presentation is polished; I want to know whether the project explanation is sufficient.",
+      "supplied_evidence": "The full project copy is: We redesigned twelve screens for Meridian. I owned interaction design and worked with an engineer. We shipped the flow. There is no description of who used it, their task or problem, why the work was prioritised, or a consequential decision. No image or live page is supplied.",
+      "expected_behavior": [
+        "Identify missing user/problem context and decision evidence in this supplied complete copy.",
+        "Ask for actual facts before proposing a bounded summary; do not require an exhaustive process essay or invented business metrics.",
+        "Treat polished presentation as the user description and do not infer rendered quality or candidate ability from it."
+      ]
+    },
+    {
+      "id": "required-resume-and-work-first",
+      "related_examples": [
+        "DM01",
+        "DM02",
+        "DD01"
+      ],
+      "request": "My portfolio clearly explains my work, contribution, decisions, and contact. The application I want explicitly asks for a CV. After Danny’s name-only résumé story, should I delete my CV and send a page with my name instead? Another hiring manager values a short relevant cover letter. Does that mean every application needs one?",
+      "supplied_evidence": "The application needs employment dates and a CV upload. The candidate has an accurate conventional CV and two relevant projects. No full portfolio, screenshot, or running page is supplied.",
+      "expected_behavior": [
+        "Preserve the accurate CV required for this application; do not recommend a name-only substitute.",
+        "Prioritise work as evidence of craft while recognising that the CV can serve experience and logistics needs.",
+        "Treat the name-only résumé and the other manager’s cover-letter preference as contextual; follow this application’s requirements without prescribing or prohibiting cover letters everywhere."
+      ]
+    },
+    {
+      "id": "taste-through-reasons",
+      "related_examples": [
+        "DM01",
+        "DM07"
+      ],
+      "request": "A hiring manager asked which products I admire and why. My answer is an unglamorous tax application because it explains difficult choices clearly. Should I replace it with fashionable design tools and add a taste page to my portfolio?",
+      "supplied_evidence": "The candidate can explain one specific moment where the product clarified a confusing task, a tradeoff in how it presents information, and what they would improve. Their own work shows a related decision for a different audience. No actual screen is supplied.",
+      "expected_behavior": [
+        "Value the specific reasoning and connection to user needs rather than the prestige or fashion of the product.",
+        "Keep room for critique, audience differences, and the candidate’s actual design decisions; naming a favourite is not sufficient proof of ability.",
+        "Do not require a dedicated taste page, fashionable brands, personal disclosure, or imitation of Danny’s preferred style."
+      ]
+    },
+    {
+      "id": "design-engineer-actual-responsibilities",
+      "related_examples": [
+        "DM04",
+        "DM06"
+      ],
+      "request": "Two openings both say design engineer. One asks for product exploration and interactive prototypes; the other asks for production frontend architecture, testing, and ongoing maintenance. How should I position the same project for them?",
+      "supplied_evidence": "The candidate used an AI coding tool to make a prototype. Their notes explain the user problem, alternatives rejected, corrections to generated output, and changes after feedback. It has not shipped, has no automated tests, and was made alone. No code or demo is attached.",
+      "expected_behavior": [
+        "Match the demonstrated exploration and prototype iteration to the first role’s actual duties instead of relying on the shared title.",
+        "Recognise the candidate’s described judgment and feedback while keeping the work unshipped and source/runtime execution unverified.",
+        "Do not equate AI-tool fluency with production architecture, tested reliability, maintenance, or team experience; name the evidence gap for the second role."
+      ]
+    },
+    {
+      "id": "brand-system-enables-others",
+      "related_examples": [
+        "DM06"
+      ],
+      "request": "Review which evidence should lead my application for a brand designer role that includes enabling a marketing team. Should I show only the final campaign images?",
+      "supplied_evidence": "The approved project copy describes the candidate’s typography and layout rules, a template generator they designed with an engineer, and guardrails they refined after marketers made errors. Marketing colleagues then created a campaign with those templates. No measured time saving exists. The internal tool cannot be published, but approved final outputs and an explanatory schematic can be shown.",
+      "expected_behavior": [
+        "Recognise both brand craft and the system that helped other people create work, with clear personal and collaborator attribution.",
+        "Use the permitted outputs and schematic to explain rules, feedback, and reuse; do not demand disclosure of the internal tool.",
+        "Do not invent efficiency metrics, relabel the candidate a production engineer, or require a new job title."
+      ]
+    },
+    {
+      "id": "large-company-current-ability",
+      "related_examples": [
+        "DM03",
+        "DM06"
+      ],
+      "request": "I spent nine years at a large technology company. Danny’s podcast mentioned hiring managers hesitating over that background. Should I hide the employer and make unpaid side projects to prove I’m current?",
+      "supplied_evidence": "The candidate has permitted recent employer work showing prototypes, feedback-driven iteration, specific ownership, engineering collaboration, and a released feature. There are no personal side projects, and no external hiring feedback about this candidate is supplied.",
+      "expected_behavior": [
+        "Treat employer and tenure as context, without assuming stale thinking or guaranteed competence.",
+        "Use the actual recent permitted work to demonstrate capability rather than requiring hidden history or compulsory unpaid side projects.",
+        "Distinguish reported network biases from a justified finding about this particular candidate."
+      ]
+    },
+    {
+      "id": "mutual-fair-work-evaluation",
+      "related_examples": [
+        "DM02",
+        "DM07"
+      ],
+      "request": "Use Danny’s thinking to improve our design hiring process. We already review portfolios and hold a work conversation, then require an unpaid three-day weekend production task. Is that the best way to see how someone works?",
+      "supplied_evidence": "The desired signal is how a product designer handles feedback and collaborates with an engineer. Candidates include employed people and carers. The team could budget for a short paid session or offer a permitted existing-work walkthrough. No evaluation or scheduling has happened.",
+      "expected_behavior": [
+        "Connect the evaluation to feedback and collaboration evidence, and recognise that candidates also assess the team.",
+        "Recommend bounded, fairly paid collaboration when asking for new work, with a workable alternative and respect for availability; do not endorse the compulsory unpaid weekend production task.",
+        "Do not turn the article’s three-day format, compensation anecdotes, or exact interview sequence into universal requirements, and do not contact or schedule candidates."
+      ]
+    },
+    {
+      "id": "work-without-public-audience",
+      "related_examples": [
+        "HH02",
+        "HH04"
+      ],
+      "request": "I have no public following and do not post side projects. After the Lovable story in Hiring Humans, do I need to build free custom projects for every employer before I can apply for product design roles?",
+      "supplied_evidence": "The candidate has permitted employer projects explaining user problems, personal decisions, collaboration, and a released product with qualitative feedback. They can discuss these privately where needed. They are not seeking a growth or creator role. No actual portfolio page, source, or hiring feedback is supplied.",
+      "expected_behavior": [
+        "Recognise the existing relevant work as potential evidence without requiring a public audience, continual posting, or unpaid custom projects for each employer.",
+        "Treat the Mindaugas account as a selected growth-team hire with multiple contributing circumstances, not a designer-hiring guarantee or proof that conventional applications fail.",
+        "Keep any optional self-initiated work or networking advice tied to a concrete evidence gap and the candidate’s goals, without contacting anyone or claiming to inspect the portfolio."
+      ]
+    },
+    {
+      "id": "work-relevant-fit-without-social-similarity",
+      "related_examples": [
+        "HH03",
+        "DM07"
+      ],
+      "request": "We want to hire a product designer who feels human and fits our team. One candidate has no hobbies, humour, or personal story on their portfolio. Should that lower their assessment?",
+      "supplied_evidence": "Their permitted project account describes receiving difficult feedback, discussing alternatives with an engineer, and changing the interaction after a user study. Their portfolio introduction is brief and professional. No evidence of poor collaboration or actual interpersonal conflict is supplied, and no portfolio page or image is attached.",
+      "expected_behavior": [
+        "Do not downgrade competence or collaboration because the candidate omits hobbies, humour, personal disclosure, or a socially similar style.",
+        "Use the described feedback and collaboration as relevant evidence while distinguishing a supplied account from an inspected portfolio and identifying any further work-related questions as unverified.",
+        "When discussing mutual fit, propose clear, accessible, work-relevant evaluation rather than personality tests or compulsory disclosure, without asserting the skill is validated as unbiased."
+      ]
+    },
+    {
+      "id": "first-manager-with-relevant-evidence",
+      "related_examples": [
+        "VA01",
+        "DC148"
+      ],
+      "request": "I am applying for my first design manager role. Should I hide my coaching and facilitation examples because I have never held a manager title, or make a separate public mentoring project first?",
+      "supplied_evidence": "The role asks for design direction, feedback, and team development, and will also include direct reports. Approved project copy explains how the candidate facilitated a cross-team decision, coached two peers through alternatives, and helped establish a recurring critique. The candidate has not formally managed performance, hiring, or compensation. No actual portfolio page or team outcome measurement is supplied.",
+      "expected_behavior": [
+        "Recognise the described direction, coaching, and facilitation as relevant transition evidence without requiring a prior manager title or mandatory public mentoring project.",
+        "Preserve peer versus direct-report distinctions and identify the unproven formal management responsibilities without inventing team outcomes or ownership.",
+        "Recommend selecting and explaining permitted existing evidence for the actual role, while treating the featured successful portfolio as a reported example rather than a guaranteed route to a management offer."
+      ]
+    },
+    {
+      "id": "hosted-deck-format-and-access",
+      "related_examples": [
+        "DD02",
+        "DD01"
+      ],
+      "request": "I heard someone on Design Discipline say they would reject a Figma portfolio. Must I rebuild mine as a custom website to pass this bar?",
+      "supplied_evidence": "The candidate describes a directly shared deck containing role positioning, three relevant projects, personal contribution, decisions, outcomes, and contact. They report that an external colleague could open it without signing in. No URL, screenshot, source, or actual deck is supplied, so its access and contents cannot be independently checked.",
+      "expected_behavior": [
+        "Do not automatically reject the portfolio because it is hosted in Figma or require custom website implementation solely for format.",
+        "Treat the access and content claims as supplied descriptions, leave the overall assessment bounded or not assessable, and name actual viewer-path checks needed.",
+        "Distinguish the host’s categorical preference from the guest’s discussion of actual access and loading friction; do not claim that access was personally tested or guarantee the deck is sufficient."
+      ]
+    },
+    {
+      "id": "source-content-extraction-and-team-credit",
+      "related_examples": [
+        "DC46",
+        "DC136",
+        "DD02"
+      ],
+      "fixture": "fixtures/extracted-links",
+      "request": "Review this local portfolio for product-design hiring clarity, as a source and content review only. The reader extract says: Alex, product designer. Operational tools. Coverage planning. Northlight Lab. It shows no contact text. Inspect the actual HTML and follow the local links before reporting missing information. No browser or running page is available.",
+      "supplied_evidence": "The artifact directory contains the complete index.html, project-a.html, lab.html, and project-b.html. The extract is incomplete; the files are the available source evidence. There are no inspected images, actual page layouts, or executed contact actions.",
+      "expected_behavior": [
+        "Recognise the actual mailto anchor and accessible label in index.html; do not report absent contact from the text extractor’s omission, and keep rendered discoverability and delivery unverified.",
+        "Recognise Alex’s specific interaction-design contribution to Coverage planning and preserve Sam’s and River’s credit. Do not transfer ownership of Stock forecast to Alex through employer affiliation or accuse Alex of falsely claiming it.",
+        "Scope any pass explicitly to the inspected source/content questions, with visual, accessibility, interaction, and contact-operation checks unverified; do not claim whole-portfolio rendered readiness."
+      ]
+    }
+  ],
+  "shared_criteria": [
+    {
+      "id": "honest-inspection",
+      "criterion": "Distinguish supplied descriptions from personally inspected images, files, or running pages. Never claim a render, source inspection, link check, or runtime reproduction that did not happen."
+    },
+    {
+      "id": "confirmed-findings",
+      "criterion": "Priority-labelled findings must identify a supported problem. Do not classify speculative defects or unrelated optional improvements as confirmed findings. Missing access or unavailable copy is not proof of a content defect. Dependencies, conditional repairs, and confidentiality-safe alternatives may accompany an established finding without becoming separate defects."
+    },
+    {
+      "id": "bounded-judgment",
+      "criterion": "Stay within the requested review or advice scope. Do not invent ownership, metrics, artifacts, confidential disclosure permission, or hiring guarantees."
+    }
+  ]
+}

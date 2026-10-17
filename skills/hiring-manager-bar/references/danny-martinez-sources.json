@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "researched_at": "2026-10-17",
+  "purpose": "Source provenance for bounded portfolio-review calibration, not Danny’s approval of this skill or measured hiring effectiveness.",
+  "sources": [
+    {
+      "id": "DM01",
+      "title": "Stop asking designers… (supplied article screenshots)",
+      "author": "Danny Martinez",
+      "url": null,
+      "published": null,
+      "evidence_kind": "author opinion with reported anecdotes and quoted third-party preferences",
+      "verification": "Supplied images read; author and handle visible in final image. Full title, original URL, and publication date not established.",
+      "provided_images": [
+        {
+          "filename": "1-Photo-1.jpg",
+          "sha256": "a8b06d6761119c0178355edeb554709ab277f2987b6f92a8561510948c5f874a"
+        },
+        {
+          "filename": "2-Photo-2.jpg",
+          "sha256": "f6624ec91b1527e48613eb94e3c6a5f32b4b60e20c6ecbb420dae2ed33eed47a"
+        },
+        {
+          "filename": "3-Photo-3.jpg",
+          "sha256": "49d22863466f68cc8e3580cb44b0cdb3df6161bcdf16915fbfdd44af6bc832c9"
+        },
+        {
+          "filename": "4-Photo-4.jpg",
+          "sha256": "f54320dc98447f900f825ccc7517a548b224a687dc82afbde2084e6059798568"
+        },
+        {
+          "filename": "5-Photo-5.jpg",
+          "sha256": "2b1eb1865ded309685d381e8e30e79f1ce5b81ab6fd178f2e326660bec015dfc"
+        },
+        {
+          "filename": "6-Photo-6.jpg",
+          "sha256": "d23948737cd10dc3bcadca0aa36ca7acfc29b6e22e0d148b9c921da83da692be"
+        }
+      ],
+      "locators": [
+        "Photo 1: name-only résumé anecdote",
+        "Photo 4–5: work, taste, and current practice",
+        "Photo 6: evaluate what each hiring step actually tests"
+      ]
+    },
+    {
+      "id": "DM02",
+      "title": "5 tips for hiring designers in 2026",
+      "author": "Danny Martinez",
+      "url": "https://www.linkedin.com/pulse/5-tips-hiring-designers-2026-danny-martinez-9wgbc",
+      "published": "2026-10-01",
+      "evidence_kind": "authored hiring advice and reported candidate/employer accounts",
+      "verification": "Public author article read; matching supplied screenshots are the same source, not corroboration.",
+      "provided_images": [
+        {
+          "filename": "1-Photo-1.jpg",
+          "sha256": "af79035f7340ea19db89370cdc113a315c9caa075adbc269a3f75f1db1be3e14"
+        },
+        {
+          "filename": "2-Photo-2.jpg",
+          "sha256": "bff37d443856ecfe3fc243ef854150d47aa73a97884cb8e4358895e21f19568f"
+        },
+        {
+          "filename": "3-Photo-3.jpg",
+          "sha256": "aeeb89ed7d496327a85982e61a60c56c9135ccc0fe8cc1826d70b8da62b19ee4"
+        },
+        {
+          "filename": "4-Photo-4.jpg",
+          "sha256": "bf8dae3f31d3fc5af663f44ef325ab59f38df7b1311f0eabc56be3ff8bca2a8f"
+        },
+        {
+          "filename": "5-Photo-5.jpg",
+          "sha256": "d79f9d17388fb4b39829dd74c68a0780b65e88b369e1e86576a0a11533845626"
+        },
+        {
+          "filename": "6-Photo-6.jpg",
+          "sha256": "bcca618183a5682565e61fe2d2922d8980aa140e610356a324692b93fc17e737"
+        }
+      ],
+      "locators": [
+        "1. Make it all about the work",
+        "2. Sprint towards a paid work trial",
+        "3. Don’t make the recruiter screen the first touchpoint",
+        "4. Be upfront about what you’re not hiring for",
+        "5. Stay flexible for the right candidate"
+      ]
+    },
+    {
+      "id": "DM03",
+      "title": "Don’t hire based on brand name alone",
+      "author": "Danny Martinez",
+      "url": "https://www.linkedin.com/posts/danny-felipe-martinez_the-best-hires-may-not-have-worked-at-google-activity-7326254472005918720-9zhL",
+      "published": null,
+      "evidence_kind": "author advice introducing Jessica Toy interview",
+      "verification": "Author’s public post read; exact publication timestamp not established.",
+      "locators": [
+        "Opening post, excluding comments and recommended posts"
+      ]
+    },
+    {
+      "id": "DM04",
+      "title": "Hiring Humans Tactics",
+      "author": "Danny Martinez",
+      "url": "https://www.linkedin.com/posts/danny-felipe-martinez_hiring-humans-tactics-activity-7247466652512980992-P-KU",
+      "published": null,
+      "evidence_kind": "author advice on AI-assisted hiring and work evidence",
+      "verification": "Public author post read; linked newsletter article was inaccessible and was not used as additional evidence.",
+      "locators": [
+        "Opening post, items 1–4, excluding comments"
+      ]
+    },
+    {
+      "id": "DM05",
+      "title": "We don’t need to hire entry-level people anymore",
+      "author": "Danny Martinez",
+      "url": "https://www.linkedin.com/posts/danny-felipe-martinez_we-dont-need-to-hire-entry-level-people-activity-7295766214918717441-MV-l",
+      "published": null,
+      "evidence_kind": "author criticism of an anti-junior hiring claim and summary of guest advice",
+      "verification": "Public author post read; the opening claim is criticised, not endorsed. Exact publication timestamp not established.",
+      "locators": [
+        "Opening author post, excluding comments and recommendations"
+      ]
+    },
+    {
+      "id": "DM06",
+      "title": "Dive Club 184 — Thriving in today’s design job market",
+      "author": "Danny Martinez and Michael Riddering, distinguish speakers",
+      "url": "https://rss.com/podcasts/diveclub/3184290",
+      "published": "2026-09-29",
+      "evidence_kind": "interview opinions, reported hiring preferences, and candidate accounts",
+      "verification": "Selected passages reviewed in local Apple transcript; no human listening or diarization.",
+      "local_corpus_episode_id": "3184290",
+      "ranges_seconds": [
+        [
+          80,
+          227
+        ],
+        [
+          564,
+          688
+        ],
+        [
+          725,
+          975
+        ],
+        [
+          1800,
+          1996
+        ],
+        [
+          2207,
+          2683
+        ]
+      ],
+      "reuse_note": "Same episode and overlapping candidates as DC184 and parts of DM02; not independent evidence."
+    },
+    {
+      "id": "DM07",
+      "title": "Design Discipline — Danny Martinez",
+      "author": "Danny Martinez interviewed by Baytaş",
+      "url": "https://www.designdisciplin.com/p/danny-martinez",
+      "published": "2026-09-28",
+      "evidence_kind": "founder interview, candidate-experience philosophy, and stated preferences",
+      "verification": "Locally transcribed from publisher audio; selected passages reviewed as text, without human audio verification or diarization.",
+      "ranges_seconds": [
+        [
+          604,
+          748
+        ],
+        [
+          937,
+          1055
+        ],
+        [
+          1853,
+          1992
+        ],
+        [
+          2545,
+          2868
+        ],
+        [
+          3207,
+          3430
+        ],
+        [
+          3494,
+          3526
+        ]
+      ],
+      "transcription": {
+        "publisher_url": "https://www.designdisciplin.com/p/danny-martinez",
+        "publisher_feed": "https://www.designdisciplin.com/feed",
+        "feed_sha256": "0e3725ad489015a0d1059b46f12eee15717fe37fac5ca64518fd870147c2c277",
+        "audio_url": "https://api.substack.com/feed/podcast/214546822/66b19c7a1ef55ab085fdc4337359c8fe.mp3",
+        "audio_sha256": "9158925d6cb7efe663f828a57a1725b09817cee88dc0846c82d9ced81ba01397",
+        "published": "2026-09-28",
+        "engine": "Apple SpeechTranscriber",
+        "operating_system": "Version 27.0 (Build 26A428)",
+        "locale": "en_US",
+        "transcribed_at": "2026-10-17T10:02:35.568117+00:00",
+        "human_audio_verified": false,
+        "speaker_diarization": false,
+        "final_transcript_timestamp_seconds": 3645.3
+      }
+    }
+  ],
+  "excluded_material": [
+    {
+      "url": "https://blog.ravi-mehta.com/p/specs-are-the-new-source-code",
+      "reason": "Only a paid-article preview was accessible; no workflow claims behind the access boundary were imported."
+    },
+    {
+      "url": "https://hiringhumans.decimals.work/p/ai-proof-your-hiring-tactics-to-humanise",
+      "reason": "Full article inaccessible; the separately accessible author post DM04 is used."
+    }
+  ]
+}

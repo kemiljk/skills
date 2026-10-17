@@ -1,0 +1,130 @@
+{
+  "origin": {
+    "method": "Regrade the unchanged earlier answer under the clarified criterion; not a fresh portfolio review.",
+    "original_run": "expanded-01",
+    "original_response_sha256": "80696de8e809826661785149b23ccbe7cbf01cb710a21ad676ea06a6ccad5bd3",
+    "original_grade_preserved": true
+  },
+  "frozen_manifest": {
+    "schema_version": 1,
+    "created_at": "2026-10-17T10:30:07.782863+00:00",
+    "case_ids": [
+      "team-result-without-personal-ownership"
+    ],
+    "frozen_sha256": {
+      "response-schema.json": "01be385dd2f41fd26ed241bb4c097b1f999086d711c9bf75c3d362a6c4e1e764",
+      "expected.json": "0aea5eaedef8f766ec7a016d63fe6774e2acea58e8e18ceccb697f2116d1b0ca",
+      "skill/SKILL.md": "9e1ec98ca871e98334a79843428470e1a117e23c313f78482da7fa42c5dba55a",
+      "skill/references/video-portfolio-sources.json": "7e44a7b1685c1df38d3af7b886a3f98b2bfe71d1e56ab0e8c01efd40d0c06a6f",
+      "skill/references/dive-club-research.md": "954105f01a9ca9d2c2ce7b566193987f22ce48e2be6bd6ed9a50f22f7964c130",
+      "skill/references/design-discipline-coverage.json": "43af8750af2a7b76c00836a5db01eedc9c802fb41d2428414ada8bb2df26edfb",
+      "skill/references/design-discipline-examples.md": "2f6c3d215851ee364933e57969a2627ad65e16e7f3ca18f02631e5cf5e5b4757",
+      "skill/references/dive-club-coverage.json": "083baf3b8be07952b873335d2a0f1b33eda49b47a3d441225c002ab766d0a44b",
+      "skill/references/danny-martinez-sources.json": "53b95501f8d72e2f82cd0f7fd569e2c91afbbf5713c8261da0e0232e56537bae",
+      "skill/references/danny-martinez.md": "6ea5b7a7bc26e7f1ba05d84aa30179754ce370b18b5af62bd17bad4529509364",
+      "skill/references/dive-club-passages.json": "d7c25ca62d15a4d1f1d2742e069d3586ae06e46e8037c74d9a326a8e8d9e450f",
+      "skill/references/dive-club-examples.md": "d7f6170bc108f3915cb59b4f224f8fd5367f4acceeafdc659982b1c0499e3810",
+      "skill/references/hiring-humans-sources.json": "4e0b397c9d92fe51e62a0d7f6b26dc28b38bd7c6a09c9ba4ef869bd381829723",
+      "skill/references/hiring-humans-examples.md": "f5b0fe1f0e8dcbac96509d8cf0b87bae257730cd1ecbbdf0de98198703f82376",
+      "skill/references/video-portfolio-advice.md": "f0b9aff931a361e048f4b7e8167a492abbc8bc0d7180c1db04585d7ad5fa86e6",
+      "cases/team-result-without-personal-ownership/input.json": "f4072ca4b3fef4937d64a247965321edfbd5e17dd11a2be59a22f5f1b0001de9",
+      "cases/team-result-without-personal-ownership/prompt.txt": "528c0cceb3c14e485c8811f0e52c0a2daf98ec0d0757aa39b6a4f0f487b63cd9"
+    }
+  },
+  "actual_response": "**Needs changes** for a senior product design application. The supplied copy establishes a team achievement, but leaves the candidate’s contribution and judgment unclear. This verdict concerns the case study’s evidence, not the candidate’s ability.\n\nScope: the copy and role field supplied in `input.json`. The screenshots are described by the user; no images were available to inspect. Site navigation, layout, and interactions were outside this review.\n\nPreserve the concise presentation and team credit. The activation result gives the story an outcome to explain, and the described onboarding flow could provide useful artifacts alongside that explanation.\n\n1. **Blocking / Source — `input.json`, case-study copy and role field:** “We rebuilt onboarding” and “Design team” do not answer **what you personally contributed**. A hiring manager cannot distinguish your responsibilities, decisions, or influence from the team’s overall work. The metric and award do not resolve that ambiguity.\n\n   **Smallest useful change:** replace the role field with your actual responsibilities and add a short contribution paragraph. Identify the part you owned, who you collaborated with, and one consequential decision: what you proposed or changed, why, and what constraint or tradeoff shaped it. Connect that decision to a relevant screen where possible. Keep shared results attributed to the team; changing every “we” to “I” would risk overstating ownership.\n\n   **Dependency:** these facts must come from you; the supplied material cannot establish them.\n\n   **Acceptance check:** a reviewer can name your responsibility, explain one decision you made and its rationale, and distinguish your work from collaborators’ contributions. A concise paragraph can accomplish this without a long process essay.\n\n2. **Should fix / Source — `input.json`, project introduction and outcome:** the copy does not explain **whose onboarding problem mattered or what the 18% improvement measures**. That limits the reviewer’s ability to connect the flow to useful product judgment.\n\n   **Smallest useful change:** add a sentence identifying the users and their onboarding difficulty. Clarify the activation event, measurement period, and whether 18% means relative improvement or percentage points, using only information you can substantiate. Describe the result as observed team impact without implying your individual decisions caused the entire gain.\n\n   **Acceptance check:** a reviewer can explain the user problem and interpret the outcome accurately. If measurement details are unavailable or confidential, state that limitation and include permitted qualitative evidence.\n\nThe next step is to recover those contribution and context facts, then write around them. More screens or award detail alone would leave the central hiring question unanswered.",
+  "independent_grading": {
+    "checks": [
+      {
+        "id": "case-1",
+        "status": "pass",
+        "reason": "Identifies the central unanswered question: the supplied team achievement and role field do not establish the candidate’s personal contribution.",
+        "evidence_quote": "“We rebuilt onboarding” and “Design team” do not answer **what you personally contributed**."
+      },
+      {
+        "id": "case-2",
+        "status": "pass",
+        "reason": "Requests actual responsibilities and a consequential decision, explicitly making candidate-supplied facts a prerequisite to writing the contribution account.",
+        "evidence_quote": "The next step is to recover those contribution and context facts, then write around them."
+      },
+      {
+        "id": "case-3",
+        "status": "pass",
+        "reason": "Does not assign the metric or complete interface to the candidate. It explicitly preserves team attribution and warns against unsupported personal ownership.",
+        "evidence_quote": "Keep shared results attributed to the team; changing every “we” to “I” would risk overstating ownership."
+      },
+      {
+        "id": "honest-inspection",
+        "status": "pass",
+        "reason": "Accurately distinguishes supplied copy and screenshot descriptions from inspected images, and makes no unsupported rendering or runtime claims.",
+        "evidence_quote": "The screenshots are described by the user; no images were available to inspect. Site navigation, layout, and interactions were outside this review."
+      },
+      {
+        "id": "confirmed-findings",
+        "status": "pass",
+        "reason": "Both priorities concern supported omissions in the explicitly complete supplied copy: personal contribution, user context, and metric meaning. Confidentiality alternatives remain conditional remedies.",
+        "evidence_quote": "the copy does not explain **whose onboarding problem mattered or what the 18% improvement measures**."
+      },
+      {
+        "id": "bounded-judgment",
+        "status": "pass",
+        "reason": "Stays within case-study advice, invents no responsibilities or outcomes, and limits the verdict to the evidence rather than promising hiring success.",
+        "evidence_quote": "This verdict concerns the case study’s evidence, not the candidate’s ability."
+      }
+    ]
+  },
+  "summary": {
+    "overall": "pass",
+    "case_counts": {
+      "fail": 0,
+      "pass": 1,
+      "uncertain": 0,
+      "incomplete": 0
+    },
+    "cases": [
+      {
+        "id": "team-result-without-personal-ownership",
+        "status": "pass",
+        "checks": [
+          {
+            "id": "case-1",
+            "status": "pass",
+            "reason": "Identifies the central unanswered question: the supplied team achievement and role field do not establish the candidate’s personal contribution.",
+            "evidence_quote": "“We rebuilt onboarding” and “Design team” do not answer **what you personally contributed**."
+          },
+          {
+            "id": "case-2",
+            "status": "pass",
+            "reason": "Requests actual responsibilities and a consequential decision, explicitly making candidate-supplied facts a prerequisite to writing the contribution account.",
+            "evidence_quote": "The next step is to recover those contribution and context facts, then write around them."
+          },
+          {
+            "id": "case-3",
+            "status": "pass",
+            "reason": "Does not assign the metric or complete interface to the candidate. It explicitly preserves team attribution and warns against unsupported personal ownership.",
+            "evidence_quote": "Keep shared results attributed to the team; changing every “we” to “I” would risk overstating ownership."
+          },
+          {
+            "id": "honest-inspection",
+            "status": "pass",
+            "reason": "Accurately distinguishes supplied copy and screenshot descriptions from inspected images, and makes no unsupported rendering or runtime claims.",
+            "evidence_quote": "The screenshots are described by the user; no images were available to inspect. Site navigation, layout, and interactions were outside this review."
+          },
+          {
+            "id": "confirmed-findings",
+            "status": "pass",
+            "reason": "Both priorities concern supported omissions in the explicitly complete supplied copy: personal contribution, user context, and metric meaning. Confidentiality alternatives remain conditional remedies.",
+            "evidence_quote": "the copy does not explain **whose onboarding problem mattered or what the 18% improvement measures**."
+          },
+          {
+            "id": "bounded-judgment",
+            "status": "pass",
+            "reason": "Stays within case-study advice, invents no responsibilities or outcomes, and limits the verdict to the evidence rather than promising hiring success.",
+            "evidence_quote": "This verdict concerns the case study’s evidence, not the candidate’s ability."
+          }
+        ]
+      }
+    ],
+    "limitation": "Synthetic regression cases; passing does not establish real hiring effectiveness."
+  },
+  "limitation": "Grading calibration of a preserved answer, not an additional fresh portfolio review or erasure of the original failure."
+}
