@@ -7,6 +7,8 @@ import io
 import json
 from pathlib import Path
 import re
+import subprocess
+import sys
 import tempfile
 import unittest
 from urllib.parse import urlparse
@@ -69,6 +71,55 @@ class EvaluationIntegrity(unittest.TestCase):
         (self.run / "skill/SKILL.md").write_text("Changed after evaluation.")
         with self.assertRaisesRegex(ValueError, "Frozen evaluation input changed"):
             evaluation.verify_snapshot(self.run)
+
+    def test_added_reference_invalidates_a_run(self):
+        reference = self.run / "skill/references/new-guidance.md"
+        reference.parent.mkdir()
+        reference.write_text("Guidance added after freezing.")
+        with self.assertRaisesRegex(ValueError, "Frozen evaluation input added"):
+            evaluation.verify_snapshot(self.run)
+
+    def test_added_fixture_invalidates_a_run(self):
+        artifact = self.run / "cases/ownership/artifacts/credits.html"
+        artifact.parent.mkdir()
+        artifact.write_text("Additional contribution evidence.")
+        with self.assertRaisesRegex(ValueError, "Frozen evaluation input added"):
+            evaluation.verify_snapshot(self.run)
+
+    def test_busy_run_cannot_submit_duplicate_model_calls(self):
+        with evaluation.run_lock(self.run), patch.object(evaluation, "codex_call") as call:
+            with self.assertRaisesRegex(ValueError, "Evaluation run is busy"):
+                evaluation.execute(self.run, "unused", "all", 1, jobs=3)
+        call.assert_not_called()
+
+    def test_busy_run_cannot_import_or_report_mixed_outputs(self):
+        response = self.root / "response-import.json"
+        evaluation.write(response, {"cases": [{"id": "ownership", "response": "A new answer."}]})
+        with evaluation.run_lock(self.run):
+            with self.assertRaisesRegex(ValueError, "Evaluation run is busy"):
+                evaluation.import_responses(self.run, [response])
+            with self.assertRaisesRegex(ValueError, "Evaluation run is busy"):
+                evaluation.report(self.run)
+        self.assertFalse((self.run / "cases/ownership/response.json").exists())
+        self.assertFalse((self.run / "summary.json").exists())
+
+    def test_run_lock_excludes_another_process_and_releases(self):
+        script = """import importlib.util,sys
+from pathlib import Path
+spec=importlib.util.spec_from_file_location('evaluation',sys.argv[1])
+evaluation=importlib.util.module_from_spec(spec);spec.loader.exec_module(evaluation)
+try:
+    with evaluation.run_lock(Path(sys.argv[2])):
+        pass
+except ValueError:
+    sys.exit(7)
+"""
+        args = [sys.executable, "-c", script, str(ROOT / "scripts/evaluate.py"), str(self.run)]
+        with evaluation.run_lock(self.run):
+            locked = subprocess.run(args, capture_output=True, text=True, timeout=5)
+        released = subprocess.run(args, capture_output=True, text=True, timeout=5)
+        self.assertEqual(locked.returncode, 7, locked.stderr)
+        self.assertEqual(released.returncode, 0, released.stderr)
 
     def test_missing_grades_are_incomplete(self):
         code, summary = self.result()

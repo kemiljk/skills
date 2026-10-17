@@ -7,9 +7,13 @@ It never substitutes keyword matching for assessment of a review decision.
 """
 import argparse
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
 from datetime import datetime, timezone
+import errno
+from functools import wraps
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -34,6 +38,42 @@ def write(path, value):
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+@contextmanager
+def run_lock(run):
+    """Hold one local run across writers and reports; the OS releases on exit."""
+    with (run / ".evaluation.lock").open("a+b") as handle:
+        handle.seek(0)
+        if os.name == "nt":
+            import msvcrt
+        else:
+            import fcntl
+        try:
+            if os.name == "nt":
+                msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+            else:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError as error:
+            if error.errno not in {errno.EACCES, errno.EAGAIN, errno.EDEADLK}:
+                raise
+            raise ValueError(f"Evaluation run is busy: {run}") from error
+        try:
+            yield
+        finally:
+            handle.seek(0)
+            if os.name == "nt":
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+
+
+def exclusive_run(function):
+    @wraps(function)
+    def guarded(run, *args, **kwargs):
+        with run_lock(run):
+            return function(run, *args, **kwargs)
+    return guarded
 
 
 def prepare(skill_file, suite_file, output, selected=()):
@@ -92,6 +132,15 @@ def verify_snapshot(run):
         path = run / relative
         if not path.is_file() or digest(path) != expected:
             raise ValueError(f"Frozen evaluation input changed: {relative}")
+    roots = [Path("skill")] + [Path("cases") / case_id / "artifacts"
+                               for case_id in manifest["case_ids"]]
+    recorded = {Path(relative) for relative in manifest["frozen_sha256"]
+                if any(Path(relative).is_relative_to(root) for root in roots)}
+    actual = {path.relative_to(run) for root in roots for path in (run / root).rglob("*")
+              if path.is_file() or path.is_symlink()}
+    added = actual - recorded
+    if added:
+        raise ValueError("Frozen evaluation input added: " + ", ".join(sorted(map(str, added))))
     return manifest
 
 
@@ -173,6 +222,7 @@ def execute_case(run, suite, case, command, phase, timeout):
         validate_grade(grade, checks, response)
 
 
+@exclusive_run
 def execute(run, command, phase, timeout, jobs=1):
     verify_snapshot(run)
     suite = read(run / "expected.json")
@@ -183,6 +233,7 @@ def execute(run, command, phase, timeout, jobs=1):
             future.result()
 
 
+@exclusive_run
 def import_responses(run, files):
     allowed = set(verify_snapshot(run)["case_ids"])
     seen = set()
@@ -198,6 +249,7 @@ def import_responses(run, files):
             write(destination, {"response": entry["response"]})
 
 
+@exclusive_run
 def report(run):
     verify_snapshot(run)
     suite = read(run / "expected.json")

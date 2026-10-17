@@ -10,7 +10,7 @@ From the repository root:
 PYTHONPYCACHEPREFIX=/tmp/hmb-test-cache python3 -m unittest discover -s skills/hiring-manager-bar/tests -v
 ```
 
-These checks require only Python's standard library. They verify that expectations stay out of reviewer inputs, fixtures are frozen, incomplete or invented grading evidence cannot pass, completed transcripts are reused safely, retrieval retains context, and curated source notes have matching provenance. They make no model calls and do not download audio.
+These checks require only Python's standard library. They verify that expectations stay out of reviewer inputs, frozen references and fixtures reject additions or changes, one process owns each run, incomplete or invented grading evidence cannot pass, completed transcripts are reused safely, retrieval retains context, and curated source notes have matching provenance. They make no model calls and do not download audio.
 
 ## Behavioral evaluation
 
@@ -36,6 +36,8 @@ The runner uses the installed `codex` CLI and its configured account and model. 
 Grade each expected decision and each shared evidence contract semantically as pass, fail, or uncertain, with a reason and an exact quotation from the answer. Empty quotations are permitted for absence-based criteria with an explanation. The local reporter checks completeness, input hashes, and quotation integrity; it does not judge meaning through keywords. A missing, invalid, failed, or uncertain result cannot become an overall pass. Inspect grader reasoning as well as the summary. If a saved grade is invalid, preserve it and its event log under attempt-specific filenames before running `--phase grade` again. Do not repair quotations by rewriting the recorded model output. Failed or uncertain semantic decisions remain test results, rather than formatting retries.
 
 `--jobs` bounds concurrent independent cases from 1 to 4 (default 1); each case is reviewed before its separate grading call. `--phase respond` and `--phase grade` run the phases separately. Completed outputs are retained for resumability; prepare a new run directory for fresh repeats. `import --run RUN --responses FILE...` accepts independently produced `{"cases": [{"id": "...", "response": "..."}]}` responses. Importing answers does not grade them. Record execution context and limitations when using a different evaluator path.
+
+Run, import, and report commands take a nonblocking local lock for the run directory. If another command owns it, wait for that command to finish before retrying; use `--jobs` for parallel cases within one controller. The OS releases the lock when its process exits. Keep the `.evaluation.lock` file in place: removing a live lock file can split ownership between different files. Prepare a new snapshot when adding input material; do not copy new references or fixture files into a frozen run.
 
 For change evaluation, preserve a baseline, fix the observed failure, then rerun affected cases and the broader suite. Repeat important cases before claiming reliability. One passing synthetic run is a regression signal, not a measured increase in hiring effectiveness.
 
