@@ -76,7 +76,17 @@ Recognize observable craft in typography, composition, copy, and interaction det
 
 ## Recommend changes that can be implemented
 
-For each confirmed finding, give the priority, evidence label, affected page and actual file/component when available, the unanswered hiring question, the smallest useful change, and an observable acceptance check. Include dependencies when content or assets must come from the candidate. Prefer fixing a shared component or content model when the same verified issue repeats.
+Choose one primary category for each recommendation:
+
+- **Discoverability:** Finding relevant work, positioning, project details, and contact information.
+- **Clarity:** Understanding the work, contribution, decisions, and evidence of experience.
+- **Experience:** The effort involved in reading, navigating, interacting, and making contact.
+- **Dependability:** Working links, accurate descriptions, keyboard access, and predictable behaviour.
+- **Delight:** Craft, personality, and details that make an already usable portfolio memorable.
+
+Categories describe what improves; **Blocking / Should fix / Polish** describe priority. Order recommendations by impact, not category. Use only categories supported by the findings; do not fill every category or duplicate a finding across them. Delight can also describe a strength to preserve, without requiring an embellishment.
+
+Present each confirmed recommendation as **Category · Priority — Specific action.** Follow with short prose connecting the observed problem, its effect on the hiring reader, and the smallest useful change. Include the evidence label, affected page and actual file/component when available, and an observable acceptance check alongside the recommendation. Include dependencies when content or assets must come from the candidate. Prefer fixing a shared component or content model when the same verified issue repeats.
 
 For example, if existing project summaries are only revealed on hover, recommend exposing those fields in the shared card's resting layout. Acceptance: a visitor can identify the project and contribution without hovering, including at a narrow viewport and during keyboard navigation. If the contribution is absent from the content, request the facts before populating it; a layout change alone does not resolve the gap.
 
@@ -92,8 +102,9 @@ Keep the report compact:
 
 1. Verdict, role assumptions, scope, and evidence limitations.
 2. Specific strengths to preserve.
-3. Prioritized recommendations: **priority / evidence / page + file → problem → change → acceptance check**.
-4. Candidate-supplied facts and remaining verification, if any.
+3. Recommendations ordered by priority, with **category · priority — action** headings and supporting evidence, hiring impact, change, and acceptance checks.
+4. Optional opportunities, if useful: use category headings without a fix priority and distinguish suggestions from observed defects.
+5. Candidate-supplied facts and remaining verification, if any.
 
 A review is complete when each material finding has a traceable cause and implementable recommendation, or an explicit dependency on missing facts. Do not manufacture findings for every rubric row or use numeric readiness scores.
 

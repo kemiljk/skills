@@ -66,22 +66,19 @@ Do not turn personal taste into a blocker. Missing project facts need the candid
 
 ## Recommend changes that can be implemented
 
-For each confirmed finding, give the priority, evidence label, affected page or frame and actual layer, component, or source file when available, the unanswered hiring question, the smallest useful change, and an observable acceptance check. Include dependencies when content or assets must come from the candidate. Prefer fixing a shared component or content model when the same verified issue repeats.
+Choose one primary category: **Discoverability** (finding work or contact), **Clarity** (understanding contribution, decisions, and evidence), **Experience** (reading and interaction effort), **Dependability** (reliable, accessible, predictable behaviour), or **Delight** (craft and personality). Categories describe what improves; priorities describe urgency. Order by impact; do not fill every category or duplicate findings. Delight can name a strength to preserve.
 
-Recommend exact content, design, or code changes only as far as the evidence allows. For a URL-only review, identify the page and element and describe the implementation target without inventing filenames. Avoid broad redesigns when a label, content field, reading-order change, or removal of a gate solves the problem.
+Present confirmed recommendations as **Category · Priority — Specific action.** Follow with concise prose covering the problem, hiring impact, and smallest useful change. Include evidence, page/frame and actual layer, component, or file when available, acceptance check, and candidate dependencies. Prefer shared fixes for repeated issues.
 
-For a reported bug, state the concrete consumer use case, prerequisites and reproduction steps, expected and actual behaviour, and impact. Only call it reproduced when the sequence was executed in the relevant medium. A prototype observation establishes prototype behaviour, not a production bug.
+Use only evidenced content, design, or code changes. For URL-only reviews, name the page and element without inventing files. Prefer bounded corrections over redesigns.
+
+For bugs, include the consumer's task, prerequisites, reproduction steps, expected and actual behaviour, and impact. Call it reproduced only after execution; prototype behaviour does not establish a production bug.
 
 ## Report and completion
 
 Lead with **passes**, **needs changes**, or **not assessable**, scoped to the inspected pages and stated role. This judges the portfolio's ability to answer the hiring questions, not the candidate's employability. A pass needs observed support for the core questions; strong visuals do not compensate for unclear ownership. A material unanswered question means needs changes. Missing access or insufficient evidence to judge the core journey means not assessable; still report any confirmed local findings.
 
-Keep the report compact:
-
-1. Verdict, role assumptions, scope, and evidence limitations.
-2. Specific strengths to preserve.
-3. Prioritized recommendations: **priority / evidence / page or frame + layer, component, or file → problem → change → acceptance check**.
-4. Candidate-supplied facts and remaining verification, if any.
+Keep the report compact: verdict, role assumptions, scope, limitations, strengths, then recommendations ordered by priority. Keep optional opportunities separate, categorised without a fix priority. Finish with candidate-supplied facts and remaining checks.
 
 A review is complete when each material finding has a traceable cause and implementable recommendation, or an explicit dependency on missing facts. Do not manufacture findings for every rubric row or use numeric readiness scores.
 
