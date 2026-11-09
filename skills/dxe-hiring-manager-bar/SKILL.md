@@ -20,6 +20,8 @@ Use relevant [Dive Club examples](references/dive-club-examples.md) for work sel
 
 ## Read as a visitor, then inspect the implementation
 
+For URL reviews, use the available browser controls. Read [Browser evidence](references/browser-review.md) when collecting rendered, interaction, or accessibility evidence.
+
 1. Follow the ordinary entry path before using repository knowledge to fill in missing context: landing page → work listing → project → about/contact. Record what is easy to answer and where understanding breaks down.
 2. Inspect representative projects that support the target role, including contrasting types of work when relevant. Name the pages sampled and omissions; do not imply a whole-site review from one case study.
 3. Trace material findings to the actual routes, content entries, shared components, and styles. Check the full relevant content and linked destinations before claiming something is missing. Separate a fact that is absent from one that exists but is hard to discover.

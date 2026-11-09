@@ -7,3 +7,6 @@
 
 # Local podcast research: audio, machine transcripts, and model caches
 /.research/
+
+# Local artwork drafts and third-party visual references
+/artifacts/

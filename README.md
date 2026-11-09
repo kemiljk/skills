@@ -96,6 +96,7 @@ Use individual skills when you want a narrow lens. Use `dxe` for a coordinated r
 | `dxe-product-delight` | Adding polish without confusing novelty for care |
 | `dxe-subtractive-design` | Removing noise and requiring purpose |
 | `dxe-humane-functionalism` | Applying Danish functionalism to UI structure, perception, human fit, everyday use, and craft |
+| `dxe-software-needs-hierarchy` | Prioritising software improvements through basic function, trust, belonging, competence, and growth, inspired by Maslow |
 | `dxe-ai-output-judgement` | Critiquing generated UI, prose, or code when a quality review is requested |
 | `dxe-prototype-to-production` | Hardening happy-path prototypes for real use |
 
@@ -107,10 +108,13 @@ For an experience-led craft pass, ask “Use `dxe-intentional-craft` to develop 
 
 For a focused functionalist pass, ask “Use `dxe-humane-functionalism` to improve this flow.” It balances reduction with discoverability, useful density, accessibility, and product character. Its [research notes](skills/dxe-humane-functionalism/references/research.md) distinguish historical sources from contemporary UI applications.
 
+For a needs-based quality review, ask “Use `dxe-software-needs-hierarchy` to prioritise improvements to this flow.” It translates Maslow's hierarchy into software decisions while allowing needs to overlap and vary by task. Its [source and translation notes](skills/dxe-software-needs-hierarchy/references/source-and-translation.md) distinguish the original framework from the software interpretation. A standalone Figma Design and Make edition is included.
+
 Select skills for the task, not merely because their subject appears in a file. For a requested broad pass, `dxe` considers these lenses and loads only relevant guidance:
 
 1. **Intent** — `dxe-write-first-design`, `dxe-subtractive-design`
    Add `dxe-humane-functionalism` when a Danish functionalist lens is requested.
+   Add `dxe-software-needs-hierarchy` when a Maslow-inspired needs lens or needs-based prioritisation is requested.
 2. **Platform** — web: `dxe-semantic-html-first`, `dxe-modern-css-html`; native: `dxe-apple-native-ui`, `dxe-android-native-ui`
 3. **Feel** — `dxe-fluid-design`, `dxe-interface-affordances`, `dxe-product-delight`
 4. **Bridge** — `dxe-design-engineering`

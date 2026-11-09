@@ -4,6 +4,10 @@
 
 - Namespace specialist skills and standalone Figma editions with `dxe-`, retaining `dxe` as the main entry point, and update invocation examples and cross-references.
 
+- Add `dxe-software-needs-hierarchy`: a Maslow-inspired prioritisation lens with source and translation notes and a standalone Figma Design and Make edition.
+
+- Add portable browser-evidence guidance for `dxe-hiring-manager-bar`, covering visitor journeys, rendered checks, and the limits of automated accessibility scans.
+
 - Add `dxe-interaction-contracts`, `dxe-design-system-evolution`, `dxe-design-for-repetition`, and `dxe-real-content-design`, each with general and standalone Figma Design and Make editions.
 
 - Add a standalone `dxe-hiring-manager-bar` edition for Figma Design and Make, with medium-specific evidence and verification guidance.

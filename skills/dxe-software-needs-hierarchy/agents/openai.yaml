@@ -1,0 +1,4 @@
+interface:
+  display_name: "DXE Software Needs Hierarchy"
+  short_description: "Prioritise software quality through human needs"
+  default_prompt: "Use $dxe-software-needs-hierarchy to evaluate this flow and prioritise improvements by the user needs they support."

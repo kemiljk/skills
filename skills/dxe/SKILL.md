@@ -123,6 +123,7 @@ Load a sibling `SKILL.md` only when the materials map, initial evidence, or requ
 | Product intent is unclear or decisions need rationale | `dxe-write-first-design` |
 | Decorative, redundant, or cognitively heavy UI | `dxe-subtractive-design` |
 | A Danish functionalist design lens is requested | `dxe-humane-functionalism` |
+| A Maslow-inspired needs lens or needs-based prioritisation is requested | `dxe-software-needs-hierarchy` |
 | Web forms, menus, dialogs, custom controls, or semantic failures | `dxe-semantic-html-first` |
 | Web responsive layout or CSS/HTML implementation questions | `dxe-modern-css-html` |
 | SwiftUI, UIKit, AppKit, Xcode, or Apple-platform UI | `dxe-apple-native-ui` |
