@@ -2,13 +2,15 @@
 
 ## Unreleased
 
-- Add `interaction-contracts`, `design-system-evolution`, `design-for-repetition`, and `real-content-design`, each with general and standalone Figma Design and Make editions.
+- Namespace specialist skills and standalone Figma editions with `dxe-`, retaining `dxe` as the main entry point, and update invocation examples and cross-references.
 
-- Add a standalone `hiring-manager-bar` edition for Figma Design and Make, with medium-specific evidence and verification guidance.
+- Add `dxe-interaction-contracts`, `dxe-design-system-evolution`, `dxe-design-for-repetition`, and `dxe-real-content-design`, each with general and standalone Figma Design and Make editions.
 
-- Add `intentional-craft` for experience-led design and engineering decisions, with source and translation notes and a standalone Figma Design and Make edition.
+- Add a standalone `dxe-hiring-manager-bar` edition for Figma Design and Make, with medium-specific evidence and verification guidance.
 
-- Add `humane-functionalism`: researched UI/UX guidance grounded in Danish functionalism and related Danish Modern craft, source notes, a standalone Figma edition, and DXE routing.
+- Add `dxe-intentional-craft` for experience-led design and engineering decisions, with source and translation notes and a standalone Figma Design and Make edition.
+
+- Add `dxe-humane-functionalism`: researched UI/UX guidance grounded in Danish functionalism and related Danish Modern craft, source notes, a standalone Figma edition, and DXE routing.
 
 - Add 13 standalone Figma Design and Make editions with original command names and a packaging validator.
 
@@ -16,9 +18,9 @@
 - Make write-first design conditional on unresolved product decisions; preserve clear briefs and existing authorization.
 - Let DXE use readable sibling skills without requiring a discovery refresh or a new session.
 - Load CSS and motion references only when relevant, and keep motion choices proportional to the interaction.
-- Clarify that product-delight context can be inferred without a mandatory question.
+- Clarify that dxe-product-delight context can be inferred without a mandatory question.
 
-- Added a behaviour-first macOS lane to `apple-native-ui` covering app shape, affordance maps, commands, windows/documents, pasteboard and drag/drop, state restoration, interoperability, and Mac-specific QA.
+- Added a behaviour-first macOS lane to `dxe-apple-native-ui` covering app shape, affordance maps, commands, windows/documents, pasteboard and drag/drop, state restoration, interoperability, and Mac-specific QA.
 - Reworked `dxe` around a compact shared rubric and progressive sibling-skill loading.
 - Added quick, review, fix, and exhaustive depth modes plus a reproducible evidence matrix.
 - Added verified strengths, severity/confidence rules, bounded surface sampling, and explicit tooling-noise classification.
@@ -34,5 +36,5 @@
 ## 2026-08-20
 
 - Initial public collection with 10 skills
-- Consolidated and improved `fluid-design` and `modern-css-html`
+- Consolidated and improved `dxe-fluid-design` and `dxe-modern-css-html`
 - Added composition/precedence guidance for overlapping skills

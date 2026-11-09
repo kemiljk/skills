@@ -6,7 +6,7 @@ Install selectively. Compose deliberately. Or run the full suite with `dxe`.
 
 ## Figma Design and Make
 
-The [Figma editions](figma/skills/) are self-contained skills adapted to Figma Design and Make. Commands retain their original names, including `/dxe` and `/fluid-design`.
+The [Figma editions](figma/skills/) are self-contained skills adapted to Figma Design and Make. Commands use the same names as the regular editions, including `/dxe` and `/dxe-fluid-design`.
 
 ## Install
 
@@ -16,7 +16,7 @@ List the available skills, then install the workflows you need:
 
 ```bash
 npx skills add kemiljk/skills --list
-npx skills add kemiljk/skills -g --skill fluid-design --skill modern-css-html
+npx skills add kemiljk/skills -g --skill dxe-fluid-design --skill dxe-modern-css-html
 ```
 
 Omit `-g` for a project-local installation. Choose the appropriate agents with `-a`, and keep one discoverable copy per skill in each host. Cross-host links to the same source are useful; duplicate entries in one host are not.
@@ -55,15 +55,15 @@ In Cursor / Claude Code (or any agent that has the skills installed), ask for a 
 
 Phases in order:
 
-1. **Intent** — `write-first-design`, `subtractive-design`  
+1. **Intent** — `dxe-write-first-design`, `dxe-subtractive-design`  
    Hypothesis for the pass; cut unexplained chrome and generative residue.
-2. **Platform** — web: `semantic-html-first`, `modern-css-html`; native: `apple-native-ui`, `android-native-ui`
+2. **Platform** — web: `dxe-semantic-html-first`, `dxe-modern-css-html`; native: `dxe-apple-native-ui`, `dxe-android-native-ui`
    Native controls and platform semantics before custom reconstructions.
-3. **Feel** — `fluid-design`, `interface-affordances`, `product-delight`  
+3. **Feel** — `dxe-fluid-design`, `dxe-interface-affordances`, `dxe-product-delight`  
    Interruptible motion, discoverable controls, care over novelty.
-4. **Bridge** — `design-engineering`  
+4. **Bridge** — `dxe-design-engineering`  
    Map design structure to code structure; keep taste attached to materials.
-5. **Shipping** — `ai-output-judgement`, `prototype-to-production`  
+5. **Shipping** — `dxe-ai-output-judgement`, `dxe-prototype-to-production`  
    Name concrete AI-median failures; harden empty/error/auth/focus paths.
 
 Every phase is considered, but sibling skills are loaded progressively from evidence rather than up front. You get a single report with the hypothesis, evidence, verified strengths, confidence-tagged findings, subtractive cuts, verification status, and explicit limits.
@@ -75,57 +75,59 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | Skill | Use when |
 | --- | --- |
 | `dxe` | **Master pass** — full design-engineering suite on a repo or path |
-| `hiring-manager-bar` | Review a job-seeking portfolio and recommend prioritized site code and content changes |
-| `fluid-design` | Interfaces need physical motion, gestures, layout continuity |
-| `modern-css-html` | Choosing native features, checking support, or replacing legacy workarounds |
-| `semantic-html-first` | Building controls, forms, disclosure, dialogs |
-| `apple-native-ui` | SwiftUI, UIKit, AppKit, and Apple-platform UI work, with a dedicated behaviour-first macOS workflow |
-| `android-native-ui` | Kotlin, Jetpack Compose, Android Views, and Compose Multiplatform UI work |
-| `interface-affordances` | Discoverability and perceptible interaction cues matter |
-| `write-first-design` | Substantial product decisions need clarification before implementation |
-| `design-engineering` | Bridging design intent and production implementation |
-| `interaction-contracts` | Resolving the behaviour a component or flow promises, including interruption, persistence, and recovery |
-| `design-system-evolution` | Choosing bounded component, variant, API, or token changes and planning compatibility and migration |
-| `design-for-repetition` | Reducing recurring effort while preserving discoverability, context, and safe recovery |
-| `real-content-design` | Using representative content to shape hierarchy, comparison, layout, and component structure |
-| `intentional-craft` | Developing design and engineering ideas through human intention, focused scope, and evidence of craft, inspired by Apple's *Intention* film |
-| `product-delight` | Adding polish without confusing novelty for care |
-| `subtractive-design` | Removing noise and requiring purpose |
-| `humane-functionalism` | Applying Danish functionalism to UI structure, perception, human fit, everyday use, and craft |
-| `ai-output-judgement` | Reviewing generated drafts before shipping |
-| `prototype-to-production` | Hardening happy-path prototypes for real use |
+| `dxe-hiring-manager-bar` | Review a job-seeking portfolio and recommend prioritized site code and content changes |
+| `dxe-fluid-design` | Interfaces need physical motion, gestures, layout continuity |
+| `dxe-modern-css-html` | Choosing native features, checking support, or replacing legacy workarounds |
+| `dxe-semantic-html-first` | Building controls, forms, disclosure, dialogs |
+| `dxe-apple-native-ui` | SwiftUI, UIKit, AppKit, and Apple-platform UI work, with a dedicated behaviour-first macOS workflow |
+| `dxe-android-native-ui` | Kotlin, Jetpack Compose, Android Views, and Compose Multiplatform UI work |
+| `dxe-interface-affordances` | Discoverability and perceptible interaction cues matter |
+| `dxe-write-first-design` | Substantial product decisions need clarification before implementation |
+| `dxe-design-engineering` | Bridging design intent and production implementation |
+| `dxe-interaction-contracts` | Resolving the behaviour a component or flow promises, including interruption, persistence, and recovery |
+| `dxe-design-system-evolution` | Choosing bounded component, variant, API, or token changes and planning compatibility and migration |
+| `dxe-design-for-repetition` | Reducing recurring effort while preserving discoverability, context, and safe recovery |
+| `dxe-real-content-design` | Using representative content to shape hierarchy, comparison, layout, and component structure |
+| `dxe-intentional-craft` | Developing design and engineering ideas through human intention, focused scope, and evidence of craft, inspired by Apple's *Intention* film |
+| `dxe-product-delight` | Adding polish without confusing novelty for care |
+| `dxe-subtractive-design` | Removing noise and requiring purpose |
+| `dxe-humane-functionalism` | Applying Danish functionalism to UI structure, perception, human fit, everyday use, and craft |
+| `dxe-ai-output-judgement` | Reviewing generated drafts before shipping |
+| `dxe-prototype-to-production` | Hardening happy-path prototypes for real use |
 
 ## Composition / precedence
 
-Use `interaction-contracts` when behaviour is unresolved, `design-system-evolution` when a shared model needs to change, `design-for-repetition` when a task's cost accumulates, and `real-content-design` when placeholder content is hiding structural decisions. Each supports a focused proposal, review, or authorised implementation without requiring a full suite pass. All four have self-contained Figma Design and Make editions.
+Use `dxe-interaction-contracts` when behaviour is unresolved, `dxe-design-system-evolution` when a shared model needs to change, `dxe-design-for-repetition` when a task's cost accumulates, and `dxe-real-content-design` when placeholder content is hiding structural decisions. Each supports a focused proposal, review, or authorised implementation without requiring a full suite pass. All four have self-contained Figma Design and Make editions.
 
-For an experience-led craft pass, ask “Use `intentional-craft` to develop this idea” or “Use `intentional-craft` to refine this flow.” It translates Apple's 2013 *Intention* film into general design engineering decisions. Its [source and translation notes](skills/intentional-craft/references/source-and-translation.md) link the published copy, preserve an ordered paraphrase, and distinguish the film's message from the skill's software applications.
+For an experience-led craft pass, ask “Use `dxe-intentional-craft` to develop this idea” or “Use `dxe-intentional-craft` to refine this flow.” It translates Apple's 2013 *Intention* film into general design engineering decisions. Its [source and translation notes](skills/dxe-intentional-craft/references/source-and-translation.md) link the published copy, preserve an ordered paraphrase, and distinguish the film's message from the skill's software applications.
 
-For a focused functionalist pass, ask “Use `humane-functionalism` to improve this flow.” It balances reduction with discoverability, useful density, accessibility, and product character. Its [research notes](skills/humane-functionalism/references/research.md) distinguish historical sources from contemporary UI applications.
+For a focused functionalist pass, ask “Use `dxe-humane-functionalism` to improve this flow.” It balances reduction with discoverability, useful density, accessibility, and product character. Its [research notes](skills/dxe-humane-functionalism/references/research.md) distinguish historical sources from contemporary UI applications.
 
 Select skills for the task, not merely because their subject appears in a file. For a requested broad pass, `dxe` considers these lenses and loads only relevant guidance:
 
-1. **Intent** — `write-first-design`, `subtractive-design`
-   Add `humane-functionalism` when a Danish functionalist lens is requested.
-2. **Platform** — web: `semantic-html-first`, `modern-css-html`; native: `apple-native-ui`, `android-native-ui`
-3. **Feel** — `fluid-design`, `interface-affordances`, `product-delight`
-4. **Bridge** — `design-engineering`
-5. **Shipping** — `ai-output-judgement`, `prototype-to-production`
+1. **Intent** — `dxe-write-first-design`, `dxe-subtractive-design`
+   Add `dxe-humane-functionalism` when a Danish functionalist lens is requested.
+2. **Platform** — web: `dxe-semantic-html-first`, `dxe-modern-css-html`; native: `dxe-apple-native-ui`, `dxe-android-native-ui`
+3. **Feel** — `dxe-fluid-design`, `dxe-interface-affordances`, `dxe-product-delight`
+4. **Bridge** — `dxe-design-engineering`
+5. **Shipping** — `dxe-ai-output-judgement`, `dxe-prototype-to-production`
 
 When motion taste and CSS purity disagree:
 
-- `fluid-design` decides how the interaction should feel
-- `modern-css-html` chooses the most native implementation that can deliver it
+- `dxe-fluid-design` decides how the interaction should feel
+- `dxe-modern-css-html` chooses the most native implementation that can deliver it
 - JavaScript/Motion/SwiftUI remain appropriate for interruption, velocity, and gesture continuity CSS cannot express
 
 ## Migration
 
-`fluid-design` and `modern-css-html` previously lived in standalone repositories:
+All specialist skill names now use `dxe-` (for example, `fluid-design` → `dxe-fluid-design`). Folder names, invocation names, and standalone Figma filenames use the same names. Remove old unprefixed installations when installing the renamed skills to avoid duplicate discovery.
+
+`dxe-fluid-design` and `dxe-modern-css-html` previously lived in standalone repositories:
 
 - https://github.com/kemiljk/fluid-design
 - https://github.com/kemiljk/modern-css-html
 
-Those names are preserved here with tighter activation files, clearer checklists, and on-demand references. New installs should use this collection.
+Their repository URLs remain unchanged. The skill names now use the `dxe-` prefix; the main `dxe` entry point keeps its name. New installs should use this collection.
 
 ## Source writing
 

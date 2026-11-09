@@ -43,7 +43,7 @@ for path in files:
     body = match[2]
     if 'Copyright (c) 2026 Karl Koch' not in body or 'Permission is hereby granted' not in body:
         errors.append(f'{path.name}: missing standalone license notice')
-    if path.stem == 'apple-native-ui' and 'Copyright (c) 2026 Bart Reardon' not in body:
+    if path.stem == 'dxe-apple-native-ui' and 'Copyright (c) 2026 Bart Reardon' not in body:
         errors.append(f'{path.name}: missing macOS source attribution')
     # No local resources or tool-specific dependencies can survive a one-file upload.
     for target in re.findall(r'\]\(([^)]+)\)', body):

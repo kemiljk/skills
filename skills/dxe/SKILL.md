@@ -120,23 +120,23 @@ Load a sibling `SKILL.md` only when the materials map, initial evidence, or requ
 
 | Trigger | Read |
 | --- | --- |
-| Product intent is unclear or decisions need rationale | `write-first-design` |
-| Decorative, redundant, or cognitively heavy UI | `subtractive-design` |
-| A Danish functionalist design lens is requested | `humane-functionalism` |
-| Web forms, menus, dialogs, custom controls, or semantic failures | `semantic-html-first` |
-| Web responsive layout or CSS/HTML implementation questions | `modern-css-html` |
-| SwiftUI, UIKit, AppKit, Xcode, or Apple-platform UI | `apple-native-ui` |
-| Kotlin, Android Gradle, Jetpack Compose, Android Views, or Compose Multiplatform | `android-native-ui` |
-| Gestures, springs, interruption, or shared-element motion | `fluid-design` |
-| Weak discoverability, hover-only actions, or input mismatch | `interface-affordances` |
-| A specific opportunity for useful polish | `product-delight` |
-| Design/code structure or token translation is breaking down | `design-engineering` |
-| Consequential interaction behaviour is unspecified or inconsistent | `interaction-contracts` |
-| A shared component or token model needs a compatibility or migration decision | `design-system-evolution` |
-| Recurring setup, waiting, or interruption makes repeated work costly | `design-for-repetition` |
-| Placeholder or uniform content obscures hierarchy or layout decisions | `real-content-design` |
-| Template-like or AI-generated residue needs judgement | `ai-output-judgement` |
-| Auth, validation, state, resilience, or release concerns | `prototype-to-production` |
+| Product intent is unclear or decisions need rationale | `dxe-write-first-design` |
+| Decorative, redundant, or cognitively heavy UI | `dxe-subtractive-design` |
+| A Danish functionalist design lens is requested | `dxe-humane-functionalism` |
+| Web forms, menus, dialogs, custom controls, or semantic failures | `dxe-semantic-html-first` |
+| Web responsive layout or CSS/HTML implementation questions | `dxe-modern-css-html` |
+| SwiftUI, UIKit, AppKit, Xcode, or Apple-platform UI | `dxe-apple-native-ui` |
+| Kotlin, Android Gradle, Jetpack Compose, Android Views, or Compose Multiplatform | `dxe-android-native-ui` |
+| Gestures, springs, interruption, or shared-element motion | `dxe-fluid-design` |
+| Weak discoverability, hover-only actions, or input mismatch | `dxe-interface-affordances` |
+| A specific opportunity for useful polish | `dxe-product-delight` |
+| Design/code structure or token translation is breaking down | `dxe-design-engineering` |
+| Consequential interaction behaviour is unspecified or inconsistent | `dxe-interaction-contracts` |
+| A shared component or token model needs a compatibility or migration decision | `dxe-design-system-evolution` |
+| Recurring setup, waiting, or interruption makes repeated work costly | `dxe-design-for-repetition` |
+| Placeholder or uniform content obscures hierarchy or layout decisions | `dxe-real-content-design` |
+| Template-like or AI-generated residue needs judgement | `dxe-ai-output-judgement` |
+| Auth, validation, state, resilience, or release concerns | `dxe-prototype-to-production` |
 
 `dxe exhaustive` is the only mode that requires reading every sibling skill in the routing table.
 
