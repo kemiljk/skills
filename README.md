@@ -2,17 +2,19 @@
 
 Personal agent skills distilled from [Karl Koch](https://karlkoch.me)'s writing on design engineering, fluid interfaces, semantic HTML, and AI judgement, with researched design traditions translated into practical UI and UX guidance.
 
-Install selectively. Compose deliberately. Or run the full suite with `dxe`.
+Install individual specialists for focused work, or use `dxe` for a coordinated design engineering review.
 
 ## Figma Design and Make
 
-The [Figma editions](figma/skills/) are self-contained skills adapted to Figma Design and Make. Commands use the same names as the regular editions, including `/dxe` and `/dxe-fluid-design`.
+The [Figma editions](figma/skills/) are self-contained Markdown files adapted to Figma Design and Make. Each has the same skill name as its regular edition, including `dxe` and `dxe-fluid-design`. Use these files for Figma skill uploads; the installer commands below install the regular agent editions.
+
+The Figma `dxe` edition contains its own rubric. Its exhaustive mode expands coverage of accessible screens and states; it does not require sibling skills.
 
 ## Install
 
 ### Selective (recommended)
 
-List the available skills, then install the workflows you need:
+Use the [skills CLI](https://github.com/vercel-labs/skills) to list the available skills, then install the workflows you need:
 
 ```bash
 npx skills add kemiljk/skills --list
@@ -23,35 +25,37 @@ Omit `-g` for a project-local installation. Choose the appropriate agents with `
 
 ### Full collection
 
-Install the full collection when you want every specialist available, including exhaustive DXE passes:
+Install every regular agent skill, then choose the agents to install to:
 
 ```bash
-npx skills add kemiljk/skills -g --all
+npx skills add kemiljk/skills -g --skill '*'
 ```
 
-Verify installed skills with `npx skills ls -g`. Update with `npx skills update -g`.
+Use `-a` to target specific agents, such as `-a codex` or `-a claude-code`. The CLI’s `--all` option installs every skill to every agent without prompting. See the [installer reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) for the available options.
+
+Verify installed skills with `npx skills ls -g`. Update global installations with `npx skills update -g`; for project installations, use `npx skills update -p`. Renaming an installed skill requires installing its new name; see [Migration](#migration).
 
 ## Master skill: `dxe`
 
 `dxe` is the orchestrator — paired with [d×e](https://designengineer.xyz). It starts with a compact shared rubric, gathers repository and rendered evidence, then loads specialist sibling skills only when the target warrants them.
 
-Install the full collection (`-g --all` above) when you need every specialist lens. A normal pass can still proceed with the shared rubric when an unneeded sibling is absent; `dxe exhaustive` requires the full collection.
+Install `dxe` and the relevant specialists for a normal pass. If a required lens is unavailable, the pass continues with the shared rubric and discloses the missing guidance. For `dxe exhaustive`, install all specialists in its [routing table](skills/dxe/SKILL.md#progressive-sibling-routing); installing the full collection above includes them. Standalone specialists such as `dxe-hiring-manager-bar` and `dxe-intentional-craft` remain separately invocable and are not automatically routed by `dxe`.
 
 ### How to invoke
 
-In Cursor / Claude Code (or any agent that has the skills installed), ask for a pass:
+In an agent with the skills installed, ask for a pass using the prompts below. Explicit invocation syntax depends on the host; you can also ask “Use the dxe skill to review this interface.”
 
 | Prompt | Behaviour |
 | --- | --- |
-| `dxe` / “run a dxe pass” | Full workspace review; propose fixes |
+| `dxe` / “run a dxe pass” | Review representative surfaces in the workspace; report findings and proposed changes without edits |
 | `dxe quick` | Compact review of one representative surface |
-| `dxe src/components` | Scope to that path |
+| `dxe src/components` | Review that path; a path can scope any mode |
 | `dxe review` | Findings only; no edits |
-| `dxe fix` | Findings, then high-confidence fixes |
-| `dxe exhaustive` | Load the full suite and inspect every available surface |
+| `dxe fix` | Review, implement bounded high-confidence fixes, and verify affected behaviour |
+| `dxe exhaustive` | Read every routed specialist and inspect all discoverable surfaces and states in scope; no edits unless fixes are also requested |
 | “apply all skills” | Alias for `dxe exhaustive` |
 
-### What it runs
+### What it reviews
 
 Phases in order:
 
@@ -68,13 +72,13 @@ Phases in order:
 
 Every phase is considered, but sibling skills are loaded progressively from evidence rather than up front. You get a single report with the hypothesis, evidence, verified strengths, confidence-tagged findings, subtractive cuts, verification status, and explicit limits.
 
-Use individual skills when you want a narrow lens. Use `dxe` when you want the full design-engineering pass on a repo.
+Use individual skills when you want a narrow lens. Use `dxe` for a coordinated review of a repository or interface; normal review uses representative sampling and reports its limits.
 
 ## Skills
 
 | Skill | Use when |
 | --- | --- |
-| `dxe` | **Master pass** — full design-engineering suite on a repo or path |
+| `dxe` | **Coordinated review** — shared rubric and relevant routed specialists for a repository or interface |
 | `dxe-hiring-manager-bar` | Review a job-seeking portfolio and recommend prioritized site code and content changes |
 | `dxe-fluid-design` | Interfaces need physical motion, gestures, layout continuity |
 | `dxe-modern-css-html` | Choosing native features, checking support, or replacing legacy workarounds |
@@ -92,7 +96,7 @@ Use individual skills when you want a narrow lens. Use `dxe` when you want the f
 | `dxe-product-delight` | Adding polish without confusing novelty for care |
 | `dxe-subtractive-design` | Removing noise and requiring purpose |
 | `dxe-humane-functionalism` | Applying Danish functionalism to UI structure, perception, human fit, everyday use, and craft |
-| `dxe-ai-output-judgement` | Reviewing generated drafts before shipping |
+| `dxe-ai-output-judgement` | Critiquing generated UI, prose, or code when a quality review is requested |
 | `dxe-prototype-to-production` | Hardening happy-path prototypes for real use |
 
 ## Composition / precedence
@@ -120,7 +124,9 @@ When motion taste and CSS purity disagree:
 
 ## Migration
 
-All specialist skill names now use `dxe-` (for example, `fluid-design` → `dxe-fluid-design`). Folder names, invocation names, and standalone Figma filenames use the same names. Remove old unprefixed installations when installing the renamed skills to avoid duplicate discovery.
+All specialist skill names now use `dxe-` (for example, `fluid-design` → `dxe-fluid-design`). The main `dxe` entry point keeps its name. Folder names, invocation names, and standalone Figma filenames use the same names.
+
+Install the renamed skills using the commands above, then remove the corresponding old unprefixed installations from the same agents and scope to avoid duplicate discovery. Preserve any local customizations before replacing an installation. An update of an old name is not a substitute for this migration. For Figma, replace old uploads with the renamed standalone files.
 
 `dxe-fluid-design` and `dxe-modern-css-html` previously lived in standalone repositories:
 
@@ -145,6 +151,12 @@ These skills compress lessons from essays such as:
 
 ## Validation
 
+From the repository root, check that the standalone Figma editions cover the regular skills and meet the collection’s metadata, licensing, and dependency rules:
+
+```bash
+python3 scripts/validate-figma.py
+```
+
 Each skill should stay:
 
 - trigger-precise in frontmatter `description`
@@ -154,4 +166,4 @@ Each skill should stay:
 
 ## License
 
-MIT
+MIT. The Apple native guidance also preserves its upstream MIT attribution and license notice.
