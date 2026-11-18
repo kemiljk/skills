@@ -16,6 +16,7 @@ Choose examples by the decision at hand:
 - **Leadership contribution:** DC148.
 - **Evidence of learning and delivery:** DC38, DC54, DC179.
 - **Problem depth and consequences:** DC5, DC50, DC112, DC161.
+- **Hiring outcomes and attributing success:** DC143, DC136, DC121.
 
 ## DC143 — Matt Sellers: deliberately select the strongest work
 

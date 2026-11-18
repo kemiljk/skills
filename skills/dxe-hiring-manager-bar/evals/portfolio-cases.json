@@ -407,6 +407,89 @@
         "Recognise Alex’s specific interaction-design contribution to Coverage planning and preserve Sam’s and River’s credit. Do not transfer ownership of Stock forecast to Alex through employer affiliation or accuse Alex of falsely claiming it.",
         "Scope any pass explicitly to the inspected source/content questions, with visual, accessibility, interaction, and contact-operation checks unverified; do not claim whole-portfolio rendered readiness."
       ]
+    },
+    {
+      "id": "single-view-projects-lack-context",
+      "related_examples": [
+        "DC112",
+        "DC26",
+        "DC50"
+      ],
+      "request": "Review my side-project listing for a design engineering role. I am applying to teams that build interface products. The supplied description covers the whole listing.",
+      "supplied_evidence": "Three side projects are listed. Each has a title, one specific sentence about what it does, and one 16:9 screenshot of the finished interface at 1440px. None states who the project is for, the problem it addresses, what the candidate personally built, whether it is shipped, a prototype, or an experiment, or when it was made. No project shows a second screen, another state, or a narrow viewport. The screenshots are legible and the sentences are specific. Contact details are present. No page was opened, so layout and interaction were not tested.",
+      "expected_behavior": [
+        "Report the repeated omission once as a portfolio-level evidence gap, not as three unrelated project notes.",
+        "Identify the confirmed gaps: audience or problem context, personal contribution, status, and distinct artifact views; keep unknown facts as candidate dependencies.",
+        "Explain what one 1440px view cannot establish for a design engineering role, including interaction, states, responsive behaviour, and shipped status.",
+        "Recommend a bounded addition per project, such as one second state or narrow viewport and an honest status label, rather than a redesign or a longer process essay.",
+        "Do not claim rendered inspection and do not invent users, contribution, metrics, or shipped status."
+      ]
+    },
+    {
+      "id": "messy-in-progress-listing",
+      "related_examples": [
+        "DC143",
+        "DC184",
+        "DC26"
+      ],
+      "request": "Is this portfolio ready to send for a senior product design role? Review the supplied current state.",
+      "supplied_evidence": "The work listing has six entries. Two are titled 'Project coming soon' and have no content. One entry links to a demo the user reports as broken. Three entries show one image and a title only: none describes the user, problem, contribution, outcome, or date. Of those, one is labelled 'Shipped', one 'Case study soon', and one has no status label. Two entries describe the same project under different names. One project is complete: users, problem, the candidate's contribution, decisions with reasons, and a qualitative result. The about page has no contact method; the footer has an email address. No page was opened.",
+      "expected_behavior": [
+        "Judge the current state as not ready rather than passing it on the strength of the one complete project.",
+        "Report the empty placeholders, duplicate entry, thin single-image entries, and inconsistent status labels as confirmed, bounded findings.",
+        "Treat the reported broken demo as a supplied problem to verify and repair or replace; do not claim to have reproduced it or invent a cause.",
+        "Use the complete project as the model and the reason to finish the others, without treating it as evidence that the rest is ready.",
+        "Do not invent missing context for the incomplete entries or demand a redesign."
+      ]
+    },
+    {
+      "id": "one-screenshot-interaction-question",
+      "related_examples": [
+        "DC112",
+        "DC36",
+        "DC105"
+      ],
+      "request": "I attached one screenshot of my new checkout flow at 1440px. Tell me whether the interaction looks good enough for a product design application, and what else you would need to judge it.",
+      "supplied_evidence": "One 1440px screenshot of a completed checkout state is described by the user: a two-column layout with the order summary on the right and the primary button at the bottom left. The user describes this as one state of a multi-step flow. No other screen, recording, narrow viewport, source file, or running page is supplied.",
+      "expected_behavior": [
+        "Say the one completed state cannot establish interaction quality: sequence, feedback, error recovery, or transitions.",
+        "State what the supplied screenshot does establish and can be assessed from the description, without claiming to have inspected it.",
+        "Name the specific evidence needed to judge interaction, such as the flow steps or a short recording and a narrow viewport.",
+        "Do not infer usability, accessibility, performance, or responsive behaviour from one frame."
+      ]
+    },
+    {
+      "id": "single-artifact-sufficient-for-content-role",
+      "related_examples": [
+        "DC162",
+        "DC5",
+        "VA02"
+      ],
+      "request": "Review this project page for a content design role. I only have one final screenshot. Is that a problem?",
+      "supplied_evidence": "The project is a documentation redesign. The page states the audience, the comprehension problem, the candidate's ownership of information architecture and wording, two decisions with reasons, a before/after passage comparison, and a qualitative result drawn from support-ticket themes. One legible final screenshot shows the resulting page. The role is content design and does not require interaction or responsive evidence.",
+      "expected_behavior": [
+        "Accept one legible final screenshot as sufficient for this role because the page supplies the context and the work is judged on structure and wording.",
+        "Preserve the before/after passage comparison and the stated decisions as the stronger evidence.",
+        "Do not demand a second state, narrow viewport, recording, process essay, or metrics that this role does not need.",
+        "Do not require additional artifact views merely because the supplied material has one."
+      ]
+    },
+    {
+      "id": "image-count-is-not-coverage",
+      "related_examples": [
+        "DC46",
+        "DC93",
+        "DC2"
+      ],
+      "request": "My case study has twelve images, so the visual evidence should be covered. Review the supplied description.",
+      "supplied_evidence": "The case study has twelve images: eight exports of the same dashboard at 1440px with minor data changes, two decorative gradient headers, one team photo, and one logo. The copy names the product, says 'we redesigned the analytics experience', and does not identify users, the problem, personal contribution, or status. Every image shows the same screen type at the same width. No narrow viewport, second state, or running page is supplied.",
+      "expected_behavior": [
+        "Distinguish image count from evidence coverage: the repeated exports are one view and the decorative images add no work evidence.",
+        "Report the missing context, contribution, and status as confirmed gaps, with the unknown facts as dependencies.",
+        "Do not treat the number of images as sufficient visual or artifact evidence.",
+        "Recommend a small set of distinct artifacts and the missing context rather than more images or a redesign.",
+        "Do not infer team composition or shipped status."
+      ]
     }
   ],
   "shared_criteria": [

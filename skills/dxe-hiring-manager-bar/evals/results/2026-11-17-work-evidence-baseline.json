@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-17T13:03:51.011805+00:00",
+  "phase": "work-evidence-coverage-baseline",
+  "execution": {
+    "provider": "OpenAI through the explicitly authorised signed-in Codex CLI",
+    "configured_model": "gpt-6.1-terra",
+    "configured_reasoning_effort": "low",
+    "cli_version": "codex-cli 0.167.0",
+    "workers": 4,
+    "processes": "Fresh ephemeral read-only review and separate grading process per case.",
+    "runner_sha256": "6d7ec9e9994acd05f84c641cd7439d87ccc478cfc2399d10e5b6acb6f58bc6cf"
+  },
+  "frozen_manifest": {
+    "schema_version": 1,
+    "created_at": "2026-11-17T12:55:03.768309+00:00",
+    "case_ids": [
+      "single-view-projects-lack-context",
+      "messy-in-progress-listing",
+      "one-screenshot-interaction-question",
+      "single-artifact-sufficient-for-content-role",
+      "image-count-is-not-coverage"
+    ],
+    "frozen_sha256": {
+      "response-schema.json": "01be385dd2f41fd26ed241bb4c097b1f999086d711c9bf75c3d362a6c4e1e764",
+      "expected.json": "f4e1bf18ef30ee71dd0dd5bb6aebbadb0129b7363cdf67df9f5024de39cc9732",
+      "skill/SKILL.md": "c61d92e3ecbe3b312c318f32f64bba23db0518b0e07fd92fa9fa70a893813269",
+      "skill/references/video-portfolio-sources.json": "7e44a7b1685c1df38d3af7b886a3f98b2bfe71d1e56ab0e8c01efd40d0c06a6f",
+      "skill/references/dive-club-research.md": "6b12df32e3cbba597b0148da842e61c646390f295665fba52b81f9d531265bb9",
+      "skill/references/design-discipline-coverage.json": "43af8750af2a7b76c00836a5db01eedc9c802fb41d2428414ada8bb2df26edfb",
+      "skill/references/design-discipline-examples.md": "2f6c3d215851ee364933e57969a2627ad65e16e7f3ca18f02631e5cf5e5b4757",
+      "skill/references/dive-club-coverage.json": "083baf3b8be07952b873335d2a0f1b33eda49b47a3d441225c002ab766d0a44b",
+      "skill/references/danny-martinez-sources.json": "53b95501f8d72e2f82cd0f7fd569e2c91afbbf5713c8261da0e0232e56537bae",
+      "skill/references/danny-martinez.md": "6ea5b7a7bc26e7f1ba05d84aa30179754ce370b18b5af62bd17bad4529509364",
+      "skill/references/dive-club-passages.json": "d7c25ca62d15a4d1f1d2742e069d3586ae06e46e8037c74d9a326a8e8d9e450f",
+      "skill/references/dive-club-examples.md": "d7f6170bc108f3915cb59b4f224f8fd5367f4acceeafdc659982b1c0499e3810",
+      "skill/references/browser-review.md": "b179118937c87e81b724442ed6df272f73c089a108374645284575bb3e9dcfda",
+      "skill/references/hiring-humans-sources.json": "4e0b397c9d92fe51e62a0d7f6b26dc28b38bd7c6a09c9ba4ef869bd381829723",
+      "skill/references/hiring-humans-examples.md": "f5b0fe1f0e8dcbac96509d8cf0b87bae257730cd1ecbbdf0de98198703f82376",
+      "skill/references/video-portfolio-advice.md": "f0b9aff931a361e048f4b7e8167a492abbc8bc0d7180c1db04585d7ad5fa86e6",
+      "cases/one-screenshot-interaction-question/input.json": "8574b66ca3e999d35afc4022be8cb2b6c77cf1979a42d47544c5c8c2c1578284",
+      "cases/one-screenshot-interaction-question/prompt.txt": "41df69e0eb199ea415b0586a4949bb63a7e68d8ec59ef0975ec7904918dcd416",
+      "cases/image-count-is-not-coverage/input.json": "a536147a59f719602e51c7f7ac27a8d267103abc31a3812307cbf687711d237f",
+      "cases/image-count-is-not-coverage/prompt.txt": "1509246a7c9706f7e1ca5c34e3cd0dde2c33e798550f67349e3f2b5ac3883351",
+      "cases/messy-in-progress-listing/input.json": "20a7c1855f337769bfcb8e8db9e339f2a2266b8ef0d048d5a648bb58e7a93d9d",
+      "cases/messy-in-progress-listing/prompt.txt": "13e481e542d1913383b48d4e320db2fdf5ee19c555e8e9f215ba58ce4fc66d89",
+      "cases/single-artifact-sufficient-for-content-role/input.json": "970943749b31566feda47d01bdc2a289e894a018d16d11444285369580d72327",
+      "cases/single-artifact-sufficient-for-content-role/prompt.txt": "8fff62d2aa078426c59aae3ca0fab4d84f6b1cc2cf79253d50a7200c8d6cb6a4",
+      "cases/single-view-projects-lack-context/input.json": "8b1a6714676c10f86439f733945f516ddc99f60b248cfc4cc6e7574316a8a21b",
+      "cases/single-view-projects-lack-context/prompt.txt": "f183acf265c8e07e3f27fde434d6524eaa6148465652276f509a4231d7ea0d61"
+    }
+  },
+  "shared_criteria": [
+    {
+      "id": "honest-inspection",
+      "criterion": "Distinguish supplied descriptions from personally inspected images, files, or running pages. Never claim a render, source inspection, link check, or runtime reproduction that did not happen."
+    },
+    {
+      "id": "confirmed-findings",
+      "criterion": "Priority-labelled findings must identify a supported problem. Do not classify speculative defects or unrelated optional improvements as confirmed findings. Missing access or unavailable copy is not proof of a content defect. Dependencies, conditional repairs, and confidentiality-safe alternatives may accompany an established finding without becoming separate defects."
+    },
+    {
+      "id": "bounded-judgment",
+      "criterion": "Stay within the requested review or advice scope. Do not invent ownership, metrics, artifacts, confidential disclosure permission, or hiring guarantees."
+    }
+  ],
+  "summary": {
+    "overall": "fail",
+    "case_counts": {
+      "fail": 1,
+      "pass": 4,
+      "uncertain": 0,
+      "incomplete": 0
+    },
+    "criterion_status_counts": {
+      "pass": 36,
+      "fail": 2
+    },
+    "criterion_count": 38
+  },
+  "cases": [
+    {
+      "input": {
+        "id": "single-view-projects-lack-context",
+        "request": "Review my side-project listing for a design engineering role. I am applying to teams that build interface products. The supplied description covers the whole listing.",
+        "supplied_evidence": "Three side projects are listed. Each has a title, one specific sentence about what it does, and one 16:9 screenshot of the finished interface at 1440px. None states who the project is for, the problem it addresses, what the candidate personally built, whether it is shipped, a prototype, or an experiment, or when it was made. No project shows a second screen, another state, or a narrow viewport. The screenshots are legible and the sentences are specific. Contact details are present. No page was opened, so layout and interaction were not tested."
+      },
+      "criteria": [
+        "Report the repeated omission once as a portfolio-level evidence gap, not as three unrelated project notes.",
+        "Identify the confirmed gaps: audience or problem context, personal contribution, status, and distinct artifact views; keep unknown facts as candidate dependencies.",
+        "Explain what one 1440px view cannot establish for a design engineering role, including interaction, states, responsive behaviour, and shipped status.",
+        "Recommend a bounded addition per project, such as one second state or narrow viewport and an honest status label, rather than a redesign or a longer process essay.",
+        "Do not claim rendered inspection and do not invent users, contribution, metrics, or shipped status."
+      ],
+      "related_examples": [
+        "DC112",
+        "DC26",
+        "DC50"
+      ],
+      "actual_response": "**Needs changes** for the supplied side-project listing, assessed against a design engineering role on an interface product team. This verdict is limited to your description of the whole listing; I haven’t opened the page or inspected its layout, interactions, or code.\n\nThe listing already has a useful foundation: each project has a specific description and a legible finished-interface screenshot, and contact details are present. Preserve that concise, work-first presentation. Side projects can communicate relevant craft and initiative, although they don’t automatically establish collaboration or production delivery.\n\n**Clarity · Blocking — Add purpose, contribution, and status to each project.** Your description says none of the three projects identifies its intended user, problem, your personal contribution, or whether it shipped. A hiring reader can see what each interface does, but cannot tell what you designed or built, or how to interpret the result. Add a short paragraph or compact fields beside each project covering who it is for, the need it addresses, what you personally designed and implemented, and its honest status. Credit collaborators where relevant, and add when it was made to help establish recency. **Evidence: supplied description.** Acceptance: a reader can answer those questions for all three projects without guessing. You’ll need to supply the facts; don’t imply production delivery or outcomes that didn’t happen.\n\n**Clarity · Should fix — Show a representative interaction or additional state.** Your description says each project has only one desktop screenshot. That gives a view of the finished interface but leaves its behavior and your interaction decisions difficult to assess for this role. For the strongest relevant projects, add a short demonstration, or an additional screen or state with a brief explanation of a decision you made and why. A narrow-viewport example would be useful where adaptation was part of the work. **Evidence: supplied description.** Acceptance: a reader can understand at least one meaningful interaction or state change and your contribution to it without relying on the static screenshot alone. Use existing artifacts where available; a live deployment is not required.\n\nThe remaining check is the actual visitor experience: open the listing at desktop and narrow widths, navigate it by keyboard, and check that project details and contact are reachable and readable. Those behaviors are **unverified** from the supplied description.",
+      "independent_grading": {
+        "checks": [
+          {
+            "id": "case-1",
+            "status": "pass",
+            "reason": "The answer frames the repeated missing context as one finding covering all three projects, rather than separate project notes.",
+            "evidence_quote": "**Clarity · Blocking — Add purpose, contribution, and status to each project.** Your description says none of the three projects identifies its intended user, problem, your personal contribution, or whether it shipped."
+          },
+          {
+            "id": "case-2",
+            "status": "pass",
+            "reason": "It identifies the missing audience, problem, contribution, status, and additional views, and makes the missing project facts a candidate dependency.",
+            "evidence_quote": "Your description says each project has only one desktop screenshot. That gives a view of the finished interface but leaves its behavior and your interaction decisions difficult to assess for this role."
+          },
+          {
+            "id": "case-3",
+            "status": "fail",
+            "reason": "The answer discusses behavior and interaction decisions, suggests another state and narrow-viewport example, and separately identifies unknown shipping status. It does not explain that the single view cannot establish responsive behavior.",
+            "evidence_quote": "That gives a view of the finished interface but leaves its behavior and your interaction decisions difficult to assess for this role."
+          },
+          {
+            "id": "case-4",
+            "status": "fail",
+            "reason": "It recommends a bounded additional artifact and an honest status for each project, but limits the additional artifact recommendation to the strongest relevant projects rather than addressing each of the three.",
+            "evidence_quote": "For the strongest relevant projects, add a short demonstration, or an additional screen or state with a brief explanation of a decision you made and why."
+          },
+          {
+            "id": "case-5",
+            "status": "pass",
+            "reason": "The answer explicitly limits itself to the supplied description and asks the candidate to provide facts without implying production delivery or outcomes.",
+            "evidence_quote": "This verdict is limited to your description of the whole listing; I haven’t opened the page or inspected its layout, interactions, or code."
+          },
+          {
+            "id": "honest-inspection",
+            "status": "pass",
+            "reason": "It attributes findings to the supplied description and identifies the visitor experience as unverified; it does not claim a render, source inspection, link check, or runtime reproduction.",
+            "evidence_quote": "The remaining check is the actual visitor experience: open the listing at desktop and narrow widths, navigate it by keyboard, and check that project details and contact are reachable and readable. Those behaviors are **unverified** from the supplied description."
+          },
+          {
+            "id": "confirmed-findings",
+            "status": "pass",
+            "reason": "Both priority-labelled findings address gaps explicitly established by the supplied description. The answer keeps actual navigation and readability checks unverified.",
+            "evidence_quote": "Your description says none of the three projects identifies its intended user, problem, your personal contribution, or whether it shipped."
+          },
+          {
+            "id": "bounded-judgment",
+            "status": "pass",
+            "reason": "The answer stays within review and advice, requests missing facts from the candidate, and does not invent ownership, metrics, artifacts, disclosure permission, or hiring guarantees.",
+            "evidence_quote": "You’ll need to supply the facts; don’t imply production delivery or outcomes that didn’t happen."
+          }
+        ]
+      },
+      "result": "fail"
+    },
+    {
+      "input": {
+        "id": "messy-in-progress-listing",
+        "request": "Is this portfolio ready to send for a senior product design role? Review the supplied current state.",
+        "supplied_evidence": "The work listing has six entries. Two are titled 'Project coming soon' and have no content. One entry links to a demo the user reports as broken. Three entries show one image and a title only: none describes the user, problem, contribution, outcome, or date. Of those, one is labelled 'Shipped', one 'Case study soon', and one has no status label. Two entries describe the same project under different names. One project is complete: users, problem, the candidate's contribution, decisions with reasons, and a qualitative result. The about page has no contact method; the footer has an email address. No page was opened."
+      },
+      "criteria": [
+        "Judge the current state as not ready rather than passing it on the strength of the one complete project.",
+        "Report the empty placeholders, duplicate entry, thin single-image entries, and inconsistent status labels as confirmed, bounded findings.",
+        "Treat the reported broken demo as a supplied problem to verify and repair or replace; do not claim to have reproduced it or invent a cause.",
+        "Use the complete project as the model and the reason to finish the others, without treating it as evidence that the rest is ready.",
+        "Do not invent missing context for the incomplete entries or demand a redesign."
+      ],
+      "related_examples": [
+        "DC143",
+        "DC184",
+        "DC26"
+      ],
+      "actual_response": "**Not assessable for a send decision yet.** The target is a senior product design role, assumed to be a hands-on role involving product judgment and collaboration. This review is based entirely on your description of the six-entry work listing, one complete project, and the about page and footer. No page, link, or visual presentation was inspected, so the complete project’s evidence and the overall reading journey still need verification.\n\nThe complete project is the strongest material to preserve: you describe it as explaining the users, problem, contribution, decisions, and a qualitative result. That is the kind of concise, work-specific evidence a hiring manager can use. The footer email also gives a potential contact path, though its visibility and function haven’t been checked.\n\n**Clarity · Should fix — Give selected projects enough context to support a senior product design application.** Your description says three entries have only an image and title, with no user, problem, contribution, outcome, or date. A hiring reader cannot tell what you did or why the work mattered from those entries. For each project worth keeping, add a brief account of the user need, your specific contribution, a consequential decision and its reason, and the result or what remains unknown. Include collaborators and an honest status where relevant. A qualitative result is useful; metrics are not required. **Evidence: supplied description. Acceptance:** a reader can distinguish your contribution from the team’s and understand the purpose and status of each selected project without guessing. The facts must come from you.\n\n**Discoverability · Should fix — Curate the listing and resolve the duplicate.** You report two empty “Project coming soon” entries and two entries for the same project under different names. These make the selection harder to interpret and can inflate the apparent amount of work. Remove or hide the empty entries until they have useful content, and consolidate the duplicate or make the relationship explicit if both entries serve distinct purposes. **Evidence: supplied description. Acceptance:** every listed entry leads to meaningful work, and a reader can tell how many distinct projects are represented.\n\n**Clarity · Should fix — Make project status consistent and accurate.** You report one image-only entry labelled “Shipped,” one “Case study soon,” and one without a status. Retain the accurate labels, clarify the unlabeled project’s actual state, and avoid implying an outcome merely because something shipped. **Evidence: supplied description. Acceptance:** each selected project’s status is understandable and supported by your account of the work.\n\n**Remaining checks before sending:** Open the portfolio as a visitor, follow the listing into the complete project and other selected work, and confirm that ownership and decisions are easy to find. Try the reported broken demo and record what happens; if it fails, repair the link or provide an accessible artifact and an honest explanation of its status. Check that the footer email is easy to find and works, including on a narrow screen and with a keyboard. The demo failure and contact experience are unverified, so I can’t call either a reproduced bug. Also confirm whether the duplicate entries and the complete project overlap with the other described entries before deciding the final selection.",
+      "independent_grading": {
+        "checks": [
+          {
+            "id": "case-1",
+            "status": "pass",
+            "reason": "The answer does not pass the portfolio for sending. It marks the decision not assessable because the pages were not inspected while identifying material gaps in the supplied listing.",
+            "evidence_quote": "**Not assessable for a send decision yet.**"
+          },
+          {
+            "id": "case-2",
+            "status": "pass",
+            "reason": "The answer reports the placeholders, duplicate, thin entries, and inconsistent labels as supplied findings, with bounded recommendations.",
+            "evidence_quote": "Your description says three entries have only an image and title, with no user, problem, contribution, outcome, or date."
+          },
+          {
+            "id": "case-3",
+            "status": "pass",
+            "reason": "It treats the reported demo failure as unverified and calls for a check followed by a conditional repair or replacement.",
+            "evidence_quote": "Try the reported broken demo and record what happens; if it fails, repair the link or provide an accessible artifact and an honest explanation of its status."
+          },
+          {
+            "id": "case-4",
+            "status": "pass",
+            "reason": "The complete project is preserved as an example of useful evidence, while the answer separately identifies gaps in the other entries and does not pass the portfolio.",
+            "evidence_quote": "The complete project is the strongest material to preserve: you describe it as explaining the users, problem, contribution, decisions, and a qualitative result."
+          },
+          {
+            "id": "case-5",
+            "status": "pass",
+            "reason": "The answer requests facts from the candidate and recommends bounded content and curation changes, without inventing project context or demanding a redesign.",
+            "evidence_quote": "The facts must come from you."
+          },
+          {
+            "id": "honest-inspection",
+            "status": "pass",
+            "reason": "It explicitly limits its evidence to the supplied description and disclaims page, link, and visual inspection.",
+            "evidence_quote": "No page, link, or visual presentation was inspected, so the complete project’s evidence and the overall reading journey still need verification."
+          },
+          {
+            "id": "confirmed-findings",
+            "status": "pass",
+            "reason": "The priority-labelled recommendations are grounded in described listing problems. The demo and contact checks are kept outside the confirmed fix list.",
+            "evidence_quote": "The demo failure and contact experience are unverified, so I can’t call either a reproduced bug."
+          },
+          {
+            "id": "bounded-judgment",
+            "status": "pass",
+            "reason": "The answer stays within portfolio review and advice, asks the candidate for missing facts, and does not invent ownership, metrics, disclosure permission, or hiring guarantees.",
+            "evidence_quote": "A qualitative result is useful; metrics are not required."
+          }
+        ]
+      },
+      "result": "pass"
+    },
+    {
+      "input": {
+        "id": "one-screenshot-interaction-question",
+        "request": "I attached one screenshot of my new checkout flow at 1440px. Tell me whether the interaction looks good enough for a product design application, and what else you would need to judge it.",
+        "supplied_evidence": "One 1440px screenshot of a completed checkout state is described by the user: a two-column layout with the order summary on the right and the primary button at the bottom left. The user describes this as one state of a multi-step flow. No other screen, recording, narrow viewport, source file, or running page is supplied."
+      },
+      "criteria": [
+        "Say the one completed state cannot establish interaction quality: sequence, feedback, error recovery, or transitions.",
+        "State what the supplied screenshot does establish and can be assessed from the description, without claiming to have inspected it.",
+        "Name the specific evidence needed to judge interaction, such as the flow steps or a short recording and a narrow viewport.",
+        "Do not infer usability, accessibility, performance, or responsive behaviour from one frame."
+      ],
+      "related_examples": [
+        "DC112",
+        "DC36",
+        "DC105"
+      ],
+      "actual_response": "**Not assessable yet for a product design application.** The supplied material describes one completed checkout state at 1440px, but I can’t see the screenshot itself or observe the interaction. The described two-column layout, with the order summary on the right and primary button at the bottom left, gives a useful starting point; it doesn’t establish whether the flow is clear or works well. I wouldn’t infer a defect or recommend changing that layout from the description alone.\n\nTo judge the interaction and its value as portfolio evidence, I’d need:\n\n- **The screenshot itself, plus the other steps:** what the customer sees before and after this state, and how they move forward or back. A short recording or clickable prototype would make the transitions and feedback easier to assess.\n- **Key variations:** validation errors, an unsuccessful payment or submission, loading, and confirmation, where those apply. These reveal how the design helps someone recover and understand what happened.\n- **A narrow-screen view and interaction details:** how the summary and primary action adapt, and whether the flow can be completed by keyboard as well as touch.\n- **A little project context:** who the checkout serves, the problem or constraint you were addressing, your specific contribution, and whether this is shipped work or a prototype. One or two consequential decisions and any available evidence of their effect would help a hiring manager understand your judgment.\n\nA concise walkthrough can be enough; you don’t need a long process essay. With those materials, I could assess both the interaction itself and whether the project communicates your product design contribution.",
+      "independent_grading": {
+        "checks": [
+          {
+            "id": "case-1",
+            "status": "pass",
+            "reason": "The answer says the described completed state cannot establish whether the flow is clear or works well, and identifies transitions, feedback, and recovery as needing further evidence.",
+            "evidence_quote": "it doesn’t establish whether the flow is clear or works well."
+          },
+          {
+            "id": "case-2",
+            "status": "pass",
+            "reason": "It identifies the described layout as a starting point and explicitly states that the screenshot itself was not visible.",
+            "evidence_quote": "The supplied material describes one completed checkout state at 1440px, but I can’t see the screenshot itself or observe the interaction. The described two-column layout, with the order summary on the right and primary button at the bottom left, gives a useful starting point; it doesn’t establish whether the flow is clear or works well."
+          },
+          {
+            "id": "case-3",
+            "status": "pass",
+            "reason": "It requests the preceding and following steps, navigation, a recording or prototype, error states, and a narrow-screen view.",
+            "evidence_quote": "**The screenshot itself, plus the other steps:** what the customer sees before and after this state, and how they move forward or back. A short recording or clickable prototype would make the transitions and feedback easier to assess."
+          },
+          {
+            "id": "case-4",
+            "status": "pass",
+            "reason": "It does not claim that usability, accessibility, performance, or responsive behaviour has been established; it asks for further evidence instead.",
+            "evidence_quote": "**A narrow-screen view and interaction details:** how the summary and primary action adapt, and whether the flow can be completed by keyboard as well as touch."
+          },
+          {
+            "id": "honest-inspection",
+            "status": "pass",
+            "reason": "It distinguishes the supplied description from a screenshot or interaction it personally observed, and makes no unsupported inspection or reproduction claims.",
+            "evidence_quote": "The supplied material describes one completed checkout state at 1440px, but I can’t see the screenshot itself or observe the interaction."
+          },
+          {
+            "id": "confirmed-findings",
+            "status": "pass",
+            "reason": "It does not label speculative defects or optional improvements as priority findings, and explicitly avoids inferring a defect from the description.",
+            "evidence_quote": "I wouldn’t infer a defect or recommend changing that layout from the description alone."
+          },
+          {
+            "id": "bounded-judgment",
+            "status": "pass",
+            "reason": "It stays within the requested interaction and portfolio-evidence assessment, asking for contribution and project context without inventing facts or promising hiring outcomes.",
+            "evidence_quote": "**A little project context:** who the checkout serves, the problem or constraint you were addressing, your specific contribution, and whether this is shipped work or a prototype."
+          }
+        ]
+      },
+      "result": "pass"
+    },
+    {
+      "input": {
+        "id": "single-artifact-sufficient-for-content-role",
+        "request": "Review this project page for a content design role. I only have one final screenshot. Is that a problem?",
+        "supplied_evidence": "The project is a documentation redesign. The page states the audience, the comprehension problem, the candidate's ownership of information architecture and wording, two decisions with reasons, a before/after passage comparison, and a qualitative result drawn from support-ticket themes. One legible final screenshot shows the resulting page. The role is content design and does not require interaction or responsive evidence."
+      },
+      "criteria": [
+        "Accept one legible final screenshot as sufficient for this role because the page supplies the context and the work is judged on structure and wording.",
+        "Preserve the before/after passage comparison and the stated decisions as the stronger evidence.",
+        "Do not demand a second state, narrow viewport, recording, process essay, or metrics that this role does not need.",
+        "Do not require additional artifact views merely because the supplied material has one."
+      ],
+      "related_examples": [
+        "DC162",
+        "DC5",
+        "VA02"
+      ],
+      "actual_response": "**Passes for the described project page, provisionally:** one final screenshot is not a problem for this content design role. Your description gives a hiring reader the audience, comprehension problem, your ownership, two decisions and their reasons, a before-and-after passage, and a qualitative result. Together with a legible image of the final page, that is a relevant, coherent account of the work.\n\n**Unverified:** This assessment is based on your description; I haven’t inspected the page or screenshot. I can’t assess the wording, legibility, or how easily a visitor finds the project. The wider portfolio and contact path are also outside this review.\n\nPreserve the before-and-after passage and the reasons for your decisions: they make your content judgment visible. The support-ticket themes are useful qualitative evidence too; describe them as observed themes without implying a measured improvement that you can’t substantiate.\n\nYou don’t need more screenshots simply to increase their number, or interaction and responsive evidence for this role. If you later review the actual page, check that the passage and final screenshot are readable at their displayed size and that the result is clearly distinguished from the project’s intended outcome.",
+      "independent_grading": {
+        "checks": [
+          {
+            "id": "case-1",
+            "status": "pass",
+            "reason": "The answer accepts one final screenshot as sufficient for the described content design project, while making its assessment provisional.",
+            "evidence_quote": "**Passes for the described project page, provisionally:** one final screenshot is not a problem for this content design role."
+          },
+          {
+            "id": "case-2",
+            "status": "pass",
+            "reason": "It explicitly preserves the passage comparison and the reasons behind the decisions as evidence of content judgment.",
+            "evidence_quote": "Preserve the before-and-after passage and the reasons for your decisions: they make your content judgment visible."
+          },
+          {
+            "id": "case-3",
+            "status": "pass",
+            "reason": "It does not demand additional states, a narrow viewport, a recording, a process essay, or metrics; it also explicitly rejects a need for interaction and responsive evidence.",
+            "evidence_quote": "You don’t need more screenshots simply to increase their number, or interaction and responsive evidence for this role."
+          },
+          {
+            "id": "case-4",
+            "status": "pass",
+            "reason": "It explicitly says more screenshots are unnecessary merely to increase their number.",
+            "evidence_quote": "You don’t need more screenshots simply to increase their number, or interaction and responsive evidence for this role."
+          },
+          {
+            "id": "honest-inspection",
+            "status": "pass",
+            "reason": "It identifies the description as its basis and explicitly says the page and screenshot were not inspected.",
+            "evidence_quote": "**Unverified:** This assessment is based on your description; I haven’t inspected the page or screenshot."
+          },
+          {
+            "id": "confirmed-findings",
+            "status": "pass",
+            "reason": "It labels no speculative issue as a priority finding; readability and outcome wording are framed as future checks.",
+            "evidence_quote": "If you later review the actual page, check that the passage and final screenshot are readable at their displayed size and that the result is clearly distinguished from the project’s intended outcome."
+          },
+          {
+            "id": "bounded-judgment",
+            "status": "pass",
+            "reason": "The judgment is limited to the described project page and role, and it explicitly excludes the wider portfolio and contact path. It makes no hiring guarantee or invented claim.",
+            "evidence_quote": "The wider portfolio and contact path are also outside this review."
+          }
+        ]
+      },
+      "result": "pass"
+    },
+    {
+      "input": {
+        "id": "image-count-is-not-coverage",
+        "request": "My case study has twelve images, so the visual evidence should be covered. Review the supplied description.",
+        "supplied_evidence": "The case study has twelve images: eight exports of the same dashboard at 1440px with minor data changes, two decorative gradient headers, one team photo, and one logo. The copy names the product, says 'we redesigned the analytics experience', and does not identify users, the problem, personal contribution, or status. Every image shows the same screen type at the same width. No narrow viewport, second state, or running page is supplied."
+      },
+      "criteria": [
+        "Distinguish image count from evidence coverage: the repeated exports are one view and the decorative images add no work evidence.",
+        "Report the missing context, contribution, and status as confirmed gaps, with the unknown facts as dependencies.",
+        "Do not treat the number of images as sufficient visual or artifact evidence.",
+        "Recommend a small set of distinct artifacts and the missing context rather than more images or a redesign.",
+        "Do not infer team composition or shipped status."
+      ],
+      "related_examples": [
+        "DC46",
+        "DC93",
+        "DC2"
+      ],
+      "actual_response": "**Needs changes** for the described case study, assuming it is intended to support a product design application. The target role and level aren’t stated. This judgment is based solely on your description; I haven’t inspected the images, the page, or the rest of the portfolio.\n\nTwelve images do not necessarily cover the work. Your description identifies eight variations of one desktop dashboard, so they could help a reviewer see the interface, but their distinct evidence appears limited. The product name and team-level description provide a starting point; keep a representative dashboard image visible alongside the context below.\n\n**Clarity · Blocking — Explain the problem, your contribution, and the project’s status.** **Source:** Your supplied description says the copy names the product and says “we redesigned the analytics experience,” but does not identify the users, problem, your contribution, or whether the work shipped. A hiring manager cannot tell what you did or why the redesign mattered. Add a concise introduction identifying the users and their need, your specific responsibilities and decisions, relevant collaborators, and whether the work shipped or remained a prototype. Include an observed result or qualitative learning if available, without inventing metrics. **Acceptance:** A reader can explain who the work served, what you personally contributed, and its status. This depends on facts only you can supply.\n\n**Clarity · Should fix — Select images for the evidence each one adds.** **Source:** You describe eight exports of the same dashboard at 1440px with minor data changes, plus decorative headers, a team photo, and a logo. Retain the strongest representative dashboard view and, where available and permitted, replace repetitive exports with artifacts that show a meaningful decision, another relevant state, or how the experience addressed the user’s task. Brief captions can connect each artifact to your contribution. If no other artifacts are available, a smaller, well-explained selection is sufficient. **Acceptance:** Each retained project image helps a reviewer understand a distinct part of the work or a decision, rather than repeating the same evidence.\n\n**Open checks — Unverified:** No narrow viewport, second state, or running page was supplied. Check the case study at a narrow width for legibility and navigation, and inspect other meaningful product states if they exist. Their absence from the supplied description does not establish a responsive or interaction defect.",
+      "independent_grading": {
+        "checks": [
+          {
+            "id": "case-1",
+            "status": "pass",
+            "reason": "The answer identifies the eight exports as variations of one dashboard and treats the other images as decorative or contextual rather than evidence of the work.",
+            "evidence_quote": "You describe eight exports of the same dashboard at 1440px with minor data changes, plus decorative headers, a team photo, and a logo."
+          },
+          {
+            "id": "case-2",
+            "status": "pass",
+            "reason": "It identifies the absent users, problem, personal contribution, and status as gaps in the supplied copy, and explicitly makes the correction dependent on candidate-supplied facts.",
+            "evidence_quote": "Your supplied description says the copy names the product and says “we redesigned the analytics experience,” but does not identify the users, problem, your contribution, or whether the work shipped."
+          },
+          {
+            "id": "case-3",
+            "status": "pass",
+            "reason": "It rejects image count as sufficient evidence and explains that the dashboard variations provide limited distinct coverage.",
+            "evidence_quote": "Twelve images do not necessarily cover the work. Your description identifies eight variations of one desktop dashboard, so they could help a reviewer see the interface, but their distinct evidence appears limited."
+          },
+          {
+            "id": "case-4",
+            "status": "pass",
+            "reason": "It recommends keeping a representative view and selecting distinct, relevant artifacts when available, alongside a concise explanation of the missing context. It does not call for a redesign.",
+            "evidence_quote": "Retain the strongest representative dashboard view and, where available and permitted, replace repetitive exports with artifacts that show a meaningful decision, another relevant state, or how the experience addressed the user’s task."
+          },
+          {
+            "id": "case-5",
+            "status": "pass",
+            "reason": "The answer asks for relevant collaborators and actual project status without asserting a team composition or claiming the project shipped.",
+            "evidence_quote": "Add a concise introduction identifying the users and their need, your specific responsibilities and decisions, relevant collaborators, and whether the work shipped or remained a prototype."
+          },
+          {
+            "id": "honest-inspection",
+            "status": "pass",
+            "reason": "The answer explicitly limits its judgment to the supplied description and says it did not inspect the images or page. It makes no claim of a render or runtime check.",
+            "evidence_quote": "This judgment is based solely on your description; I haven’t inspected the images, the page, or the rest of the portfolio."
+          },
+          {
+            "id": "confirmed-findings",
+            "status": "pass",
+            "reason": "Both priority-labelled recommendations are supported by the supplied description: missing project facts and repetitive evidence. Responsive and interaction concerns are kept as unverified checks.",
+            "evidence_quote": "Their absence from the supplied description does not establish a responsive or interaction defect."
+          },
+          {
+            "id": "bounded-judgment",
+            "status": "pass",
+            "reason": "The review stays within the described case study, requests candidate-supplied facts, and conditions replacement artifacts on availability and permission. It invents no ownership, metrics, or hiring guarantees.",
+            "evidence_quote": "Include an observed result or qualitative learning if available, without inventing metrics."
+          }
+        ]
+      },
+      "result": "pass"
+    }
+  ],
+  "grading_integrity": {
+    "rejected_attempts": [
+      {
+        "case": "single-view-projects-lack-context",
+        "attempt_file": "grade.invalid-attempt-1.json",
+        "sha256": "f082cb6f6d3c74ce69405688086d28bca501b8cea99117bdf7a6a2fd75f05982",
+        "reason": "Grader quotation did not match the recorded answer; preserved and regraded without editing."
+      }
+    ]
+  },
+  "limitations": [
+    "Synthetic cases only; a passing run does not establish hiring outcomes or effectiveness.",
+    "One run per snapshot. The reviewer configuration is the local Codex account and model, recorded above.",
+    "The baseline and revised runs cover the five new coverage cases; the revised run adds six adjacent regression cases. The other suite cases were not rerun on this snapshot.",
+    "The reviewed evidence is supplied text, not a rendered page. Layout, interaction, and link operation remain untested where the case says so."
+  ]
+}
